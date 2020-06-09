@@ -1,0 +1,43 @@
+---
+version: '2.4'
+
+services:
+  xui:
+    image: "hmctspublic.azurecr.io/xui/webapp:latest"
+    environment:
+      MICROSERVICE: xui_webapp
+      PROTOCOL: http
+      XUI_ENV: local
+
+      SERVICES_CCD_COMPONENT_API: http://ccd-api-gateway:3453
+      SERVICES_CCD_DATA_STORE_API: http://localhost:4452
+      SERVICES_DOCUMENTS_API: http://dm-store:8080
+      SERVICES_S2S: http://service-auth-provider-api:8080
+      SERVICES_IDAM_LOGIN_URL: http://localhost:3501
+      SERVICES_IDAM_API_URL: http://idam-api:5000
+      SERVICES_IDAM_OAUTH_CALLBACK_URL: oauth2/callback
+      SERVICES_IDAM_CLIENT_ID: xui_webapp
+      SERVICES_PAYMENTS_URL: http://wiremock:8080
+
+      SERVICES_EM_ANNO_API: http://ccd-api-gateway:3453
+
+      FEATURE_APP_INSIGHTS_ENABLED: "false"
+      FEATURE_SECURE_COOKIE_ENABLED: "false"
+      APPINSIGHTS_INSTRUMENTATIONKEY: fake
+
+      S2S_SECRET:  "${IDAM_KEY_XUI_WEBAPP}"
+      IDAM_SECRET: "${OAUTH2_CLIENT_XUI}"
+
+    ports:
+      - 3333:3000
+    depends_on:
+      idam-api:
+        condition: service_started
+      ccd-data-store-api:
+        condition: service_started
+    networks:
+      - ccd-network
+
+networks:
+  ccd-network:
+    external: true

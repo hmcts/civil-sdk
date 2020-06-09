@@ -1,0 +1,15 @@
+# Dynamic image tags
+.tags.env
+
+.workspace
+
+# IntelliJ IDEA files
+.idea/
+*.iml
+/.project
+
+build/
+
+
+mocks/wiremock/__files/mockResponse.json
+mocks/wiremock/mappings/user-by-email/*
