@@ -1,0 +1,33 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/fees-register/fees/lookup",
+    "queryParameters": {
+      "service": {
+        "equalTo": "civil money claims"
+      },
+      "jurisdiction1": {
+        "equalTo": "civil"
+      },
+      "jurisdiction2": {
+        "equalTo": "county court"
+      },
+      "channel": {
+        "equalTo": "default"
+      },
+      "event": {
+        "equalTo": "issue"
+      },
+      "amount_or_volume": {
+        "matches": "(20000[1-9]|2000[1-9][0-9]|200[1-9][0-9]{2}|20[1-9][0-9]{3}|2[1-9][0-9]{4}|[3-9][0-9]{5}|[1-8][0-9]{6}|9[0-8][0-9]{5}|99[0-8][0-9]{4}|999[0-8][0-9]{3}|9999[0-8][0-9]{2}|99999[0-8][0-9]|999999[0-9]|[1-8][0-9]{7}|9[0-8][0-9]{6}|99[0-8][0-9]{5}|999[0-8][0-9]{4}|9999[0-8][0-9]{3}|99999[0-8][0-9]{2}|999999[0-8][0-9]|9999999[0-9]|[1-8][0-9]{8}|9[0-8][0-9]{7}|99[0-8][0-9]{6}|999[0-8][0-9]{5}|9999[0-8][0-9]{4}|99999[0-8][0-9]{3}|999999[0-8][0-9]{2}|9999999[0-8][0-9]|99999999[0-9]|1000000000)"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": "{\"code\": \"FEE0210\", \"description\": \"Civil Court fees - Money Claims - Claim Amount - 200000.01 GBP or more\", \"version\": 3, \"fee_amount\": 10000.00}"
+  }
+}
