@@ -1,4 +1,4 @@
-# Unspecified civil money claims customised version of CCD Docker :whale:
+# Unspecified civil claims customised version of CCD Docker :whale:
 
 - [Prerequisites](#prerequisites)
 - [Quick start](#quick-start)
