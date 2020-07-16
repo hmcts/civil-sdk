@@ -13,7 +13,7 @@ ${dir}/utils/idam-create-caseworker.sh "ccd.docker.default@hmcts.net" "ccd-impor
 
 ${dir}/utils/ccd-add-role.sh "caseworker-civil"
 
-roles=("solicitor, systemupdate")
+roles=("solicitor" "systemupdate")
 for role in "${roles[@]}"
 do
   ${dir}/utils/idam-add-role.sh "caseworker-civil-${role}"
