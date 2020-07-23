@@ -1,0 +1,20 @@
+---
+version: '2.4'
+
+services:
+  docmosis-tornado:
+    image: skeneventures/docmosis-tornado
+    healthcheck:
+      disable: true
+    environment:
+      # not supported in current version of Tornado
+      - DOCMOSIS_KEY
+      - DOCMOSIS_SITE="Free Trial License"
+    volumes:
+      - ../../docker/docmosis/templates:/home/docmosis/templates:rw
+    ports:
+      - 5433:8080
+
+networks:
+  ccd-network:
+    external: true
