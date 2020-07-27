@@ -17,7 +17,7 @@ services:
 
   ccd-data-store-api:
     environment:
-      CCD_DM_DOMAIN: http://dm-store:4506
+      CCD_DM_DOMAIN: http://dm-store:8080
 
   service-auth-provider-api:
     environment:
