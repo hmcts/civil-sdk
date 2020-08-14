@@ -20,6 +20,7 @@ services:
       SERVICES_PAYMENTS_URL: http://wiremock:8080
 
       SERVICES_EM_ANNO_API: http://ccd-api-gateway:3453
+      REDISCLOUD_URL: fake
 
       FEATURE_APP_INSIGHTS_ENABLED: "false"
       FEATURE_SECURE_COOKIE_ENABLED: "false"
