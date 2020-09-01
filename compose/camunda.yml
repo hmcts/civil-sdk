@@ -1,0 +1,15 @@
+---
+version: '2.4'
+
+services:
+  camunda:
+    container_name: camunda
+    image: camunda/camunda-bpm-platform:run-latest
+    ports:
+      - 9404:8080
+    networks:
+      - ccd-network
+
+networks:
+  ccd-network:
+    external: true

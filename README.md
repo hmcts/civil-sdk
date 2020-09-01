@@ -3,6 +3,7 @@
 - [Prerequisites](#prerequisites)
 - [Quick start](#quick-start)
 - [Elastic search](#elastic-search)
+- [Camunda](#camunda)
 - [License](#license)
 
 ## Prerequisites
@@ -157,6 +158,30 @@ Example response:
 }
 
 ```
+----
+
+## Camunda
+
+Camunda is part of `defaults.conf` file, so it is enabled by default.
+
+To enable the compose file manually run the following:
+
+```
+./ccd enable backend dm-store sidam sidam-local sidam-local-ccd xui camunda
+```
+
+Camunda is available at `http://localhost:9404/`. To login into the cockpit application use: 
+
+`username: demo` 
+
+`password: demo`
+
+Within Cockpit you can find information around deployed processes. 
+
+The easiest way to deploy a process is via the Camunda Modeler and setting the REST endpoint value to 
+`http://localhost:9404/engine-rest`. However this can also be done via the REST API. You can find full documentation of the 
+REST API [here.](https://docs.camunda.org/manual/latest/reference/rest/)
+
 ----
 
 This project should aim to keep upto date with the [base CCD Docker project](https://github.com/hmcts/ccd-docker)
