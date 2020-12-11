@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+#export IDAM_STUB_LOCALHOST=http://localhost:5555
+
 set -eu
 
 dir=$(dirname ${0})

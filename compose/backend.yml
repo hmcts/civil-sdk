@@ -50,10 +50,8 @@ services:
       # Uncomment this and the JAVA_TOOL_OPTIONS flag for JVM debugging
       # - 5005:5005
     depends_on:
-# Uncomment this line to enable ccd test stub service
-#     ccd-test-stubs-service:
-#       condition: service_started
-      idam-api:
+# Replace idam-api with ccd-test-stubs-service to enable ccd test stub service
+      ccd-test-stubs-service:
         condition: service_started
       ccd-shared-database:
         condition: service_started
@@ -92,10 +90,8 @@ services:
       # Uncomment this and the JAVA_TOOL_OPTIONS flag for JVM debugging
       # - 5005:5005
     depends_on:
-# Uncomment this line to enable ccd test stub service
-#     ccd-test-stubs-service:
-#       condition: service_started
-      idam-api:
+# Replace idam-api with ccd-test-stubs-service to enable ccd test stub service
+      ccd-test-stubs-service:
         condition: service_started
       ccd-shared-database:
         condition: service_started
@@ -153,10 +149,11 @@ services:
       - 5555:5555
     networks:
       - ccd-network
-    #provide custom Idam roles when using Idam Stub.
-    #uncomment and add the desired roles to idam_stub_get_details_custom.json. Then restart the Stub Service
-#    volumes:
-#      - ${PWD}/resources/idam_stub_get_details_custom.json:/opt/app/wiremock/mappings/idam_get_details.json
+    #provide custom Idam and CCD roles when using Idam Stub.
+#    volumes: #comment required for use-idam-stub.sh to find this line
+#      - ${PWD}/resources/idam-stub/get_details.json:/opt/app/wiremock/mappings/idam_get_details.json
+#      - ${PWD}/resources/idam-stub/get_userinfo.json:/opt/app/wiremock/mappings/idam_get_userinfo.json
+#      - ${PWD}/resources/idam-stub/post_userinfo.json:/opt/app/wiremock/mappings/idam_post_userinfo.json
 
 volumes:
   ccd-docker-ccd-shared-database-data:

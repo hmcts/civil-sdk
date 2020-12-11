@@ -1,0 +1,29 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/details"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "active": true,
+      "email": "solicitor@example.com",
+      "forename": "CCD",
+      "id": "123456",
+      "roles": [
+        "caseworker-autotest1",
+        "caseworker-autotest2",
+        "caseworker",
+        "ccd-import",
+        "caseworker-civil",
+        "caseworker-civil-solicitor",
+        "caseworker-civil-systemupdate"
+      ],
+      "surname": "Auto Test (Stub)"
+    }
+
+  }
+}

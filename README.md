@@ -170,17 +170,57 @@ To enable the compose file manually run the following:
 ./ccd enable backend dm-store sidam sidam-local sidam-local-ccd xui camunda
 ```
 
-Camunda is available at `http://localhost:9404/`. To login into the cockpit application use: 
+Camunda is available at `http://localhost:9404/`. To login into the cockpit application use:
 
-`username: demo` 
+`username: demo`
 
 `password: demo`
 
-Within Cockpit you can find information around deployed processes. 
+Within Cockpit you can find information around deployed processes.
 
-The easiest way to deploy a process is via the Camunda Modeler and setting the REST endpoint value to 
-`http://localhost:9404/engine-rest`. However this can also be done via the REST API. You can find full documentation of the 
+The easiest way to deploy a process is via the Camunda Modeler and setting the REST endpoint value to
+`http://localhost:9404/engine-rest`. However this can also be done via the REST API. You can find full documentation of the
 REST API [here.](https://docs.camunda.org/manual/latest/reference/rest/)
+
+----
+
+## Idam Stub
+
+### Prerequisites:
+Add following line to your `/etc/hosts`:
+```
+127.0.0.1	ccd-test-stubs-service
+```
+
+### Enable stub
+To use Idam stub instead of real service follow the steps:
+
+- Make sure you are in root directory (`civil-unspecified-docker`)
+- Run the command to enable stub and rebuild local environment:
+```
+export IDAM_STUB_ENABLED=true && ./bin/toggle-idam-stub.sh
+```
+- Run unspec-service with profiles:
+```
+spring.profiles.active=local,idam-stub
+```
+
+If you want to run functional tests in new terminal tab, the env variable needs to be re-exported or added to `~/.zshrc` file:
+```
+export IDAM_STUB_ENABLED=true
+```
+
+### Switching back to real Idam
+
+- Run the command to disable stub and rebuild local environment:
+```
+unset IDAM_STUB_ENABLED && ./bin/toggle-idam-stub.sh
+```
+
+- Run unspec-service with the following profiles:
+ ```
+ spring.profiles.active=local
+ ```
 
 ----
 
