@@ -1,4 +1,5 @@
 [
   {"email": "solicitor@example.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor", "lastName": "Solicitor"},
+  {"email": "claimantsolicitor@gmail.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor", "lastName": "Solicitor"},
   {"email": "civil-system-update@mailnesia.com", "roles": "caseworker,caseworker-civil,caseworker-civil-systemupdate", "lastName": "System-update"}
 ]
