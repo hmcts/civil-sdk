@@ -17,7 +17,7 @@ create_user_request() {
           "email":"'"${email}"'",
           "forename":"'"${email}"'",
           "surname":"'"${surname}"'",
-          "password":"Password12",
+          "password":"Password12!",
           "levelOfAccess":1,
           "roles": [
             '"${rolesJson}"'
