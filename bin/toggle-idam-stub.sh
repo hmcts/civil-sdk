@@ -34,7 +34,7 @@ else
   commentLine "IDAM_STUB_SERVICE_NAME" .env
   commentLine "IDAM_STUB_LOCALHOST" .env
 
-  commentLine "#export IDAM_STUB_LOCALHOST" bin/utils/ccd-import-definition.sh
+  commentLine "export IDAM_STUB_LOCALHOST" bin/utils/ccd-import-definition.sh
 
   sed -i '' -e 's/      ccd-test-stubs-service:/      idam-api:/g' compose/backend.yml
 

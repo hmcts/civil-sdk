@@ -51,7 +51,7 @@ services:
       # - 5005:5005
     depends_on:
 # Replace idam-api with ccd-test-stubs-service to enable ccd test stub service
-      ccd-test-stubs-service:
+      idam-api:
         condition: service_started
       ccd-shared-database:
         condition: service_started
@@ -91,7 +91,7 @@ services:
       # - 5005:5005
     depends_on:
 # Replace idam-api with ccd-test-stubs-service to enable ccd test stub service
-      ccd-test-stubs-service:
+      idam-api:
         condition: service_started
       ccd-shared-database:
         condition: service_started
