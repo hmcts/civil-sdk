@@ -31,14 +31,14 @@ services:
       - IDAMHEALTHCHECK_AM_ENABLED=false
       - IDAMHEALTHCHECK_IDM_ENABLED=false
       - STRATEGIC_ADMIN_URL=http://idam-web-admin:8082
-      - STRATEGIC_WEBPUBLIC_URL=http://idam-web-public:9002
+      - STRATEGIC_WEBPUBLIC_URL=http://localhost:9002
       - SPRING_PROFILES_ACTIVE=local
       - SPRING_DATASOURCE_URL=jdbc:postgresql://shared-db:5432/openidm?currentSchema=fridam
       - SPRING_DATASOURCE_USERNAME=openidm
       - SPRING_DATASOURCE_PASSWORD=openidm
       - SECURITY_OAUTH2_CLIENT_CLIENTSECRET=password
-      - SECURITY_OAUTH2_CLIENT_PRE_ESTABLISHED_REDIRECT_URI=http://idam-web-public:9002/login
-      - SECURITY_OAUTH2_CLIENT_REGISTERED_REDIRECT_URI=http://idam-web-public:9002/login
+      - SECURITY_OAUTH2_CLIENT_PRE_ESTABLISHED_REDIRECT_URI=http://localhost:9002/login
+      - SECURITY_OAUTH2_CLIENT_REGISTERED_REDIRECT_URI=http://localhost:9002/login
       - IDAM_SPI_FORGEROCK_AM_ROOT=http://fr-am:8080/openam
       - IDAM_SPI_FORGEROCK_AM_TOPLEVELHOST=fr-am
       - IDAM_SPI_FORGEROCK_AM_USERNAME=amadmin
@@ -61,4 +61,4 @@ services:
     environment:
       - JAVA_OPTS=-Xms128m -Xms512m
       - STRATEGIC_SERVICE_URL=http://idam-api:5000
-      - STRATEGIC_PUBLIC_URL=http://idam-web-public:9002
+      - STRATEGIC_PUBLIC_URL=http://localhost:9002

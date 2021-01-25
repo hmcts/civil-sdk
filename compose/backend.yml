@@ -70,7 +70,7 @@ services:
       DATA_STORE_DB_USE_SSL: "${DB_USE_SSL}"
       DATA_STORE_IDAM_KEY: "${IDAM_KEY_CCD_DATA_STORE}"
       DATA_STORE_TOKEN_SECRET: iuasbcuasdcbasdgcasdgcuysachjsacyasdgjcgasdj
-      DATA_STORE_S2S_AUTHORISED_SERVICES: ccd_gw,ccd_gateway,unspec_service,ccd_data,ccd_ps,xui_webapp
+      DATA_STORE_S2S_AUTHORISED_SERVICES: ccd_gw,ccd_gateway,unspec_service,ccd_data,ccd_ps,xui_webapp,aac_manage_case_assignment
       DEFINITION_STORE_HOST: http://ccd-definition-store-api:4451
       USER_PROFILE_HOST: http://ccd-user-profile-api:4453
       IDAM_USER_URL: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}"
@@ -83,6 +83,8 @@ services:
       ELASTIC_SEARCH_HOSTS: ccd-elasticsearch:9200
       ELASTIC_SEARCH_DATA_NODES_HOSTS: "http://ccd-elasticsearch:9200"
       CCD_DEFAULTPRINTURL: https://return-case-doc-ccd.nonprod.platform.hmcts.net/jurisdictions/:jid/case-types/:ctid/cases/:cid
+      CCD_S2S_AUTHORISED_SERVICES_CASE_USER_ROLES: unspec_service,aac_manage_case_assignment
+      DATA_STORE_CROSS_JURISDICTIONAL_ROLES: caseworker-caa,caseworker-civil-systemupdate
       # Uncomment this line to enable JVM debugging and uncomment the port mapping below
       # JAVA_TOOL_OPTIONS: '-XX:InitialRAMPercentage=30.0 -XX:MaxRAMPercentage=65.0 -XX:MinRAMPercentage=30.0 -XX:+UseConcMarkSweepGC -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005'
     ports:
@@ -120,6 +122,9 @@ services:
       MICROSERVICEKEYS_CCD_PS: "${IDAM_KEY_CCD_PS}"
       MICROSERVICEKEYS_UNSPEC_SERVICE: "${IDAM_KEY_UNSPEC_CASE_SERVICE}"
       MICROSERVICEKEYS_XUI_WEBAPP: "${IDAM_KEY_XUI_WEBAPP}"
+      MICROSERVICEKEYS_AAC_MANAGE_CASE_ASSIGNMENT: "${IDAM_KEY_CASE_ASSIGNMENT}"
+      MICROSERVICEKEYS_RD_PROFESSIONAL_API: "${OAUTH2_CLIENT_RD_PROFESSIONAL}"
+      MICROSERVICEKEYS_RD_USER_PROFILE_API: "${OAUTH2_CLIENT_RD_USER_PROFILE}"
       TESTING_SUPPORT_ENABLED: "true"
     networks:
       - ccd-network

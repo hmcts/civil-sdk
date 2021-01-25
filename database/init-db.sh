@@ -13,7 +13,7 @@ psql -v ON_ERROR_STOP=1 --username postgres --set USERNAME=$DB_USERNAME --set PA
 EOSQL
 
 # databases
-for service in idam ccd_user_profile ccd_definition ccd_data evidence ccd_definition_designer cmc; do
+for service in idam ccd_user_profile ccd_definition ccd_data evidence ccd_definition_designer cmc dbrefdata dbuserprofile; do
   echo "Database $service: Creating..."
 psql -v ON_ERROR_STOP=1 --username postgres --set USERNAME=$DB_USERNAME --set PASSWORD=$DB_PASSWORD --set DATABASE=$service <<-EOSQL
   CREATE DATABASE :DATABASE

@@ -1,0 +1,27 @@
+---
+version: '2.4'
+
+services:
+  manage-case-assignment:
+    image:  'hmctspublic.azurecr.io/aac/manage-case-assignment:latest'
+    environment:
+      IDAM_API_URL: http://idam-api:5000
+      IDAM_OIDC_URL: http://idam-web-public:8080
+      S2S_URL: http://service-auth-provider-api:8080
+      MANAGE_CASE_S2S_AUTHORISED_SERVICES: ccd_gw,xui_webapp
+      CCD_DATA_STORE_API_BASE_URL: http://ccd-data-store-api:4452
+      PRD_HOST: http://rd-professional-api:8090
+      MANAGE_CASE_S2S_KEY: "${IDAM_KEY_CASE_ASSIGNMENT}"
+      IDAM_CLIENT_SECRET: "${OAUTH2_CLIENT_CASE_ASSIGNMENT}"
+      NOTIFY_MCA_API_KEY: notify-test-api-key
+      IDAM_SYSTEM_USER_USERNAME: caseworker-caa@mailnesia.com
+      IDAM_SYSTEM_USER_PASSWORD: Password12!
+      ROOT_LOGGING_LEVEL: debug
+      MCA_DS_PROXY_URLS_ALLOWED_LIST: /searchCases.*,/internal/searchCases.*
+    ports:
+      - 4454:4454
+    networks:
+      - ccd-network
+networks:
+  ccd-network:
+    external: true

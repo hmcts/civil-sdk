@@ -10,7 +10,7 @@ services:
       XUI_ENV: local
 
       SERVICES_CCD_COMPONENT_API: http://ccd-api-gateway:3453
-      SERVICES_CCD_DATA_STORE_API: http://localhost:4452
+      SERVICES_CCD_DATA_STORE_API: http://ccd-data-store-api:4452
       SERVICES_DOCUMENTS_API: http://dm-store:8080
       SERVICES_S2S: http://service-auth-provider-api:8080
       SERVICES_IDAM_LOGIN_URL: "${IDAM_STUB_LOCALHOST:-http://localhost:3501}"
@@ -19,6 +19,7 @@ services:
       SERVICES_IDAM_OAUTH_CALLBACK_URL: /oauth2/callback
       SERVICES_IDAM_CLIENT_ID: xui_webapp
       SERVICES_PAYMENTS_URL: http://wiremock:8080
+      SERVICES_PRD_API: http://wiremock:8080
 
       SERVICES_EM_ANNO_API: http://ccd-api-gateway:3453
       REDISCLOUD_URL: http://dummyrediscloudurl

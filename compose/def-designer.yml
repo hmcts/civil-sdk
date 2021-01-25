@@ -42,7 +42,7 @@ services:
       - ccd-user-profile-api
     networks:
       - ccd-network
-      
+
 networks:
   ccd-network:
-    external: true      
+    external: true

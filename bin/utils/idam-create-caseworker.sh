@@ -21,8 +21,8 @@ create_user_request() {
           "levelOfAccess":1,
           "roles": [
             '"${rolesJson}"'
-          ],
-          "userGroup": {"code": "caseworker"}}
+          ]
+          }
         '
   )
 
