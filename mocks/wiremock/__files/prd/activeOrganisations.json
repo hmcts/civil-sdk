@@ -24,35 +24,34 @@
       "email": "civil.damages.claims+organisation.2.superuser@gmail.com"
     },
     "paymentAccount": [
-      "PBA1234589"
+      "PBA0077597",
+      "PBA0078094"
     ]
   },
   {
     "name": "Civil Damages Claims - Organisation 1",
-    "organisationIdentifier": "M9VLW61",
+    "organisationIdentifier": "0FA7S8S",
     "contactInformation": [
       {
-        "addressLine1": "25, SEATON DRIVE",
+        "addressLine1": "38 Delisle Road",
         "addressLine2": null,
         "addressLine3": null,
-        "townCity": "NORTHAMPTON",
-        "county": null,
+        "townCity": "London",
+        "county": "London",
         "country": null,
-        "postCode": "NN3 9SS",
-        "dxAddress": [
-
-        ]
+        "postCode": "SE28 0JE",
+        "dxAddress": []
       }
     ],
     "status": "ACTIVE",
     "sraRegulated": false,
     "superUser": {
-      "firstName": "Civil Damages Claims",
-      "lastName": "Organisation 1",
+      "firstName": "civil damages claims",
+      "lastName": "organisation 1",
       "email": "civil.damages.claims+organisation.1.superuser@gmail.com"
     },
     "paymentAccount": [
-      "PBA1234539"
+      "PBA1234999"
     ]
   }
 ]
