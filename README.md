@@ -63,6 +63,11 @@ To add users:
 
 `IDAM_ADMIN_USER` and `IDAM_ADMIN_PASSWORD` details can be found on confluence.
 
+To process and import ccd definition from `civil-damages-ccd-definition` repo:
+```
+./bin/process-and-import-ccd-definition.sh
+```
+
 To enable stubbing of the ```PROXY_PAYMENTS``` set the ```PROXY_PAYMENTS_STUB``` environment variable to the desired url.
 
 ## Elastic search
@@ -181,6 +186,19 @@ Within Cockpit you can find information around deployed processes.
 The easiest way to deploy a process is via the Camunda Modeler and setting the REST endpoint value to
 `http://localhost:9404/engine-rest`. However this can also be done via the REST API. You can find full documentation of the
 REST API [here.](https://docs.camunda.org/manual/latest/reference/rest/)
+
+### Deployments
+
+To delete all deployments and process instances from your local env run the script:
+
+```
+./bin/reset-camunda.sh
+```
+
+To deploy new bpmn diagrams stored in `civil-damages-camunda-bpmn-definition` repo run the script:
+```
+./bin/import-bpmn-diagram.sh
+```
 
 ----
 
