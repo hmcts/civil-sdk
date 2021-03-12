@@ -7,5 +7,6 @@
   {"email": "civil-system-update@mailnesia.com", "roles": "caseworker,caseworker-civil,caseworker-civil-systemupdate", "lastName": "System-update"},
   {"email": "caseworker-caa@mailnesia.com", "roles": "caseworker,caseworker-caa", "lastName": "caseworker-caa-manager"},
   {"email": "organisation-approver@mailnesia.com", "roles": "prd-admin", "lastName": "Org-approver"},
-  {"email": "civil-damages-admin@mailnesia.com", "roles": "caseworker,caseworker-civil,caseworker-civil-admin", "lastName": "Admin"}
+  {"email": "civil-damages-admin@mailnesia.com", "roles": "caseworker,caseworker-civil,caseworker-civil-admin", "lastName": "Admin"},
+  {"email": "civil.damages.prd.admin@example.com", "roles": "prd-admin", "lastName": "prd-admin"}
 ]
