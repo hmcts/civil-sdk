@@ -6,5 +6,7 @@
   {"email": "civil.damages.claims+organisation.2.solicitor.1@gmail.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager", "lastName": "Defendant-solicitor"},
   {"email": "civil-system-update@mailnesia.com", "roles": "caseworker,caseworker-civil,caseworker-civil-systemupdate", "lastName": "System-update"},
   {"email": "caseworker-caa@mailnesia.com", "roles": "caseworker,caseworker-caa", "lastName": "caseworker-caa-manager"},
-  {"email": "organisation-approver@mailnesia.com", "roles": "prd-admin", "lastName": "Org-approver"}
+  {"email": "organisation-approver@mailnesia.com", "roles": "prd-admin", "lastName": "Org-approver"},
+  {"email": "civil-damages-admin@mailnesia.com", "roles": "caseworker,caseworker-civil,caseworker-civil-admin", "lastName": "Admin"},
+  {"email": "civil.damages.prd.admin@example.com", "roles": "prd-admin", "lastName": "prd-admin"}
 ]

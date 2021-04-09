@@ -34,6 +34,9 @@ Pulling latest Docker images:
 ```bash
 ./ccd compose pull
 ```
+You will need to add the docmosis API key to the `docmosis.yml` file found in `compose/docmosis.yml`, or export the `DOCMOSIS_KEY` variable in your `~/.zshrc` file.
+
+To generate a new API key [click here](https://www.docmosis.com/products/tornado/try.html).
 
 Creating and starting the containers:
 

@@ -8,6 +8,6 @@
     "headers": {
       "Content-Type": "application/json"
     },
-    "bodyFileName": "prd/organisation.json"
+    "bodyFileName": "prd/organisation1.json"
   }
 }
