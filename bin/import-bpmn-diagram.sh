@@ -24,7 +24,8 @@ do
     ${CAMUNDA_BASE_URL:-http://localhost:9404}/engine-rest/deployment/create \
     -H "Accept: application/json" \
     -H "ServiceAuthorization: Bearer ${serviceToken}" \
-    -F "deployment-name=$(date +"%Y%m%d-%H%M%S")-${filename}" \
+    -F "deployment-name=${filename}" \
+    -F "deploy-changed-only=true" \
     -F "file=@${filePath}")
 
   uploadHttpCode=$(echo "$uploadResponse" | tail -n1)
