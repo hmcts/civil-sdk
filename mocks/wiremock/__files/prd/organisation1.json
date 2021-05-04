@@ -1,5 +1,5 @@
 {
-  "name": "Civil Damages Claims - Organisation 1",
+  "name": "Civil - Organisation 1",
   "organisationIdentifier": "0FA7S8S",
   "contactInformation": [
     {
@@ -16,9 +16,9 @@
   "status": "ACTIVE",
   "sraRegulated": false,
   "superUser": {
-    "firstName": "Civil Damages Claims",
+    "firstName": "Civil",
     "lastName": "Organisation 1",
-    "email": "civil.damages.claims+organisation.1.superuser@gmail.com"
+    "email": "civil+organisation.1.superuser@gmail.com"
   },
   "paymentAccount": [
     "PBA0077597",

@@ -1,4 +1,4 @@
-# Civil claims customised version of CCD Docker :whale:
+# Civil customised version of CCD Docker :whale:
 
 - [Prerequisites](#prerequisites)
 - [Quick start](#quick-start)

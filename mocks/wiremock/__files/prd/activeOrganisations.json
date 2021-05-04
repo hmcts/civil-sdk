@@ -1,6 +1,6 @@
 [
   {
-    "name": "Civil Damages Claims - Organisation 2",
+    "name": "Civil - Organisation 2",
     "organisationIdentifier": "N5AFUXG",
     "contactInformation": [
       {
@@ -19,9 +19,9 @@
     "status": "ACTIVE",
     "sraRegulated": false,
     "superUser": {
-      "firstName": "Civil Damages Claims",
+      "firstName": "Civil",
       "lastName": "Organisation 2",
-      "email": "civil.damages.claims+organisation.2.superuser@gmail.com"
+      "email": "civil+organisation.2.superuser@gmail.com"
     },
     "paymentAccount": [
       "PBA0077597",
@@ -29,7 +29,7 @@
     ]
   },
   {
-    "name": "Civil Damages Claims - Organisation 1",
+    "name": "Civil - Organisation 1",
     "organisationIdentifier": "0FA7S8S",
     "contactInformation": [
       {
@@ -46,9 +46,9 @@
     "status": "ACTIVE",
     "sraRegulated": false,
     "superUser": {
-      "firstName": "civil damages claims",
+      "firstName": "civil",
       "lastName": "organisation 1",
-      "email": "civil.damages.claims+organisation.1.superuser@gmail.com"
+      "email": "civil+organisation.1.superuser@gmail.com"
     },
     "paymentAccount": [
       "PBA1234999"
