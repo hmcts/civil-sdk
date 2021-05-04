@@ -1,4 +1,4 @@
-# Unspecified civil claims customised version of CCD Docker :whale:
+# Civil claims customised version of CCD Docker :whale:
 
 - [Prerequisites](#prerequisites)
 - [Quick start](#quick-start)
@@ -66,7 +66,7 @@ To add users:
 
 `IDAM_ADMIN_USER` and `IDAM_ADMIN_PASSWORD` details can be found on confluence.
 
-To process and import ccd definition from `civil-damages-ccd-definition` repo:
+To process and import ccd definition from `civil-ccd-definition` repo:
 ```
 ./bin/process-and-import-ccd-definition.sh
 ```
@@ -198,7 +198,7 @@ To delete all deployments and process instances from your local env run the scri
 ./bin/reset-camunda.sh
 ```
 
-To deploy new bpmn diagrams stored in `civil-damages-camunda-bpmn-definition` repo run the script:
+To deploy new bpmn diagrams stored in `civil-camunda-bpmn-definition` repo run the script:
 ```
 ./bin/import-bpmn-diagram.sh
 ```
@@ -216,12 +216,12 @@ Add following line to your `/etc/hosts`:
 ### Enable stub
 To use Idam stub instead of real service follow the steps:
 
-- Make sure you are in root directory (`civil-unspecified-docker`)
+- Make sure you are in root directory (`civil-sdk`)
 - Run the command to enable stub and rebuild local environment:
 ```
 export IDAM_STUB_ENABLED=true && ./bin/toggle-idam-stub.sh
 ```
-- Run unspec-service with profiles:
+- Run civil-service with profiles:
 ```
 spring.profiles.active=local,idam-stub
 ```
@@ -238,7 +238,7 @@ export IDAM_STUB_ENABLED=true
 unset IDAM_STUB_ENABLED && ./bin/toggle-idam-stub.sh
 ```
 
-- Run unspec-service with the following profiles:
+- Run civil-service with the following profiles:
  ```
  spring.profiles.active=local
  ```

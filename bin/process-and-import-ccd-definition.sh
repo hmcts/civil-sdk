@@ -4,15 +4,15 @@ set -eu
 
 scriptPath=$(dirname $(realpath $0))
 basePath=$(dirname $(dirname $scriptPath))
-ccdDefinitionRepoPath=$basePath/civil-damages-ccd-definition
+ccdDefinitionRepoPath=$basePath/civil-ccd-definition
 
 ccdDefinitionPath=$ccdDefinitionRepoPath/ccd-definition
-definitionOutputFile="${ccdDefinitionRepoPath}/build/ccd-development-config/ccd-unspec-dev.xlsx"
+definitionOutputFile="${ccdDefinitionRepoPath}/build/ccd-development-config/ccd-civil-dev.xlsx"
 params="$@"
 
 cd $basePath
-if [[ ! -d civil-damages-service || ! -d civil-damages-ccd-definition || ! -d civil-damages-camunda-bpmn-definition ]]; then
-  echo "Error: make sure all civil-damages repos are in the same directory"
+if [[ ! -d civil-service || ! -d civil-ccd-definition || ! -d civil-camunda-bpmn-definition ]]; then
+  echo "Error: make sure all civil repos are in the same directory"
   exit 1
 fi
 
