@@ -4,16 +4,16 @@ set -eu
 
 scriptPath=$(dirname $(realpath $0))
 basePath=$(dirname $(dirname $scriptPath))
-camundaDiagramsPath=$basePath/civil-damages-camunda-bpmn-definition/src/main/resources/camunda
+camundaDiagramsPath=$basePath/civil-camunda-bpmn-definition/src/main/resources/camunda
 
 cd $basePath
-if [[ ! -d civil-damages-service || ! -d civil-damages-ccd-definition || ! -d civil-damages-camunda-bpmn-definition ]]; then
-  echo "Error: make sure all civil-damages repos are in the same directory"
+if [[ ! -d civil-service || ! -d civil-ccd-definition || ! -d civil-camunda-bpmn-definition ]]; then
+  echo "Error: make sure all civil repos are in the same directory"
   exit 1
 fi
 
 cd $scriptPath
-serviceToken=$(utils/idam-lease-service-token.sh unspec_service \
+serviceToken=$(utils/idam-lease-service-token.sh civil_service \
   $(docker run --rm toolbelt/oathtool --totp -b ${S2S_SECRET:-AABBCCDDEEFFGGHH}))
 
 cd $camundaDiagramsPath

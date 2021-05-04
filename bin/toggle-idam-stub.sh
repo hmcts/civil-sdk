@@ -14,7 +14,7 @@ commentLine() {
   sed  -i '' -e "/${matchingText}/s/^/#/g" ${filename}
 }
 
-./ccd enable backend frontend dm-store sidam sidam-local sidam-local-ccd xui unspec docmosis camunda
+./ccd enable backend frontend dm-store sidam sidam-local sidam-local-ccd xui civil docmosis camunda
 
 if [ ${IDAM_STUB_ENABLED:-false} == "true" ]; then
   ./ccd disable sidam sidam-local sidam-local-ccd
