@@ -21,7 +21,7 @@
     "superUser": {
       "firstName": "Civil",
       "lastName": "Organisation 2",
-      "email": "civil+organisation.2.superuser@gmail.com"
+      "email": "hmcts.civil+organisation.2.superuser@gmail.com"
     },
     "paymentAccount": [
       "PBA0077597",
@@ -48,7 +48,7 @@
     "superUser": {
       "firstName": "civil",
       "lastName": "organisation 1",
-      "email": "civil+organisation.1.superuser@gmail.com"
+      "email": "hmcts.civil+organisation.1.superuser@gmail.com"
     },
     "paymentAccount": [
       "PBA1234999"
