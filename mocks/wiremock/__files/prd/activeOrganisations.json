@@ -1,7 +1,7 @@
 [
   {
     "name": "Civil - Organisation 2",
-    "organisationIdentifier": "N5AFUXG",
+    "organisationIdentifier": "79ZRSOU",
     "contactInformation": [
       {
         "addressLine1": "29, SEATON DRIVE",
@@ -24,13 +24,12 @@
       "email": "hmcts.civil+organisation.2.superuser@gmail.com"
     },
     "paymentAccount": [
-      "PBA0077597",
-      "PBA0078094"
+      "PBA1234999"
     ]
   },
   {
     "name": "Civil - Organisation 1",
-    "organisationIdentifier": "0FA7S8S",
+    "organisationIdentifier": "Q1KOKP2",
     "contactInformation": [
       {
         "addressLine1": "38 Delisle Road",
@@ -51,7 +50,8 @@
       "email": "hmcts.civil+organisation.1.superuser@gmail.com"
     },
     "paymentAccount": [
-      "PBA1234999"
+      "PBA0088192",
+      "PBA0078094"
     ]
   }
 ]
