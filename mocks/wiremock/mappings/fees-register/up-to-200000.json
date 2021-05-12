@@ -28,6 +28,6 @@
     "headers": {
       "Content-Type": "application/json"
     },
-    "body": "{\"code\": \"FEE0209\", \"description\": \"Civil Court fees - Money Claims - Claim Amount - 10000.01 up to 200000 GBP.\", \"version\": 1, \"fee_amount\": 1500.00}"
+    "body": "{\"code\": \"FEE0209\", \"description\": \"Civil Court fees - Money Claims - Claim Amount - 10000.01 up to 200000 GBP.\", \"version\": 3, \"fee_amount\": 1500.00}"
   }
 }
