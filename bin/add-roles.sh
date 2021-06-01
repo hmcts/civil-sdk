@@ -17,7 +17,7 @@ ${dir}/utils/ccd-add-role.sh "caseworker-civil"
 ${dir}/utils/ccd-add-role.sh "caseworker-caa"
 ${dir}/utils/ccd-add-role.sh "caseworker-approver"
 
-roles=("solicitor" "systemupdate" "admin")
+roles=("solicitor" "systemupdate" "admin" "staff")
 for role in "${roles[@]}"
 do
   ${dir}/utils/idam-add-role.sh "caseworker-civil-${role}"
@@ -48,3 +48,5 @@ ${dir}/utils/idam-add-role.sh "caseworker-divorce-financialremedy-solicitor"
 
 prdRoles=('"caseworker"','"caseworker-caa"','"caseworker-divorce"','"caseworker-divorce-solicitor"','"caseworker-divorce-financialremedy"','"caseworker-divorce-financialremedy-solicitor"','"caseworker-probate"','"caseworker-ia"','"caseworker-probate-solicitor"','"caseworker-publiclaw"','"caseworker-ia-legalrep-solicitor"','"caseworker-publiclaw-solicitor"','"caseworker-civil"','"caseworker-civil-solicitor"','"xui-approver-userdata"','"pui-caa"','"prd-admin"','"pui-case-manager"','"pui-finance-manager"','"pui-organisation-manager"','"pui-user-manager"')
 ${dir}/utils/idam-add-role.sh "prd-admin" "${prdRoles[@]}"
+${dir}/utils/idam-add-role.sh "payments"
+${dir}/utils/ccd-add-role.sh "payments"
