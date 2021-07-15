@@ -1,10 +1,10 @@
 # Civil customised version of CCD Docker :whale:
->>>>>>> f968439a28487bd63cb90966fe1124a2a95abeff
 
 - [Prerequisites](#prerequisites)
 - [Quick start](#quick-start)
 - [Elastic search](#elastic-search)
 - [Camunda](#camunda)
+- [Useful scripts](#useful-scripts)
 - [License](#license)
 
 ## Prerequisites
@@ -16,15 +16,10 @@
 - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) - minimum version 2.0.57
 - [jq Json Processor](https://stedolan.github.io/jq)
 
-## Sync with ccd-docker
-```bash
-git pull git@github.com:hmcts/ccd-docker.git master
-```
-
 ## Quick start
 Login to the Azure Container registry:
 
-```bash
+```
 ./ccd login
 ```
 Note:
@@ -32,9 +27,18 @@ if you experience any error with the above command, try `az login` first
 
 Pulling latest Docker images:
 
-```bash
+```
 ./ccd compose pull
 ```
+
+If you're seeing errors when pulling images, run the following command:
+
+```
+ az acr login --name hmctspublic --subscription 8999dec3-0104-4a27-94ee-6588559729d1
+```
+
+and try pulling images again.
+
 You will need to add the docmosis API key to the `docmosis.yml` file found in `compose/docmosis.yml`, or export the `DOCMOSIS_KEY` variable in your `~/.zshrc` file.
 
 To generate a new API key [click here](https://www.docmosis.com/products/tornado/try.html).
@@ -201,7 +205,7 @@ To delete all deployments and process instances from your local env run the scri
 
 To deploy new bpmn diagrams stored in `civil-camunda-bpmn-definition` repo run the script:
 ```
-./bin/import-bpmn-diagram.sh
+./bin/import-bpmn-diagram.sh .
 ```
 
 ----
@@ -246,7 +250,52 @@ unset IDAM_STUB_ENABLED && ./bin/toggle-idam-stub.sh
 
 ----
 
-This project should aim to keep upto date with the [base CCD Docker project](https://github.com/hmcts/ccd-docker)
+## Useful scripts
+
+### Reset local wiremock mappings
+
+```
+curl -X DELETE http://localhost:8765/__admin/mappings && curl -X POST http://localhost:8765/__admin/mappings/reset
+```
+
+### Connect to preview database
+
+```
+k port-forward {YOUR_PR_POSTGRES_POD} -n civil 9999:5432
+```
+
+Example:
+
+```
+k port-forward civil-service-pr-168-postgresql-0 -n civil 9999:5432
+```
+
+After running the command you can connect to `postgres` database on `localhost:9999` with `hmcts` user and password.
+
+### Remove stuck PR
+
+```
+./bin/remove-stuck-pr {REPOSITORY} {PR_NUMBER}
+```
+
+Example:
+
+```
+./bin/remove-stuck-pr service 165
+```
+
+### Run tests against AAT
+
+```
+./run-tests-aat.sh {S2S_SECRET} {TEST_TYPE} {SHOW_BROWSER_WINDOW}
+```
+
+S2S secret needs to be provided, it's microservicekey-civil-service from civil-aat vault. Example:
+
+```
+./run-tests-aat.sh SECRET_FROM_AAT_VAULT e2e true
+```
+
 
 ## LICENSE
 
