@@ -5,12 +5,15 @@ services:
   ccd-api-gateway:
     environment:
       PROXY_DOCUMENT_MANAGEMENT: http://dm-store:8080
+      TIMEOUT: 35000
+
     depends_on:
       - dm-store
 
   ccd-data-store-api:
     environment:
       CCD_DM_DOMAIN: http://dm-store:8080
+      TIMEOUT: 35000
 
   service-auth-provider-api:
     environment:
@@ -22,6 +25,7 @@ services:
       disable: true
     environment:
       SERVER_PORT: 8080
+      TIMEOUT: 35000
       IDAM_SUPERUSER_EMAIL:
       IDAM_SECRET_KEY: "${IDAM_KEY_DM_STORE}"
       GOV_NOTIFY_API_KEY:
