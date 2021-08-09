@@ -6,16 +6,16 @@
         "urlPath": "/credit-account-payments",
         "bodyPatterns": [
           {
-            "contains": "\"PBA0079005\""
+            "contains": "\"PBA0077597\""
           }
         ]
       },
       "response": {
-        "status": 404,
+        "status": 403,
         "headers": {
           "Content-Type": "application/json"
         },
-        "body": "Account information could not be found"
+        "bodyFileName": "payment/accountOnFailedResponse.json"
       }
     }
   ]

@@ -1,7 +1,12 @@
 {
   "request": {
     "method": "GET",
-    "urlPath": "/refdata/external/v1/organisations"
+    "urlPath": "/refdata/internal/v1/organisations",
+    "queryParameters": {
+      "id": {
+        "equalTo": "H2156A0"
+      }
+    }
   },
   "response": {
     "status": 200,
