@@ -90,6 +90,12 @@ To add users:
 
 `IDAM_ADMIN_USER` and `IDAM_ADMIN_PASSWORD` details can be found on Confluence.
 
+To add role assignments:
+
+```shell
+./bin/add-role-assignments.sh
+```
+
 8. Process and import ccd definition from `civil-ccd-definition` repo
 
 **Note:** These next scripts requires you to have the other civil repositories cloned to the same directory so if you

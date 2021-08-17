@@ -70,12 +70,14 @@ services:
       DATA_STORE_DB_USE_SSL: "${DB_USE_SSL}"
       DATA_STORE_IDAM_KEY: "${IDAM_KEY_CCD_DATA_STORE}"
       DATA_STORE_TOKEN_SECRET: iuasbcuasdcbasdgcasdgcuysachjsacyasdgjcgasdj
-      DATA_STORE_S2S_AUTHORISED_SERVICES: ccd_gw,ccd_gateway,civil_service,ccd_data,ccd_ps,xui_webapp,aac_manage_case_assignment
+      DATA_STORE_S2S_AUTHORISED_SERVICES: ccd_gw,ccd_gateway,civil_service,ccd_data,ccd_ps,aac_manage_case_assignment,xui_webapp,ccd_case_document_am_api,am_role_assignment_service
       DEFINITION_STORE_HOST: http://ccd-definition-store-api:4451
       USER_PROFILE_HOST: http://ccd-user-profile-api:4453
       IDAM_API_BASE_URL: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}"
-      IDAM_OIDC_URL: http://idam-web-public:8080
+      IDAM_USER_URL: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}" # For backward compatibility with older images
+      IDAM_OIDC_URL: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}"
       IDAM_S2S_URL: http://service-auth-provider-api:8080
+      IDAM_OAUTH2_DATA_STORE_CLIENT_SECRET: idam_data_store_client_secret
       REFORM_SERVICE_NAME: ccd-data-store-api
       REFORM_TEAM: ccd
       REFORM_ENVIRONMENT: local
@@ -86,6 +88,11 @@ services:
       CCD_DEFAULTPRINTURL: https://return-case-doc-ccd.nonprod.platform.hmcts.net/jurisdictions/:jid/case-types/:ctid/cases/:cid
       CCD_S2S_AUTHORISED_SERVICES_CASE_USER_ROLES: civil_service,aac_manage_case_assignment
       DATA_STORE_CROSS_JURISDICTIONAL_ROLES: caseworker-caa,caseworker-civil-systemupdate
+      CASE_DOCUMENT_AM_URL: http://ccd-case-document-am-api:4455
+      ROLE_ASSIGNMENT_URL: "${ROLE_ASSIGNMENT_URL:-http://am-role-assignment-service:4096}"
+      IDAM_DATA_STORE_SYSTEM_USER_USERNAME: ccd-system-user@mailinator.com
+      IDAM_DATA_STORE_SYSTEM_USER_PASSWORD: Password12!
+      CASE_DOCUMENT_AM_API_ATTACH_DOCUMENT_ENABLED: "false"
       # Uncomment this line to enable JVM debugging and uncomment the port mapping below
       # JAVA_TOOL_OPTIONS: '-XX:InitialRAMPercentage=30.0 -XX:MaxRAMPercentage=65.0 -XX:MinRAMPercentage=30.0 -XX:+UseConcMarkSweepGC -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005'
     ports:
@@ -101,6 +108,56 @@ services:
       ccd-user-profile-api:
         condition: service_started
       ccd-definition-store-api:
+        condition: service_started
+    networks:
+      - ccd-network
+
+  am-role-assignment-service:
+    image: "${AM_ROLE_ASSIGNMENT_SERVICE_USE_LOCAL-hmctspublic.azurecr.io/}am/role-assignment-service:${AM_ROLE_ASSIGNMENT_SERVICE_TAG:-latest}"
+    environment:
+      ROLE_ASSIGNMENT_DB_HOST: "${CCD_POSTGRES_11:-ccd-shared-database}"
+      ROLE_ASSIGNMENT_DB_NAME: role_assignment
+      ROLE_ASSIGNMENT_DB_PORT: 5432
+      ROLE_ASSIGNMENT_DB_USERNAME: "${DB_USERNAME}"
+      ROLE_ASSIGNMENT_DB_PASSWORD: "${DB_PASSWORD}"
+      ROLE_ASSIGNMENT_DB_OPTIONS:
+      AM_ROLE_ASSIGNMENT_SERVICE_SECRET: "${IDAM_KEY_AM_ROLE_ASSIGNMENT}"
+      LD_SDK_KEY:
+      ROLE_ASSIGNMENT_IDAM_KEY:
+      ROLE_ASSIGNMENT_TOKEN_SECRET:
+      ROLE_ASSIGNMENT_S2S_AUTHORISED_SERVICES: ccd_gw,am_role_assignment_service,am_org_role_mapping_service,wa_task_management_api,xui_webapp,ccd_data
+      IDAM_USER_URL: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}"
+      IDAM_S2S_URL: http://service-auth-provider-api:8080
+      OPEN_ID_API_BASE_URI: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}/o"
+      OIDC_ISSUER_URL: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}/openam/oauth2/hmcts"
+      ROLE_ASSIGNMENT_IDAM_CLIENT_ID: am_role_assignment
+      ROLE_ASSIGNMENT_IDAM_CLIENT_SECRET: am_role_assignment_secret
+      ROLE_ASSIGNMENT_IDAM_ADMIN_USERID: role.assignment.admin@gmail.com
+      ROLE_ASSIGNMENT_IDAM_ADMIN_PASSWORD: "${AM_ROLE_AADMINGMENT_ADMIN_PWD:-Pa55word11}"
+      ROLE_ASSIGNMENT_IDAM_ADMIN_SCOPE: profile openid roles search-user
+      CCD_DATA_STORE_URL: http://ccd-data-store-api:4452
+      AZURE_APPLICATIONINSIGHTS_INSTRUMENTATIONKEY: key
+      REFORM_SERVICE_NAME: am-role-assignment-service
+      REFORM_TEAM: am
+      REFORM_ENVIRONMENT: local
+      # Uncomment this line to enable JVM debugging and uncomment the port mapping below
+      #  JAVA_TOOL_OPTIONS: -XX:InitialRAMPercentage=30.0 -XX:MaxRAMPercentage=65.0 -XX:MinRAMPercentage=30.0 -XX:+UseConcMarkSweepGC -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005
+    ports:
+      - 4096:4096
+      # Uncomment this and the JAVA_TOOL_OPTIONS flag for JVM debugging
+      # - 5005:5005
+    depends_on:
+      # Uncomment this line to enable ccd test stub service
+      #     ccd-test-stubs-service:
+      #       condition: service_started
+      idam-api:
+        condition: service_started
+      ccd-shared-database:
+        condition: service_started
+      # Uncomment this line to enable ccd-shared-database with Postgres version 11
+      #      ccd-shared-database-v11:
+      #        condition: service_started
+      ccd-data-store-api:
         condition: service_started
     networks:
       - ccd-network
@@ -126,6 +183,8 @@ services:
       MICROSERVICEKEYS_AAC_MANAGE_CASE_ASSIGNMENT: "${IDAM_KEY_CASE_ASSIGNMENT}"
       MICROSERVICEKEYS_RD_PROFESSIONAL_API: "${OAUTH2_CLIENT_RD_PROFESSIONAL}"
       MICROSERVICEKEYS_RD_USER_PROFILE_API: "${OAUTH2_CLIENT_RD_USER_PROFILE}"
+      MICROSERVICEKEYS_AM_ROLE_ASSIGNMENT_SERVICE: "${IDAM_KEY_AM_ROLE_ASSIGNMENT}"
+      MICROSERVICEKEYS_CCD_CASE_DOCUMENT_AM_API: "${IDAM_KEY_CASE_DOCUMENT}"
       TESTING_SUPPORT_ENABLED: "true"
     networks:
       - ccd-network
