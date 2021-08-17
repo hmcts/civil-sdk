@@ -11,5 +11,6 @@
   {"email": "organisation-approver@mailnesia.com", "roles": "prd-admin", "lastName": "Org-approver"},
   {"email": "civil-admin@mailnesia.com", "roles": "caseworker,caseworker-civil,caseworker-civil-admin", "lastName": "Admin"},
   {"email": "civil-staff@mailnesia.com", "roles": "caseworker,caseworker-civil,caseworker-civil-staff,payments", "lastName": "Staff"},
-  {"email": "civil.prd.admin@example.com", "roles": "prd-admin", "lastName": "prd-admin"}
+  {"email": "civil.prd.admin@example.com", "roles": "prd-admin", "lastName": "prd-admin"},
+  {"email": "ccd-system-user@mailinator.com", "roles": "caseworker", "lastName": "(ccd-sys-user)"}
 ]
