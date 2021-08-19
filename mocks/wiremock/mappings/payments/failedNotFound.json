@@ -11,11 +11,11 @@
         ]
       },
       "response": {
-        "status": 403,
+        "status": 400,
         "headers": {
           "Content-Type": "application/json"
         },
-        "bodyFileName": "payment/accountOnFailedResponse.json"
+        "body": "Duplicate Payment"
       }
     }
   ]

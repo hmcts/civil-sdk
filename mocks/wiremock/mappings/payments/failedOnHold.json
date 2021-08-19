@@ -6,7 +6,7 @@
         "urlPath": "/credit-account-payments",
         "bodyPatterns": [
           {
-            "contains": "\"PBA0078095\""
+            "contains": "\"PBA0078094\""
           }
         ]
       },
