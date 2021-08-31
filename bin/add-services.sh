@@ -19,3 +19,7 @@ ${dir}/utils/idam-create-service.sh "aac_manage_case_assignment" "aac_manage_cas
 ${dir}/utils/idam-create-service.sh "rd_professional_api" "rd_professional_api" "OOOOOOOOOOOOOOOO" "https://rd_professional_api/oauth2redirect" "false" "openid profile roles create-user manage-user search-user"
 
 ${dir}/utils/idam-create-service.sh "rd_user_profile_api" "rd_user_profile_api" "OOOOOOOOOOOOOOOO" "https://rd_user_profile_api/oauth2redirect" "false" "openid profile roles create-user manage-user search-user"
+
+${dir}/utils/idam-create-service.sh "am_role_assignment" "am_role_assignment" "am_role_assignment_secret" "http://localhost:4096/oauth2redirect" "false" "profile openid roles search-user"
+
+${dir}/utils/idam-create-service.sh "ccd_data_store_api" "ccd_data_store_api" "idam_data_store_client_secret" "http://ccd-data-store-api/oauth2redirect" "false" "profile openid roles manage-user"
