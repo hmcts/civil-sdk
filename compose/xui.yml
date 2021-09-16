@@ -23,6 +23,7 @@ services:
 
       SERVICES_EM_ANNO_API: http://ccd-api-gateway:3453
       REDISCLOUD_URL: http://dummyrediscloudurl
+      SERVICES_ROLE_ASSIGNMENT_API: http://am-role-assignment-service:4096
 
       #LAUNCH_DARKLY_CLIENT_ID must be set to enable share a case functionality
       LAUNCH_DARKLY_CLIENT_ID: dummy
