@@ -50,7 +50,7 @@ services:
       # Uncomment this and the JAVA_TOOL_OPTIONS flag for JVM debugging
       # - 5005:5005
     depends_on:
-# Replace idam-api with ccd-test-stubs-service to enable ccd test stub service
+      # Replace idam-api with ccd-test-stubs-service to enable ccd test stub service
       idam-api:
         condition: service_started
       ccd-shared-database:
@@ -65,12 +65,13 @@ services:
     environment:
       DATA_STORE_DB_HOST: ccd-shared-database
       DATA_STORE_DB_PORT: 5432
+      TIMEOUT: 75000
       DATA_STORE_DB_USERNAME: "${DB_USERNAME}"
       DATA_STORE_DB_PASSWORD: "${DB_PASSWORD}"
       DATA_STORE_DB_USE_SSL: "${DB_USE_SSL}"
       DATA_STORE_IDAM_KEY: "${IDAM_KEY_CCD_DATA_STORE}"
       DATA_STORE_TOKEN_SECRET: iuasbcuasdcbasdgcasdgcuysachjsacyasdgjcgasdj
-      DATA_STORE_S2S_AUTHORISED_SERVICES: ccd_gw,ccd_gateway,civil_service,ccd_data,ccd_ps,aac_manage_case_assignment,xui_webapp,ccd_case_document_am_api,am_role_assignment_service
+      DATA_STORE_S2S_AUTHORISED_SERVICES: ccd_gw,ccd_gateway,fpl_case_service,ccd_data,ccd_ps,aac_manage_case_assignment,xui_webapp,ccd_case_document_am_api,am_role_assignment_service,civil_service,stitching-api
       DEFINITION_STORE_HOST: http://ccd-definition-store-api:4451
       USER_PROFILE_HOST: http://ccd-user-profile-api:4453
       IDAM_API_BASE_URL: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}"
@@ -96,6 +97,9 @@ services:
       CASE_DOCUMENT_AM_API_ATTACH_DOCUMENT_ENABLED: "false"
       DATA_STORE_DEFAULT_LOG_LEVEL: info
       CCD_MULTIPARTY_FIX_ENABLED: "true"
+      IDAM_CLIENT_REDIRECT_URI: http://ccd-data-store-api/oauth2redirect
+      IDAM_CLIENT_SCOPE: profile openid roles manage-user
+      IDAM_CLIENT_ID: ccd_data_store_api
       # Uncomment this line to enable JVM debugging and uncomment the port mapping below
       # JAVA_TOOL_OPTIONS: '-XX:InitialRAMPercentage=30.0 -XX:MaxRAMPercentage=65.0 -XX:MinRAMPercentage=30.0 -XX:+UseConcMarkSweepGC -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005'
     ports:
@@ -103,7 +107,7 @@ services:
       # Uncomment this and the JAVA_TOOL_OPTIONS flag for JVM debugging
       # - 5005:5005
     depends_on:
-# Replace idam-api with ccd-test-stubs-service to enable ccd test stub service
+      # Replace idam-api with ccd-test-stubs-service to enable ccd test stub service
       idam-api:
         condition: service_started
       ccd-shared-database:
@@ -166,7 +170,7 @@ services:
       - ccd-network
 
   service-auth-provider-api:
-    image: "hmctspublic.azurecr.io/rpe/service-auth-provider:latest"
+    image: "hmctspublic.azurecr.io/rpe/service-auth-provider:prod-cf4a598-20211206083015"
     healthcheck:
       interval: 10s
       timeout: 10s
@@ -177,11 +181,15 @@ services:
       SERVER_PORT: 8080
       JWT_KEY: wThK0f0/lh3FlxFcL4xUWDMI5C1J9KyQBgXV4wseh1e5J1uYJIjvTvArHxQDrYoHJ23xFxjHkOnvNbR5dXRoxA==
       MICROSERVICEKEYS_CCD_DATA: "${IDAM_KEY_CCD_DATA_STORE}"
+      MICROSERVICEKEYS_EM_GW: AAAAAAAAAAAAAAAA
+      MICROSERVICEKEYS_EM_STITCHING_API: AAAAAAAAAAAAAAAA
+      MICROSERVICEKEYS_EM_CCD_ORCHESTRATOR: AAAAAAAAAAAAAAAA
       MICROSERVICEKEYS_CCD_GW: "${IDAM_KEY_CCD_GATEWAY}"
       MICROSERVICEKEYS_CCD_DEFINITION: "${IDAM_KEY_CCD_DEFINITION_STORE}"
       MICROSERVICEKEYS_CCD_ADMIN: "${IDAM_KEY_CCD_ADMIN}"
       MICROSERVICEKEYS_CCD_PS: "${IDAM_KEY_CCD_PS}"
       MICROSERVICEKEYS_CIVIL_SERVICE: "${IDAM_KEY_CIVIL_SERVICE}"
+      #MICROSERVICEKEYS_CCD_CASE_DOCUMENT_AM_API: "CNTOE7D2NX6XHBKT"
       MICROSERVICEKEYS_XUI_WEBAPP: "${IDAM_KEY_XUI_WEBAPP}"
       MICROSERVICEKEYS_AAC_MANAGE_CASE_ASSIGNMENT: "${IDAM_KEY_CASE_ASSIGNMENT}"
       MICROSERVICEKEYS_RD_PROFESSIONAL_API: "${OAUTH2_CLIENT_RD_PROFESSIONAL}"
@@ -206,6 +214,35 @@ services:
       - 5050:5432
     volumes:
       - ccd-docker-ccd-shared-database-data:/var/lib/postgresql/data
+    networks:
+      - ccd-network
+
+  ccd-case-document-am-api:
+    image: "${CCD_CASE_DOCUMENT_AM_API_USE_LOCAL-hmctspublic.azurecr.io/}ccd/case-document-am-api:${CCD_CASE_DOCUMENT_AM_API_TAG:-latest}"
+    environment:
+      CCD_DOCUMENT_API_IDAM_KEY: "CNTOE7D2NX6XHBKT"
+      CASE_DOCUMENT_AM_API_S2S_SECRET: "CNTOE7D2NX6XHBKT"
+      CASE_DOCUMENT_S2S_AUTHORISED_SERVICES: ccd_case_document_am_api,ccd_gw,xui_webapp,ccd_data,bulk_scan_processor,civil_service
+      IDAM_API_URL: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}"
+      IDAM_OIDC_URL: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}"
+      S2S_URL: http://service-auth-provider-api:8080
+      DM_STORE_BASE_URL: http://dm-store:8080
+      CCD_DATA_STORE_API_BASE_URL: http://ccd-data-store-api:4452
+      REFORM_SERVICE_NAME: ccd-case-document-am-api
+      REFORM_TEAM: ccd
+      REFORM_ENVIRONMENT: local
+      APPINSIGHTS_INSTRUMENTATIONKEY: key
+      DOCUMENT_TTL: 3600000
+      # Uncomment this line to enable JVM debugging and uncomment the port mapping below
+      # JAVA_TOOL_OPTIONS: '-XX:InitialRAMPercentage=30.0 -XX:MaxRAMPercentage=65.0 -XX:MinRAMPercentage=30.0 -XX:+UseConcMarkSweepGC -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005'
+    ports:
+      - 4455:4455
+      # Uncomment this and the JAVA_TOOL_OPTIONS flag for JVM debugging
+      # 5005:5005
+    depends_on:
+      - ccd-data-store-api
+      - dm-store
+      - service-auth-provider-api
     networks:
       - ccd-network
 

@@ -11,6 +11,7 @@ services:
   ccd-data-store-api:
     environment:
       CCD_DM_DOMAIN: http://dm-store:8080
+      TIMEOUT: 75000
 
   service-auth-provider-api:
     environment:
@@ -22,6 +23,7 @@ services:
       disable: true
     environment:
       SERVER_PORT: 8080
+      TIMEOUT: 75000
       IDAM_SUPERUSER_EMAIL:
       IDAM_SECRET_KEY: "${IDAM_KEY_DM_STORE}"
       GOV_NOTIFY_API_KEY:
@@ -29,6 +31,7 @@ services:
       SPRING_DATASOURCE_USERNAME: "${DB_USERNAME}"
       SPRING_DATASOURCE_PASSWORD: "${DB_PASSWORD}"
       ENABLE_AZURE_STORAGE_CONTAINER: "true"
+      ENABLE_METADATA_MIGRATION: "true"
       ENABLE_POSTGRES_BLOB_STORAGE: "false"
       STORAGEACCOUNT_PRIMARY_CONNECTION_STRING: "${STORAGEACCOUNT_PRIMARY_CONNECTION_STRING:-DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://azure-storage-emulator-azurite:10000/devstoreaccount1}"
       STORAGE_CONTAINER_DOCUMENT_CONTAINER_NAME: "${STORAGE_CONTAINER_DOCUMENT_CONTAINER_NAME:-hmctstestcontainer}"
@@ -36,10 +39,12 @@ services:
       BLOBSTORE_MIGRATE_CCD_PUBLIC_KEY: "${BLOBSTORE_MIGRATE_CCD_PUBLIC_KEY:-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDiQ//gc/G53d9dLCtf123fIYo49gUySuJuxOcw2GtieWTMSy+O7RNtsAIjVf3mCOdDNuN69tZNPEWMdaW8n11s9MwYFahtxDecyn0KIP9MvPsfSMSbxhp/f7kfbdB/H/S5eYea66JTyeJS6uNd76RdHttx0mLO30ZkRcXB25c2SIXhRYsdoeKS5GXHDdNejkQM0S/Ev94x2UunApmYHjWN1XcDhsEsAeF4WHnvYh2XiMn9vHY44AqvbWLlAmCgzaXpz8Xhl0fO7jDKSeReDyuM3UTMaiFFaxuvliGol7aIXq/aVe/miiD2SLxHZ6RxAPW80bhXrzJMTLTCqhCEhzfv someone@somewhere.sometime}"
       SPRING_PROFILES_ACTIVE: dev
       IDAM_TESTING_SUPPORT_ENABLED: "true"
+      ENABLE_DOCUMENT_AND_METADATA_UPLOAD: "true"
+      ENABLE_TTL: "true"
       LOGGING_LEVEL_UK_GOV_HMCTS_IDAM: DEBUG
       IDAM_USER_BASE_URI: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}"
       IDAM_S2S_BASE_URI: http://service-auth-provider-api:8080
-      S2S_NAMES_WHITELIST: sscs,divorce,ccd,em_gw,document-management-store,idam-api,xui_webapp,ccd_gw,civil_service,ccd_case_document_am_api
+      S2S_NAMES_WHITELIST: em_npa_app,sscs,divorce,ccd,em_gw,document-management-store,ccd_gw,idam-api,fpl_case_service,xui_webapp,ccd_case_document_am_api,em_stitching_api,em_ccd_orchestrator,civil_service
       http_proxy:
       https_proxy:
       no_proxy:

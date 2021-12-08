@@ -8,7 +8,7 @@ services:
       disable: true
     environment:
       # not supported in current version of Tornado
-      - DOCMOSIS_KEY
+      - DOCMOSIS_KEY=3OAD-KMTL-JALP-ELIA-EBBH-2ELH-QBKQ-ES07-E7E1-B-829A
       - DOCMOSIS_SITE="Free Trial Tornado"
     volumes:
       - ../../civil-service/docker/docmosis/templates:/home/docmosis/templates:rw

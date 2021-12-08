@@ -3,7 +3,7 @@ version: '2.4'
 
 services:
   xui:
-    image: "hmctspublic.azurecr.io/xui/webapp:latest"
+    image: "hmctspublic.azurecr.io/xui/webapp:prod-f85bafe-20211130100258"
     environment:
       MICROSERVICE: xui_webapp
       PROTOCOL: http
