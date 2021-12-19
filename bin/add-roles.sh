@@ -17,7 +17,7 @@ ${dir}/utils/ccd-add-role.sh "caseworker-civil"
 ${dir}/utils/ccd-add-role.sh "caseworker-caa"
 ${dir}/utils/ccd-add-role.sh "caseworker-approver"
 
-roles=("solicitor" "systemupdate" "admin" "staff")
+roles=("solicitor" "systemupdate" "admin" "staff" "judge")
 for role in "${roles[@]}"
 do
   ${dir}/utils/idam-add-role.sh "caseworker-civil-${role}"

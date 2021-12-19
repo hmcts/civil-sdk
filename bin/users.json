@@ -16,4 +16,5 @@
   {"email": "ccd-system-user@mailinator.com", "roles": "caseworker", "lastName": "(ccd-sys-user)"},
   {"email": "role.assignment.admin@gmail.com", "roles": "caseworker", "lastName": "RA", "firstName": "Admin"},
   {"email": "data.store.idam.system.user@gmail.com", "roles": "caseworker", "lastName": "System User", "firstName": "Data Store"}
+  {"email": "judge-civil@example.com", "roles": "caseworker, caseworker-civil-judge", "lastName": "judge"}
 ]
