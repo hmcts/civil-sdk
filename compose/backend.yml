@@ -96,6 +96,9 @@ services:
       CASE_DOCUMENT_AM_API_ATTACH_DOCUMENT_ENABLED: "false"
       DATA_STORE_DEFAULT_LOG_LEVEL: info
       CCD_MULTIPARTY_FIX_ENABLED: "true"
+      CCD_MULTIPARTY_LOG_LEVEL: DEBUG
+      CCD_MULTIPARTY_CASE_TYPES: CIVIL
+      CCD_MULTIPARTY_EVENTS: DEFENDANT_RESPONSE,ACKNOWLEDGE_CLAIM,CLAIMANT_RESPONSE
       # Uncomment this line to enable JVM debugging and uncomment the port mapping below
       # JAVA_TOOL_OPTIONS: '-XX:InitialRAMPercentage=30.0 -XX:MaxRAMPercentage=65.0 -XX:MinRAMPercentage=30.0 -XX:+UseConcMarkSweepGC -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005'
     ports:
