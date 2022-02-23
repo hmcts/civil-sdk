@@ -26,7 +26,7 @@ services:
       SERVICES_ROLE_ASSIGNMENT_API: http://am-role-assignment-service:4096
 
       #LAUNCH_DARKLY_CLIENT_ID must be set to enable share a case functionality
-      LAUNCH_DARKLY_CLIENT_ID: dummy
+      LAUNCH_DARKLY_CLIENT_ID: 5de6610b23ce5408280f2268
 
       FEATURE_REDIS_ENABLED: "false"
       FEATURE_APP_INSIGHTS_ENABLED: "false"
