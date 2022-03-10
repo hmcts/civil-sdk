@@ -210,6 +210,8 @@ services:
       DB_USERNAME:
       DB_PASSWORD:
       POSTGRES_HOST_AUTH_METHOD: trust
+      PG_MAJOR: 11.14
+      PG_VERSION: 11.14-1.pgdg110+1
     ports:
       - 5050:5432
     volumes:
