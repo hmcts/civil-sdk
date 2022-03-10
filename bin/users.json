@@ -1,6 +1,6 @@
 [
   {"email": "solicitor@example.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,,pui-organisation-manager,pui-case-manager,pui-user-manager", "lastName": "Solicitor"},
-  {"email": "hmcts.civil+organisation.1.superuser@gmail.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager", "lastName": "Claimant-solicitor"},
+  {"email": "hmcts.civil+organisation.1.superuser@gmail.com", "roles": "caseworker,caseworker-civil,citizen,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager", "lastName": "Claimant-solicitor"},
   {"email": "hmcts.civil+organisation.1.solicitor.1@gmail.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager,payments", "lastName": "Claimant-solicitor"},
   {"email": "hmcts.civil+organisation.2.superuser@gmail.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager", "lastName": "Defendant-solicitor"},
   {"email": "hmcts.civil+organisation.2.solicitor.1@gmail.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager", "lastName": "Defendant-solicitor"},
@@ -14,8 +14,8 @@
   {"email": "civil-staff@mailnesia.com", "roles": "caseworker,caseworker-civil,caseworker-civil-staff,payments", "lastName": "Staff"},
   {"email": "civil.prd.admin@example.com", "roles": "prd-admin", "lastName": "prd-admin"},
   {"email": "ccd-system-user@mailinator.com", "roles": "caseworker", "lastName": "(ccd-sys-user)"},
-  {"email": "judge-civil-01@example.com", "roles": "caseworker,caseworker-civil,caseworker-civil-judge", "lastName": "judge"}
+  {"email": "judge-civil-01@example.com", "roles": "caseworker,caseworker-civil,caseworker-civil-judge", "lastName": "judge"},
   {"email": "role.assignment.admin@gmail.com", "roles": "caseworker", "lastName": "RA", "firstName": "Admin"},
-  {"email": "data.store.idam.system.user@gmail.com", "roles": "caseworker", "lastName": "System User", "firstName": "Data Store"}
+  {"email": "data.store.idam.system.user@gmail.com", "roles": "caseworker", "lastName": "System User", "firstName": "Data Store"},
   {"email": "judge-civil@example.com", "roles": "caseworker, caseworker-civil-judge", "lastName": "judge"}
 ]

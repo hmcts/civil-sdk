@@ -101,11 +101,11 @@ services:
       IDAM_CLIENT_SCOPE: profile openid roles manage-user
       IDAM_CLIENT_ID: ccd_data_store_api
       # Uncomment this line to enable JVM debugging and uncomment the port mapping below
-      # JAVA_TOOL_OPTIONS: '-XX:InitialRAMPercentage=30.0 -XX:MaxRAMPercentage=65.0 -XX:MinRAMPercentage=30.0 -XX:+UseConcMarkSweepGC -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005'
+      JAVA_TOOL_OPTIONS: '-XX:InitialRAMPercentage=30.0 -XX:MaxRAMPercentage=65.0 -XX:MinRAMPercentage=30.0 -XX:+UseConcMarkSweepGC -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005'
     ports:
       - 4452:4452
       # Uncomment this and the JAVA_TOOL_OPTIONS flag for JVM debugging
-      # - 5005:5005
+      - 5005:5005
     depends_on:
       # Replace idam-api with ccd-test-stubs-service to enable ccd test stub service
       idam-api:
@@ -170,7 +170,7 @@ services:
       - ccd-network
 
   service-auth-provider-api:
-    image: "hmctspublic.azurecr.io/rpe/service-auth-provider:prod-cf4a598-20211206083015"
+    image: "hmctspublic.azurecr.io/rpe/service-auth-provider:latest"
     healthcheck:
       interval: 10s
       timeout: 10s
