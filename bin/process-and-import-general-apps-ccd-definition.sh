@@ -14,7 +14,7 @@ ccdDefinitionRepoPath=$basePath/civil-general-apps-ccd-definition
 
 
 
-ccdDefinitionPath=$ccdDefinitionRepoPath/ccd-definition
+ccdDefinitionPath=$ccdDefinitionRepoPath/ga-ccd-definition
 
 definitionOutputFile="${ccdDefinitionRepoPath}/build/ccd-development-config/ccd-civil-apps-dev.xlsx"
 
