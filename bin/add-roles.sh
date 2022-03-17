@@ -50,3 +50,5 @@ prdRoles=('"caseworker"','"caseworker-caa"','"caseworker-divorce"','"caseworker-
 ${dir}/utils/idam-add-role.sh "prd-admin" "${prdRoles[@]}"
 ${dir}/utils/idam-add-role.sh "payments"
 ${dir}/utils/ccd-add-role.sh "payments"
+
+${dir}/utils/idam-add-role.sh "citizen"

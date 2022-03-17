@@ -4,7 +4,7 @@
   {"email": "hmcts.civil+organisation.1.solicitor.1@gmail.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager,payments", "lastName": "Claimant-solicitor"},
   {"email": "hmcts.civil+organisation.2.superuser@gmail.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager", "lastName": "Defendant-solicitor"},
   {"email": "hmcts.civil+organisation.2.solicitor.1@gmail.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager", "lastName": "Defendant-solicitor"},
-  {"email": "hmcts.civil+organisation.2.solicitor.2@gmail.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager", "lastName": "Defendant-solicitor-2"},
+  {"email": "hmcts.civil+organisation.2.solicitor.2@gmail.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager,am_role_assignment,citizen", "lastName": "Defendant-solicitor-2"},
   {"email": "hmcts.civil+organisation.3.superuser@gmail.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager", "lastName": "Defendant-solicitor"},
   {"email": "hmcts.civil+organisation.3.solicitor.1@gmail.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager", "lastName": "Defendant-solicitor"},
   {"email": "civil-system-update@mailnesia.com", "roles": "caseworker,caseworker-civil,caseworker-civil-systemupdate", "lastName": "System-update"},
@@ -14,5 +14,7 @@
   {"email": "civil-staff@mailnesia.com", "roles": "caseworker,caseworker-civil,caseworker-civil-staff,payments", "lastName": "Staff"},
   {"email": "civil.prd.admin@example.com", "roles": "prd-admin", "lastName": "prd-admin"},
   {"email": "ccd-system-user@mailinator.com", "roles": "caseworker", "lastName": "(ccd-sys-user)"},
-  {"email": "judge-civil-01@example.com", "roles": "caseworker,caseworker-civil,caseworker-civil-judge", "lastName": "judge"}
+  {"email": "judge-civil-01@example.com", "roles": "caseworker,caseworker-civil,caseworker-civil-judge", "lastName": "judge"},
+  {"email": "test@example.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,am_role_assignment,citizen", "lastName": "test"},
+  {"email": "defendant@example.com", "roles": "am_role_assignment,citizen", "lastName": "test"}
 ]
