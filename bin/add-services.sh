@@ -23,3 +23,7 @@ ${dir}/utils/idam-create-service.sh "rd_user_profile_api" "rd_user_profile_api" 
 ${dir}/utils/idam-create-service.sh "am_role_assignment" "am_role_assignment" "am_role_assignment_secret" "http://localhost:4096/oauth2redirect" "false" "profile openid roles search-user"
 
 ${dir}/utils/idam-create-service.sh "ccd_data_store_api" "ccd_data_store_api" "idam_data_store_client_secret" "http://ccd-data-store-api/oauth2redirect" "false" "profile openid roles manage-user"
+
+${dir}/utils/idam-create-service.sh "civil_citizen_ui" "civil_citizen_ui" "citizen-ui-secret" "http://localhost:3001/oauth2/callback" "false" "profile openid roles manage-user create-user search-user openid profile roles"
+
+${dir}/utils/idam-create-service.sh "civil_service" "civil_service" "OOOOOOOOOOOOOOOO" "http://localhost:4000/oauth2/callback" "false" "profile openid roles manage-user create-user search-user openid profile roles"
