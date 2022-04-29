@@ -17,12 +17,22 @@ ${dir}/utils/ccd-add-role.sh "caseworker-civil"
 ${dir}/utils/ccd-add-role.sh "caseworker-caa"
 ${dir}/utils/ccd-add-role.sh "caseworker-approver"
 
-roles=("solicitor" "systemupdate" "admin" "staff" "judge")
+roles=("solicitor" "systemupdate" "admin" "staff")
 for role in "${roles[@]}"
 do
   ${dir}/utils/idam-add-role.sh "caseworker-civil-${role}"
   ${dir}/utils/ccd-add-role.sh "caseworker-civil-${role}"
 done
+
+roles=("judge" "fee-paid-judge" "leadership-judge" "circuit-judge")
+for role in "${roles[@]}"
+do
+  ${dir}/utils/idam-add-role.sh "${role}"
+  ${dir}/utils/ccd-add-role.sh "${role}"
+done
+
+${dir}/utils/idam-add-role.sh "hmcts-judiciary"
+${dir}/utils/ccd-add-role.sh "hmcts-judiciary"
 
 roles=("caa" "case-manager" "finance-manager" "organisation-manager" "user-manager")
 for role in "${roles[@]}"

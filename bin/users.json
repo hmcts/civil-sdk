@@ -14,5 +14,9 @@
   {"email": "civil-staff@mailnesia.com", "roles": "caseworker,caseworker-civil,caseworker-civil-staff,payments", "lastName": "Staff"},
   {"email": "civil.prd.admin@example.com", "roles": "prd-admin", "lastName": "prd-admin"},
   {"email": "ccd-system-user@mailinator.com", "roles": "caseworker", "lastName": "(ccd-sys-user)"},
-  {"email": "judge-civil-01@example.com", "roles": "caseworker,caseworker-civil,caseworker-civil-judge", "lastName": "judge"}
+  {"email": "judge-civil-01@example.com", "roles": "caseworker,caseworker-civil,judge", "lastName": "judge"},
+  {"email": "circuit-judge-01@example.com", "roles": "caseworker,caseworker-civil,circuit-judge", "lastName": "judge"},
+  {"email": "fee-paid-judge-01@example.com", "roles": "caseworker,caseworker-civil,fee-paid-judge", "lastName": "judge"},
+  {"email": "leadership-judge-01@example.com", "roles": "caseworker,caseworker-civil,leadership-judge", "lastName": "judge"},
+  {"email": "judge-dredd-01@example.com", "roles": "caseworker,caseworker-civil,hmcts-judiciary", "lastName": "judge"}
 ]
