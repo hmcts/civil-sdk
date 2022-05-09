@@ -19,6 +19,5 @@
   {"email": "circuit-judge-01@example.com", "roles": "caseworker,caseworker-civil,hmcts-judiciary,circuit-judge", "lastName": "judge"},
   {"email": "fee-paid-judge-01@example.com", "roles": "caseworker,caseworker-civil,hmcts-judiciary,fee-paid-judge", "lastName": "judge"},
   {"email": "leadership-judge-01@example.com", "roles": "caseworker,caseworker-civil,leadership-judge", "lastName": "judge"},
-  {"email": "judge-dredd-01@example.com", "roles": "caseworker,caseworker-civil,hmcts-judiciary", "lastName": "judge"},
-  {"email": "testAMjudge@test.com", "roles": "caseworker,caseworker-civil,judgeTest", "lastName": "judge"}
+  {"email": "judge-dredd-01@example.com", "roles": "caseworker,caseworker-civil,hmcts-judiciary", "lastName": "judge"}
 ]
