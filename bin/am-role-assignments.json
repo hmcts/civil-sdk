@@ -106,7 +106,7 @@
     "overrideAll": true
   },
   {
-    "email": "task-allocator-civil-01@example.com",
+    "email": "task-supervisor-civil-01@example.com",
     "roleAssignments": [
       {
         "roleType": "ORGANISATION",

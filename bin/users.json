@@ -20,6 +20,6 @@
   {"email": "fee-paid-judge-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "judge"},
   {"email": "leadership-judge-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "judge"},
   {"email": "judge-dredd-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "standard"},
-  {"email": "task-allocator-civil-01@example.com", ",roles": "caseworker,caseworker-civil", "lastName": "standard"},
+  {"email": "task-supervisor-civil-01@example.com", ",roles": "caseworker,caseworker-civil", "lastName": "standard"},
   {"email": "case-allocator-civil-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "standard"}
 ]
