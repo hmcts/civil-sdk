@@ -24,15 +24,11 @@ do
   ${dir}/utils/ccd-add-role.sh "caseworker-civil-${role}"
 done
 
-roles=("judge" "fee-paid-judge" "leadership-judge" "circuit-judge")
-for role in "${roles[@]}"
+accessprofiles=("judge-profile")
+for accessprofile in "${accessprofiles[@]}"
 do
-  ${dir}/utils/idam-add-role.sh "${role}"
-  ${dir}/utils/ccd-add-role.sh "${role}"
+  ${dir}/utils/ccd-add-role.sh "${accessprofile}"
 done
-
-${dir}/utils/idam-add-role.sh "hmcts-judiciary"
-${dir}/utils/ccd-add-role.sh "hmcts-judiciary"
 
 roles=("caa" "case-manager" "finance-manager" "organisation-manager" "user-manager")
 for role in "${roles[@]}"

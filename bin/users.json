@@ -15,9 +15,11 @@
   {"email": "civil.prd.admin@example.com", "roles": "prd-admin", "lastName": "prd-admin"},
   {"email": "ccd-system-user@mailinator.com", "roles": "caseworker", "lastName": "(ccd-sys-user)"},
   {"email": "judge-civil-01@example.com", "roles": "caseworker,caseworker-civil,caseworker-civil-judge", "lastName": "judge"},
-  {"email": "judge-civil-02@example.com", "roles": "caseworker,caseworker-civil,hmcts-judiciary,judge", "lastName": "judge"},
-  {"email": "circuit-judge-01@example.com", "roles": "caseworker,caseworker-civil,hmcts-judiciary,circuit-judge", "lastName": "judge"},
-  {"email": "fee-paid-judge-01@example.com", "roles": "caseworker,caseworker-civil,hmcts-judiciary,fee-paid-judge", "lastName": "judge"},
-  {"email": "leadership-judge-01@example.com", "roles": "caseworker,caseworker-civil,leadership-judge", "lastName": "judge"},
-  {"email": "judge-dredd-01@example.com", "roles": "caseworker,caseworker-civil,hmcts-judiciary", "lastName": "judge"}
+  {"email": "judge-civil-02@example.com", "roles": "caseworker,caseworker-civil", "lastName": "judge"},
+  {"email": "circuit-judge-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "judge"},
+  {"email": "fee-paid-judge-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "judge"},
+  {"email": "leadership-judge-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "judge"},
+  {"email": "judge-dredd-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "standard"},
+  {"email": "task-allocator-civil-01@example.com", ",roles": "caseworker,caseworker-civil", "lastName": "standard"},
+  {"email": "case-allocator-civil-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "standard"}
 ]

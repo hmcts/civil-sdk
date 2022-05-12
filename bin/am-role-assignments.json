@@ -24,5 +24,117 @@
       }
     ],
     "overrideAll": true
+  },
+  {
+    "email": "fee-paid-judge-01@example.com",
+    "roleAssignments": [
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "fee-paid-judge",
+        "grantType": "STANDARD",
+        "roleCategory": "JUDICIAL",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
+        "authorisations": []
+      }
+    ],
+    "overrideAll": true
+  },
+  {
+    "email": "leadership-judge-01@example.com",
+    "roleAssignments": [
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "leadership-judge",
+        "grantType": "STANDARD",
+        "roleCategory": "JUDICIAL",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
+        "authorisations": []
+      }
+    ],
+    "overrideAll": true
+  },
+  {
+    "email": "judge-dredd-01@example.com",
+    "roleAssignments": [
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "hmcts-judiciary",
+        "grantType": "STANDARD",
+        "roleCategory": "JUDICIAL",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
+        "authorisations": []
+      }
+    ],
+    "overrideAll": true
+  },
+  {
+    "email": "circuit-judge-01@example.com",
+    "roleAssignments": [
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "circuit-judge",
+        "grantType": "STANDARD",
+        "roleCategory": "JUDICIAL",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
+        "authorisations": []
+      }
+    ],
+    "overrideAll": true
+  },
+  {
+    "email": "judge-civil-02@example.com",
+    "roleAssignments": [
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "judge",
+        "grantType": "STANDARD",
+        "roleCategory": "JUDICIAL",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
+        "authorisations": []
+      }
+    ],
+    "overrideAll": true
+  },
+  {
+    "email": "task-allocator-civil-01@example.com",
+    "roleAssignments": [
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "task-supervisor",
+        "grantType": "STANDARD",
+        "roleCategory": "JUDICIAL",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
+        "authorisations": []
+      }
+    ],
+    "overrideAll": true
+  },
+  {
+    "email": "case-allocator-civil-01@example.com",
+    "roleAssignments": [
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "case-allocator",
+        "grantType": "STANDARD",
+        "roleCategory": "JUDICIAL",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
+        "authorisations": []
+      }
+    ],
+    "overrideAll": true
   }
 ]
