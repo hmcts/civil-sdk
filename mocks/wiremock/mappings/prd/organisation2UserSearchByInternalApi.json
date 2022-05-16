@@ -1,12 +1,7 @@
 {
   "request": {
     "method": "GET",
-    "urlPath": "/refdata/internal/v1/organisations/{orgId}/users",
-    "queryParameters": {
-      "orgId": {
-        "equalTo": "79ZRSOU"
-      }
-    }
+    "urlPath": "/refdata/internal/v1/organisations/79ZRSOU/users"
   },
   "response": {
     "status": 200,
