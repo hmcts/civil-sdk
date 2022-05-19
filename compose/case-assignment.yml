@@ -8,7 +8,7 @@ services:
       IDAM_OIDC_URL: http://idam-api:5000
       IDAM_API_URL: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}"
       IDAM_CLIENT_ID: aac_manage_case_assignment
-      IDAM_CLIENT_SECRET: "${IDAM_KEY_AAC_MANAGE_CASE_ASSIGNMENT}"
+      IDAM_CLIENT_SECRET: "${IDAM_KEY_CASE_ASSIGNMENT}"
       IDAM_CLIENT_REDIRECT_URL: http://localhost:3333/oauth2/callback
       IDAM_CAA_USERNAME: caa-caseworker@mailnesia.com
       IDAM_CAA_PASSWORD: Password12!
@@ -18,8 +18,8 @@ services:
       IDAM_SYSTEM_USER_PASSWORD: Password12!
       IDAM_URL: http://idam-api:5000
       S2S_URL: http://service-auth-provider-api:8080
-      MANAGE_CASE_S2S_KEY: "${IDAM_KEY_AAC_MANAGE_CASE_ASSIGNMENT}"
-      MANAGE_CASE_S2S_AUTHORISED_SERVICES: ccd_gw,xui_webapp,civil_service
+      MANAGE_CASE_S2S_KEY: "${IDAM_KEY_CASE_ASSIGNMENT}"
+      MANAGE_CASE_S2S_AUTHORISED_SERVICES: ccd_gw,xui_webapp,civil_service,ccd_data
       CCD_DATA_STORE_API_BASE_URL: http://ccd-data-store-api:4452
       CCD_DATA_STORE_ALLOWED_SERVICE: ccd_gw
       CCD_DEFINITION_STORE_API_BASE_URL: http://ccd-definition-store-api:4451
@@ -30,6 +30,7 @@ services:
       NOTIFY_MCA_API_KEY: "notify-test-api-key"
       ROLE_ASSIGNMENT_URL: "${ROLE_ASSIGNMENT_URL:-http://am-role-assignment-service:4096}"
       #      JAVA_TOOL_OPTIONS: '-XX:InitialRAMPercentage=30.0 -XX:MaxRAMPercentage=65.0 -XX:MinRAMPercentage=30.0 -XX:+UseConcMarkSweepGC -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5006'
+      OIDC_ISSUER_URL: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}/openam/oauth2/hmcts"
     ports:
       - 4454:4454
     networks:
