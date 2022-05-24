@@ -16,6 +16,7 @@ services:
       IDAM_NOC_APPROVER_PASSWORD: Password12!
       IDAM_SYSTEM_USER_USERNAME: caa-caseworker@mailnesia.com
       IDAM_SYSTEM_USER_PASSWORD: Password12!
+      ROOT_LOGGING_LEVEL: debug
       IDAM_URL: http://idam-api:5000
       S2S_URL: http://service-auth-provider-api:8080
       MANAGE_CASE_S2S_KEY: "${IDAM_KEY_CASE_ASSIGNMENT}"
