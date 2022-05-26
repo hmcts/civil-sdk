@@ -20,7 +20,7 @@ services:
       IDAM_URL: http://idam-api:5000
       S2S_URL: http://service-auth-provider-api:8080
       MANAGE_CASE_S2S_KEY: "${IDAM_KEY_CASE_ASSIGNMENT}"
-      MANAGE_CASE_S2S_AUTHORISED_SERVICES: ccd_gw,xui_webapp,civil_service,ccd_data
+      MANAGE_CASE_S2S_AUTHORISED_SERVICES: ccd_gw,xui_webapp,ccd_data
       CCD_DATA_STORE_API_BASE_URL: http://ccd-data-store-api:4452
       CCD_DATA_STORE_ALLOWED_SERVICE: ccd_gw
       CCD_DEFINITION_STORE_API_BASE_URL: http://ccd-definition-store-api:4451
