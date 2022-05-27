@@ -1,0 +1,33 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/fees-register/fees/lookup",
+    "queryParameters": {
+      "service": {
+        "equalTo": "general"
+      },
+      "jurisdiction1": {
+        "equalTo": "civil"
+      },
+      "jurisdiction2": {
+        "equalTo": "civil"
+      },
+      "channel": {
+        "equalTo": "default"
+      },
+      "event": {
+        "equalTo": "general application"
+      },
+      "keyword": {
+        "matches": "GeneralAppWithoutNotice"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": "{\"code\":\"FEE0443\",\"description\":\"General application (by consent/without notice) excl HA'97 & Court Fund Pay Out\",\"version\":2,\"fee_amount\":108}"
+  }
+}
