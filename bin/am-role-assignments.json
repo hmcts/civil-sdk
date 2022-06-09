@@ -31,7 +31,7 @@
       {
         "roleType": "ORGANISATION",
         "roleName": "fee-paid-judge",
-        "grantType": "STANDARD",
+        "grantType": "SPECIFIC",
         "roleCategory": "JUDICIAL",
         "classification": "PUBLIC",
         "readOnly": false,
@@ -63,7 +63,7 @@
       {
         "roleType": "ORGANISATION",
         "roleName": "hmcts-judiciary",
-        "grantType": "STANDARD",
+        "grantType": "SPECIFIC",
         "roleCategory": "JUDICIAL",
         "classification": "PUBLIC",
         "readOnly": false,
