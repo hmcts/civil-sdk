@@ -1,0 +1,18 @@
+{
+  "call_back_url": "string",
+  "case_payment_request": {
+    "action": "payment",
+    "responsible_party": "sadf fsda"
+  },
+  "case_reference": "string",
+  "ccd_case_number": "1655902469266236",
+  "fees": [
+    {
+      "calculated_amount": 275.00,
+      "code": "FEE0442",
+      "version": "2",
+      "volume": 1
+    }
+  ],
+  "hmcts_org_id": "Q1KOKP2"
+}
