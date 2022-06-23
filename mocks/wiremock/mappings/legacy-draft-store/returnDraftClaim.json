@@ -1,0 +1,125 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/drafts",
+    "headers": {
+      "Content-Type": {
+        "equalTo": "application/json"
+      },
+      "Authorization": {
+        "contains": "Bearer"
+      },
+      "ServiceAuthorization": {
+        "contains": "Bearer"
+      },
+      "Secret": {
+        "contains": "not-a-real-primary-secret"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "data": [
+        {
+          "id": "1",
+          "document": {
+            "externalId": "7e5a48ce-160f-4f8c-96fc-f651a728ecf3",
+            "claimant": {
+              "payment": {},
+              "partyDetails": {
+                "address": {
+                  "line1": "7 Wisdom Crescent",
+                  "line2": "",
+                  "line3": "",
+                  "city": "London",
+                  "postcode": "F4K3 C0D",
+                  "addressVisible": true,
+                  "addressSelectorVisible": false,
+                  "enterManually": true,
+                  "postcodeLookup": "",
+                  "addressList": ""
+                },
+                "hasCorrespondenceAddress": false,
+                "correspondenceAddress": {
+                  "addressVisible": true,
+                  "addressSelectorVisible": false,
+                  "enterManually": false
+                },
+                "name": "Mr John Smith",
+                "type": "individual",
+                "title": "Mr",
+                "firstName": "John",
+                "lastName": "Smith",
+                "dateOfBirth": {
+                  "known": true,
+                  "date": {
+                    "year": 1980,
+                    "month": 3,
+                    "day": 31
+                  }
+                }
+              },
+              "phone": {
+                "number": ""
+              }
+            },
+            "defendant": {},
+            "amount": {
+              "type": "breakdown",
+              "rows": [
+                {},
+                {},
+                {},
+                {}
+              ]
+            },
+            "interest": {},
+            "interestType": {},
+            "interestRate": {},
+            "interestDate": {},
+            "interestStartDate": {
+              "date": {}
+            },
+            "interestEndDate": {},
+            "interestTotal": {},
+            "interestContinueClaiming": {},
+            "interestHowMuch": {},
+            "helpWithFees": {},
+            "reason": {},
+            "readResolveDispute": true,
+            "readCompletingClaim": true,
+            "timeline": {
+              "rows": [
+                {},
+                {},
+                {},
+                {}
+              ]
+            },
+            "evidence": {
+              "rows": [
+                {},
+                {},
+                {},
+                {}
+              ]
+            },
+            "feeAmountInPennies": 0,
+            "breathingSpace": {},
+            "eligibility": true
+          },
+          "type": "claim",
+          "created": "2022-06-08T10:22:06.605278Z",
+          "updated": "2022-06-08T10:28:05.392825Z"
+        }
+      ],
+      "paging_cursors": {
+        "after": "1"
+      }
+    }
+  }
+}
