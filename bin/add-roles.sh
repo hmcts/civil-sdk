@@ -30,6 +30,12 @@ do
   ${dir}/utils/idam-add-role.sh "pui-${role}"
 done
 
+roles=("legal-advisor" "hearing-admin")
+for roles in "${role[@]}"
+do
+  ${dir}/utils/ccd-add-role.sh "${role}"
+done
+
 ${dir}/utils/idam-add-role.sh "caseworker-probate"
 ${dir}/utils/idam-add-role.sh "caseworker-probate-solicitor"
 
