@@ -1,0 +1,17 @@
+[
+  {
+    "business_area": "string",
+    "ccd_case_types": [
+      "string"
+    ],
+    "ccd_service_name": "string",
+    "jurisdiction": "string",
+    "last_update": "2000-01-01",
+    "org_unit": "string",
+    "service_code": "string",
+    "service_description": "string",
+    "service_id": 0,
+    "service_short_description": "string",
+    "sub_business_area": "string"
+  }
+]

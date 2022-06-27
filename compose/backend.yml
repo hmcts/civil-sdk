@@ -164,6 +164,75 @@ services:
     networks:
       - ccd-network
 
+  payments-api:
+    image: hmctspublic.azurecr.io/payment/api:latest
+    environment:
+      payments.report.file.location: .
+      PAYMENT_AUDIT_FILE: /tmp/payment-audit.log
+      ASB_CONNECTION_STRING: "false"
+      FEES_REGISTER_URL: http://fees-api:8080
+      TRUSTED_S2S_SERVICE_NAMES: cmc_claim_store,cmc,probate_frontend,divorce_frontend,ccd_gateway,bar_api,api_gw,civil_service
+      JAVA_OPTS: -Xms8m -Xmx256m -Djava.security.egd=file:/dev/./urandom -XX:MaxMetaspaceSize=128m
+      SPRING_DATASOURCE_URL: jdbc:postgresql://ccd-shared-database:5432/payment
+      AUTH_PROVIDER_SERVICE_CLIENT_BASEURL: http://service-auth-provider-api:8080
+      AUTH_IDAM_CLIENT_BASEURL: http://idam-api:5000/
+      RD_LOCATION_BASE_URL: http://wiremock:8080
+      GOV_PAY_AUTH_KEY_CMC:
+      GOV_PAY_URL: https://publicapi.payments.service.gov.uk/v1/payments
+      http_proxy:
+      https_proxy:
+      no_proxy: idam-api,$no_proxy
+      MANAGEMENT_SECURITY_DISABLED: "false"
+      SPRING_DATASOURCE_USERNAME: ccd
+      SPRING_DATASOURCE_PASSWORD: ccd
+      SPRING_DATASOURCE_DRIVER: org.postgresql.Driver
+      SPRING_MAIL_HOST: smtp-server
+      SPRING_MAIL_PORT: 1025
+      CCD_CLIENT_URL: http://ccd-data-store-api:4452
+      CORE_CASE_DATA_API_URL: http://ccd-data-store-api:4452
+      CARD_PAYMENTS_REPORT_SCHEDULER_ENABLED: "false"
+      CARD_PAYMENTS_EMAIL_FROM: no-reply@reform.hmcts.net
+      CARD_PAYMENTS_EMAIL_TO: nowhere@example.com
+      CARD_PAYMENTS_EMAIL_SUBJECT: Local Env:Card Payments Reconciliation Report
+      CARD_PAYMENTS_EMAIL_MESSAGE: Hi <br/><br/>Please find attached today''s reconciliation report. <br/><br/>Regards <br/><br/>Payments team<br/><br/>
+      PBA_CMC_PAYMENTS_REPORT_SCHEDULER_ENABLED: "false"
+      PBA_CMC_PAYMENTS_EMAIL_FROM: no-reply@reform.hmcts.net
+      PBA_CMC_PAYMENTS_EMAIL_TO: pepito@grillo.com
+      PBA_CMC_PAYMENTS_EMAIL_MESSAGE: hi
+      PBA_CMC_PAYMENTS_EMAIL_SUBJECT: Docker Env Card Payments Reconciliation Report
+      PBA_DIVORCE_PAYMENTS_REPORT_SCHEDULER_ENABLED: "false"
+      PBA_DIVORCE_PAYMENTS_EMAIL_FROM: no-reply@reform.hmcts.net
+      PBA_DIVORCE_PAYMENTS_EMAIL_TO: pepito@grillo.com
+      PBA_DIVORCE_PAYMENTS_EMAIL_MESSAGE: hi
+      PBA_DIVORCE_PAYMENTS_EMAIL_SUBJECT: Docker Env Card Payments Reconciliation Report
+      BAR_PAYMENTS_REPORT_SCHEDULER_ENABLED: "true"
+      BAR_PAYMENTS_EMAIL_FROM: no-reply@reform.hmcts.net
+      BAR_PAYMENTS_EMAIL_TO: pepito@grillo.com
+      BAR_PAYMENTS_EMAIL_MESSAGE: hi
+      BAR_PAYMENTS_EMAIL_SUBJECT: Docker Env Bar Payments Reconciliation Report
+      PBA_PROBATE_PAYMENTS_REPORT_SCHEDULER_ENABLED: "false"
+      PBA_PROBATE_PAYMENTS_EMAIL_FROM: no-reply@reform.hmcts.net
+      PBA_PROBATE_PAYMENTS_EMAIL_TO: pepito@grillo.com
+      PBA_PROBATE_PAYMENTS_EMAIL_MESSAGE: hi
+      PBA_PROBATE_PAYMENTS_EMAIL_SUBJECT: Docker Env Card Payments Reconciliation Report
+      PBA_FINREM_PAYMENTS_REPORT_SCHEDULER_ENABLED: "false"
+      PBA_FINREM_PAYMENTS_EMAIL_FROM: no-reply@reform.hmcts.net
+      PBA_FINREM_PAYMENTS_EMAIL_TO: pepito@grillo.com
+      PBA_FINREM_PAYMENTS_EMAIL_MESSAGE: hi
+      PBA_FINREM_PAYMENTS_EMAIL_SUBJECT: Docker Env Card Payments Reconciliation Report
+      PAYMENT_S2S_SECRET: AAAAAAAAAAAAAAAA
+      APPINSIGHTS_INSTRUMENTATIONKEY: fake-key
+    mem_limit: 512m
+    memswap_limit: 0
+    ports:
+      - 4421:8080
+    depends_on:
+      - ccd-shared-database
+      - idam-api
+      - ccd-data-store-api
+    networks:
+      - ccd-network
+
   service-auth-provider-api:
     image: "hmctspublic.azurecr.io/rpe/service-auth-provider:latest"
     healthcheck:
@@ -185,8 +254,9 @@ services:
       MICROSERVICEKEYS_AAC_MANAGE_CASE_ASSIGNMENT: "${IDAM_KEY_CASE_ASSIGNMENT}"
       MICROSERVICEKEYS_RD_PROFESSIONAL_API: "${OAUTH2_CLIENT_RD_PROFESSIONAL}"
       MICROSERVICEKEYS_RD_USER_PROFILE_API: "${OAUTH2_CLIENT_RD_USER_PROFILE}"
-      MICROSERVICEKEYS_AM_ROLE_ASSIGNMENT_SERVICE: "${IDAM_KEY_AM_ROLE_ASSIGNMENT}"
-      MICROSERVICEKEYS_CCD_CASE_DOCUMENT_AM_API: "${IDAM_KEY_CASE_DOCUMENT}"
+      MICROSERVICEKEYS_AM_ROLE_ASSIGNMENT_SERVICE: AAAAAAAAAAAAAAAA
+      MICROSERVICEKEYS_CCD_CASE_DOCUMENT_AM_API: CNTOE7D2NX6XHBKT
+      MICROSERVICEKEYS_PAYMENT_APP: AAAAAAAAAAAAAAAA
       TESTING_SUPPORT_ENABLED: "true"
     networks:
       - ccd-network
