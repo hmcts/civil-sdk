@@ -3,8 +3,8 @@
 repository=${1}
 prNumber=${2}
 
-if [[ ${repository} != "service" && ${repository} != "ccd" && ${repository} != "camunda" ]]; then
-  echo "Supported repositories: service, ccd, camunda"
+if [[ ${repository} != "service" && ${repository} != "citizen-ui" && ${repository} != "general-apps-ccd-definition" && ${repository} != "general-applications" && ${repository} != "ccd" && ${repository} != "camunda" ]]; then
+  echo "Supported repositories: general-apps-ccd-definition,citizen-ui, ccd, camunda,service,general applications"
   exit 1
 fi
 
