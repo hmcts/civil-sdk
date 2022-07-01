@@ -15,5 +15,13 @@
   {"email": "civil.prd.admin@example.com", "roles": "prd-admin", "lastName": "prd-admin"},
   {"email": "ccd-system-user@mailinator.com", "roles": "caseworker", "lastName": "(ccd-sys-user)"},
   {"email": "judge-civil-01@example.com", "roles": "caseworker,caseworker-civil,caseworker-civil-judge", "lastName": "judge"},
+  {"email": "judge-civil-02@example.com", "roles": "caseworker,caseworker-civil", "lastName": "judge"},
+  {"email": "circuit-judge-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "judge"},
+  {"email": "fee-paid-judge-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "judge"},
+  {"email": "leadership-judge-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "judge"},
+  {"email": "judge-dredd-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "standard"},
+  {"email": "task-supervisor-civil-01@example.com", ",roles": "caseworker,caseworker-civil", "lastName": "standard"},
+  {"email": "case-allocator-civil-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "standard"},
   {"email": "jane.smith@gmail.com", "roles": "citizen", "lastName": "Smith"}
 ]
+
