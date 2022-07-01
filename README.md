@@ -348,6 +348,8 @@ Example:
 
 ```shell
 ./bin/remove-stuck-pr service 165
+./bin/remove-stuck-pr.sh general-applications 306
+./bin/remove-stuck-pr.sh general-apps-ccd-definition 306
 ```
 
 ### Run tests against AAT
