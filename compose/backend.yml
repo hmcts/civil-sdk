@@ -70,7 +70,7 @@ services:
       DATA_STORE_DB_USE_SSL: "${DB_USE_SSL}"
       DATA_STORE_IDAM_KEY: "${IDAM_KEY_CCD_DATA_STORE}"
       DATA_STORE_TOKEN_SECRET: iuasbcuasdcbasdgcasdgcuysachjsacyasdgjcgasdj
-      DATA_STORE_S2S_AUTHORISED_SERVICES: ccd_gw,ccd_gateway,civil_service,ccd_data,ccd_ps,aac_manage_case_assignment,xui_webapp,ccd_case_document_am_api,am_role_assignment_service
+      DATA_STORE_S2S_AUTHORISED_SERVICES: ccd_gw,ccd_gateway,civil_service,ccd_data,ccd_ps,aac_manage_case_assignment,xui_webapp,ccd_case_document_am_api,am_role_assignment_service,ccd_data
       DEFINITION_STORE_HOST: http://ccd-definition-store-api:4451
       USER_PROFILE_HOST: http://ccd-user-profile-api:4453
       IDAM_API_BASE_URL: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}"
@@ -171,7 +171,7 @@ services:
       PAYMENT_AUDIT_FILE: /tmp/payment-audit.log
       ASB_CONNECTION_STRING: "false"
       FEES_REGISTER_URL: http://fees-api:8080
-      TRUSTED_S2S_SERVICE_NAMES: cmc_claim_store,cmc,probate_frontend,divorce_frontend,ccd_gateway,bar_api,api_gw,civil_service
+      TRUSTED_S2S_SERVICE_NAMES: cmc_claim_store,cmc,probate_frontend,divorce_frontend,ccd_gateway,bar_api,api_gw,civil_service,xui_webapp
       JAVA_OPTS: -Xms8m -Xmx256m -Djava.security.egd=file:/dev/./urandom -XX:MaxMetaspaceSize=128m
       SPRING_DATASOURCE_URL: jdbc:postgresql://ccd-shared-database:5432/payment
       AUTH_PROVIDER_SERVICE_CLIENT_BASEURL: http://service-auth-provider-api:8080
