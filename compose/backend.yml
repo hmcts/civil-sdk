@@ -32,7 +32,7 @@ services:
       DEFINITION_STORE_DB_PASSWORD: "${DB_PASSWORD}"
       DEFINITION_STORE_DB_USE_SSL: "${DB_USE_SSL}"
       DEFINITION_STORE_IDAM_KEY: "${IDAM_KEY_CCD_DEFINITION_STORE}"
-      DEFINITION_STORE_S2S_AUTHORISED_SERVICES: ccd_data,ccd_gw,ccd_admin,xui_webapp
+      DEFINITION_STORE_S2S_AUTHORISED_SERVICES: ccd_data,ccd_gw,ccd_admin,xui_webapp,aac_manage_case_assignment
       USER_PROFILE_HOST: http://ccd-user-profile-api:4453
       IDAM_USER_URL: "${IDAM_STUB_SERVICE_NAME:-http://idam-web-public:8080}"
       IDAM_S2S_URL: http://service-auth-provider-api:8080
@@ -89,7 +89,7 @@ services:
       ELASTIC_SEARCH_DATA_NODES_HOSTS: "http://ccd-elasticsearch:9200"
       CCD_DEFAULTPRINTURL: https://return-case-doc-ccd.nonprod.platform.hmcts.net/jurisdictions/:jid/case-types/:ctid/cases/:cid
       CCD_S2S_AUTHORISED_SERVICES_CASE_USER_ROLES: civil_service,aac_manage_case_assignment
-      DATA_STORE_CROSS_JURISDICTIONAL_ROLES: caseworker-caa,caseworker-civil-systemupdate
+      DATA_STORE_CROSS_JURISDICTIONAL_ROLES: caseworker-caa,caseworker-civil-systemupdate,caseworker-approver
       CASE_DOCUMENT_AM_URL: http://ccd-case-document-am-api:4455
       ROLE_ASSIGNMENT_URL: "${ROLE_ASSIGNMENT_URL:-http://am-role-assignment-service:4096}"
       IDAM_DATA_STORE_SYSTEM_USER_USERNAME: ccd-system-user@mailinator.com
