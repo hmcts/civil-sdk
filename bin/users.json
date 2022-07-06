@@ -26,7 +26,7 @@
   },
   {
     "email": "hmcts.civil+organisation.2.solicitor.2@gmail.com",
-    "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager",
+    "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager,am_role_assignment,citizen",
     "lastName": "Defendant-solicitor-2"
   },
   {
