@@ -26,4 +26,4 @@ ${dir}/utils/idam-create-service.sh "ccd_data_store_api" "ccd_data_store_api" "i
 
 ${dir}/utils/idam-create-service.sh "civil_citizen_ui" "civil_citizen_ui" "citizen-ui-secret" "http://localhost:3001/oauth2/callback" "true" "profile openid roles manage-user create-user search-user"
 
-${dir}/utils/idam-create-service.sh "cmc_citizen_frontend" "cmc_citizen" "12345678" "http://localhost:3002/receiver" "true" "profile openid roles manage-user create-user search-user"
+${dir}/utils/idam-create-service.sh "cmc_citizen_frontend" "cmc_citizen" "12345678" "https://localhost:3002/receiver" "true" "profile openid roles manage-user create-user search-user"
