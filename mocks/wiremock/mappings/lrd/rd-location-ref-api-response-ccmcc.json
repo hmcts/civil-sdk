@@ -1,0 +1,18 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/refdata/location/court-venues",
+    "queryParameters": {
+      "court_venue_name": {
+        "equalTo": "County Court Money Claims Centre"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": "[{\"court_venue_id\":\"1234\",\"epimms_id\":\"992288\",\"site_name\":\"County Court Money Claims Centre\",\"region_id\":\"4\",\"region\":\"North West\",\"court_type\":\"County Court\",\"court_type_id\":\"10\",\"cluster_id\":\"8\",\"cluster_name\":\"Great Monster\",\"open_for_public\":\"NO\",\"court_address\":\"88 Alfred Street, RandonCity\",\"postcode\":\"AA5 4RR\",\"phone_number\":\"0123 456 7890\",\"closed_date\":null,\"court_location_code\":\"390\",\"dx_address\":\"DX: 123456 Random 5\",\"welsh_site_name\":\"\",\"welsh_court_address\":\"\",\"court_status\":\"Open\",\"court_open_date\":null,\"court_name\":\"COUNTY COURT MONEY CLAIMS CENTRE\",\"venue_name\":\"CCMCC\",\"is_case_management_location\":\"Y\",\"is_hearing_location\":\"N\",\"welsh_venue_name\":\"\",\"is_temporary_location\":\"N\",\"is_nightingale_court\":\"N\",\"location_type\":\"COURT\",\"parent_location\":\"\",\"welsh_court_name\":\"\",\"uprn\":\"\",\"venue_ou_code\":\"\",\"mrd_building_location_id\":\"ABC-DEF-240\",\"mrd_venue_id\":\"ABC-PQR-0812\",\"service_url\":\"\",\"fact_url\":\"\"}]"
+  }
+}
