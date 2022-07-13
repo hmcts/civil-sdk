@@ -22,8 +22,7 @@
   {"email": "judge-dredd-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "standard"},
   {"email": "task-supervisor-civil-01@example.com", ",roles": "caseworker,caseworker-civil", "lastName": "standard"},
   {"email": "case-allocator-civil-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "standard"},
-  {"email": "jane.smith@gmail.com", "roles": "citizen", "lastName": "Smith"}
-  {"email": "judge-civil-01@example.com", "roles": "caseworker,caseworker-civil,caseworker-civil-judge", "lastName": "judge"},
-  {"email": "approver-noc@mailnesia.com", "roles": "caseworker-approver, prd-aac-system", "lastName": "Approver-NoC"},
-  {"email": "approver-caseworker@mailnesia.com", "roles": "caseworker-approver, prd-aac-system", "lastName": "Approver-System"}
+  {"email": "jane.smith@gmail.com", "roles": "citizen", "lastName": "Smith"},
+  {"email": "approver-noc@mailnesia.com", "roles": "caseworker,caseworker-approver, prd-aac-system", "lastName": "Approver-NoC"},
+  {"email": "approver-caseworker@mailnesia.com", "roles": "caseworker,caseworker-approver, prd-aac-system", "lastName": "Approver-System"}
 ]

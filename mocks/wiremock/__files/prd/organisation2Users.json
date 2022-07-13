@@ -1,0 +1,62 @@
+{
+  "organisationIdentifier": "79ZRSOU",
+  "users": [
+    {
+      "userIdentifier": "uid-string",
+      "firstName": "civil",
+      "lastName": "organisation 1",
+      "email": "hmcts.civil+organisation.2.superuser@gmail.com",
+      "idamStatus": "ACTIVE",
+      "roles": [
+        "payments",
+        "pui-finance-manager",
+        "pui-organisation-manager",
+        "pui-case-manager",
+        "pui-user-manager",
+        "pui-caa",
+        "payments-refund-approver",
+        "payments-refund",
+        "caseworker",
+        "caseworker-civil",
+        "caseworker-civil-solicitor"
+      ],
+      "idamStatusCode": "200",
+      "idamMessage": "11 OK"
+    },
+    {
+      "userIdentifier": "0230d6fe-9c9e-477f-9103-03d04bc0b95b",
+      "firstName": "civil",
+      "lastName": "organisation 2 solicitor 1",
+      "email": "hmcts.civil+organisation.2.solicitor.1@gmail.com",
+      "idamStatus": "ACTIVE",
+      "roles": [
+        "payments",
+        "pui-organisation-manager",
+        "payments-refund-approver",
+        "payments-refund",
+        "pui-case-manager",
+        "caseworker",
+        "caseworker-civil",
+        "caseworker-civil-solicitor"
+      ],
+      "idamStatusCode": "200",
+      "idamMessage": "11 OK"
+    },
+    {
+      "userIdentifier": "uid-string",
+      "firstName": "civil",
+      "lastName": "organisation 2 solicitor 2",
+      "email": "hmcts.civil+organisation.2.solicitor.2@gmail.com",
+      "idamStatus": "ACTIVE",
+      "roles": [
+        "pui-organisation-manager",
+        "pui-case-manager",
+        "caseworker",
+        "caseworker-civil",
+        "caseworker-civil-solicitor"
+      ],
+      "idamStatusCode": "200",
+      "idamMessage": "11 OK"
+    }
+  ]
+}
