@@ -36,11 +36,11 @@
             "rows": [
               {
                 "reason": "Some weird reason but you owe me money",
-                "amount": 200
+                "amount": 200.00
               },
               {
                 "reason": "Some weird reason2 but you owe me money",
-                "amount": 100
+                "amount": 100.00
               }
             ]
           },
@@ -188,7 +188,7 @@
               "type": "CUSTOM",
               "year": 0
             },
-            "lastInterestCalculationDate": "2022-06-21T12:18:59.827Z",
+            "lastInterestCalculationDate": "2022-06-21",
             "rate": 0,
             "reason": "string",
             "specificDailyAmount": {
@@ -354,7 +354,7 @@
           "empty": true,
           "present": true
         },
-        "responseDeadline": "2022-06-21T12:18:59.827Z",
+        "responseDeadline": "2022-06-21",
         "reviewOrder": {
           "empty": true,
           "present": true
