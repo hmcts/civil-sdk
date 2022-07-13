@@ -4,6 +4,7 @@ version: '2.4'
 services:
   rd-professional-api:
     image:  'hmctspublic.azurecr.io/rd/professional-api:latest'
+    mem_limit: 512m
     environment:
       POSTGRES_HOST: ccd-shared-database
       POSTGRES_USERNAME: "${DB_USERNAME}"
@@ -13,7 +14,7 @@ services:
       S2S_SECRET: "${OAUTH2_CLIENT_RD_PROFESSIONAL}"
       S2S_URL: http://service-auth-provider-api:8080
       idam_url: http://idam-api:5000
-      LD_SDK_KEY: sdk-b1310c4a-e522-4512-9e68-d75d23b04c5d
+      LD_SDK_KEY: sdk-1be5f18b-59fd-4575-aa77-908bf0ecceab
       ACTIVE_ORG_EXT: "true"
       ROOT_LOGGING_LEVEL: debug
       OIDC_ISSUER_URL: http://fr-am:8080/openam/oauth2/hmcts

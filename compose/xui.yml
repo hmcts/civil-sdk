@@ -4,6 +4,7 @@ version: '2.4'
 services:
   xui:
     image: "hmctspublic.azurecr.io/xui/webapp:latest"
+    mem_limit: 512m
     environment:
       MICROSERVICE: xui_webapp
       PROTOCOL: http

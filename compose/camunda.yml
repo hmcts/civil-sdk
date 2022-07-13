@@ -5,6 +5,7 @@ services:
   camunda:
     container_name: camunda
     image: camunda/camunda-bpm-platform:run-latest
+    mem_limit: 512m
     ports:
       - 9404:8080
     networks:

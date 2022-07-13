@@ -6,12 +6,14 @@ version: '2.4'
 services:
   fr-am:
     image: hmctsprivate.azurecr.io/idam/idam-fr-am:latest
+    mem_limit: 512m
     hostname: localam
     depends_on:
       shared-db:
         condition: service_started
   fr-idm:
     image: hmctsprivate.azurecr.io/idam/idam-fr-idm:latest
+    mem_limit: 512m
     hostname: localidm
     depends_on:
       fr-am:
@@ -24,6 +26,7 @@ services:
     image: mailhog/mailhog
   idam-api:
     image: hmctspublic.azurecr.io/idam/api:stable
+    mem_limit: 512m
     depends_on:
       fr-am:
         condition: service_started
@@ -31,11 +34,13 @@ services:
         condition: service_started
   idam-web-public:
     image: hmctspublic.azurecr.io/idam/web-public:stable
+    mem_limit: 512m
     depends_on:
       idam-api:
         condition: service_started
   idam-web-admin:
     image: hmctspublic.azurecr.io/idam/web-admin:stable
+    mem_limit: 512m
     depends_on:
       idam-api:
         condition: service_started

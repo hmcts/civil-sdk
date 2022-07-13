@@ -4,11 +4,12 @@ version: '2.4'
 services:
   docmosis-tornado:
     image: skeneventures/docmosis-tornado:2.7.3-8366
+    mem_limit: 512m
     healthcheck:
       disable: true
     environment:
       # not supported in current version of Tornado
-      - DOCMOSIS_KEY
+      - DOCMOSIS_KEY="3TAD-KLTK-JALP-FKIA-EBBH-2ELH-RBKQ-JS07-E7E1-B-EA43"
       - DOCMOSIS_SITE="Free Trial Tornado"
     volumes:
       - ../../civil-service/docker/docmosis/templates:/home/docmosis/templates:rw

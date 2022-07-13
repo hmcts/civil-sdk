@@ -18,6 +18,7 @@ services:
 
   dm-store:
     image: "${DM_STORE_USE_LOCAL-hmctspublic.azurecr.io/}dm/store:${DM_STORE_TAG:-latest}"
+    mem_limit: 512m
     healthcheck:
       disable: true
     environment:

@@ -4,6 +4,7 @@ version: '2.4'
 services:
   manage-case-assignment:
     image:  'hmctspublic.azurecr.io/aac/manage-case-assignment:latest'
+    mem_limit: 512m
     environment:
       IDAM_OIDC_URL: http://idam-api:5000
       IDAM_API_URL: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}"
