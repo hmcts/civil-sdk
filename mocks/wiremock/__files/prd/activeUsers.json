@@ -1,0 +1,19 @@
+{
+  "organisationIdentifier": "H2156A0",
+  "users": [
+    {
+      "userIdentifier": "92e750d0-8a45-4975-9f1a-9cfc56247d37",
+      "firstName": "civil",
+      "lastName": "organisation 2",
+      "email": "hmcts.civil+organisation.3.superuser@gmail.com",
+      "idamStatus": "Active"
+    },
+    {
+      "userIdentifier": "52a23cfe-0383-4dae-826d-d45efdcfdc11",
+      "firstName": "civil",
+      "lastName": "organisation 3 solicitor 1",
+      "email": "hmcts.civil+organisation.3.solicitor.1@gmail.com",
+      "idamStatus": "Active"
+    }
+  ]
+}
