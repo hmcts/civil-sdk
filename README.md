@@ -49,6 +49,8 @@ To generate a new API key [click here](https://www.docmosis.com/products/tornado
 
 4. Enable docker compose defaults
 
+**Note:** If you'd like to run OCMC services as well, append `ocmc` line in `defaults.conf`.
+
 ```shell
 ./ccd enable defaults
 ```
@@ -103,6 +105,11 @@ don't have those, go get them.
 
 ```shell
 ./bin/process-and-import-ccd-definition.sh
+```
+If you have chosen to run OCMC services as well (step 4), you need to import CMC CCD definition. You can do so by running:
+
+```shell
+docker-compose -f compose/cmc-ccd-definition-importer.yml up cmc-ccd-definition-importer
 ```
 
 9. Upload Camunda diagrams from `civil-camunda-bpmn-definition` repo
