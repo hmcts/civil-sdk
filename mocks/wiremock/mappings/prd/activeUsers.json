@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/refdata/external/v1/organisations/users",
+    "queryParameters": {
+      "status": {
+        "equalTo": "Active"
+      },
+      "returnRoles": {
+        "equalTo": "false"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "prd/activeUsers.json"
+  }
+}

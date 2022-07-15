@@ -26,11 +26,27 @@
     "overrideAll": true
   },
   {
-    "email": "legal-advisor-01@example.com",
+    "email": "fee-paid-judge-01@example.com",
     "roleAssignments": [
       {
         "roleType": "ORGANISATION",
-        "roleName": "legal-advisor",
+        "roleName": "fee-paid-judge",
+        "grantType": "SPECIFIC",
+        "roleCategory": "JUDICIAL",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
+        "authorisations": []
+      }
+    ],
+    "overrideAll": true
+  },
+  {
+    "email": "leadership-judge-01@example.com",
+    "roleAssignments": [
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "leadership-judge",
         "grantType": "STANDARD",
         "roleCategory": "JUDICIAL",
         "classification": "PUBLIC",
@@ -42,13 +58,109 @@
     "overrideAll": true
   },
   {
-    "email": "hearing-admin-01@example.com",
+    "email": "judge-dredd-01@example.com",
     "roleAssignments": [
       {
         "roleType": "ORGANISATION",
-        "roleName": "hearing-admin",
+        "roleName": "hmcts-judiciary",
+        "grantType": "SPECIFIC",
+        "roleCategory": "JUDICIAL",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
+        "authorisations": []
+      }
+    ],
+    "overrideAll": true
+  },
+  {
+    "email": "circuit-judge-01@example.com",
+    "roleAssignments": [
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "circuit-judge",
         "grantType": "STANDARD",
         "roleCategory": "JUDICIAL",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
+        "authorisations": []
+      }
+    ],
+    "overrideAll": true
+  },
+  {
+    "email": "judge-civil-02@example.com",
+    "roleAssignments": [
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "judge",
+        "grantType": "STANDARD",
+        "roleCategory": "JUDICIAL",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
+        "authorisations": []
+      }
+    ],
+    "overrideAll": true
+  },
+  {
+    "email": "task-supervisor-civil-01@example.com",
+    "roleAssignments": [
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "task-supervisor",
+        "grantType": "STANDARD",
+        "roleCategory": "JUDICIAL",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
+        "authorisations": []
+      }
+    ],
+    "overrideAll": true
+  },
+  {
+    "email": "case-allocator-civil-01@example.com",
+    "roleAssignments": [
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "case-allocator",
+        "grantType": "STANDARD",
+        "roleCategory": "JUDICIAL",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
+        "authorisations": []
+      }
+    ],
+    "overrideAll": true
+  },
+  {
+    "email": "tribunal-caseworker-01@example.com",
+    "roleAssignments": [
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "tribunal-caseworker",
+        "grantType": "STANDARD",
+        "roleCategory": "LEGAL_OPERATIONS",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
+        "authorisations": []
+      }
+    ],
+    "overrideAll": true
+  },
+  {
+    "email": "hearing-centre-admin-01@example.com",
+    "roleAssignments": [
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "hearing-centre-admin",
+        "grantType": "STANDARD",
+        "roleCategory": "ADMINISTRATOR",
         "classification": "PUBLIC",
         "readOnly": false,
         "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
