@@ -8,10 +8,10 @@ services:
       - IDAM_API_URL=http://idam-api:5000
       - IDAM_AUTHENTICATION_WEB_URL=http://idam-web-public:9002
       - IDAM_S2S_AUTH=http://service-auth-provider-api:8080
-      - PAY_URL=http://payments-api:8080
+      - PAY_URL=http://wiremock:8080
       - CLAIM_STORE_URL=${CLAIM_STORE_URL:-http://claim-store-api:4400}
-      - FEES_URL=http://fees-api:8080
-      - PDF_SERVICE_URL=http://pdf-service-api:5500
+      - FEES_URL=http://wiremock:8080
+      - PDF_SERVICE_URL=http://wiremock:8080
       - DRAFT_STORE_URL=http://draft-store-api:8800
       - POSTCODE_LOOKUP_API_KEY
       - LOG_LEVEL
@@ -63,7 +63,7 @@ services:
       - RPA_NOTIFICATIONS_PAIDINFULLRECIPIENT=${RPA_NOTIFICATIONS_PAIDINFULLRECIPIENT:-civilmoneyclaimsdemo@gmail.com}
       - SPRING_MAIL_HOST=smtp-server
       - SPRING_MAIL_PORT=1025
-      - PDF_SERVICE_URL=http://pdf-service-api:5500
+      - PDF_SERVICE_URL=http://wiremock:8080
       - DOCUMENT_MANAGEMENT_URL=http://dm-store:4460
       - CORE_CASE_DATA_API_URL=http://ccd-data-store-api:4452
       - FEATURE_TOGGLES_SAVE_CLAIM_STATE_ENABLED=true
@@ -76,7 +76,7 @@ services:
       - REFORM_ENVIRONMENT
       - http_proxy
       - https_proxy
-      - no_proxy
+      - no_proxy=idam-api,service-auth-provider-api,pdf-service-api,ccd-data-store-api,dm-store
       - IDAM_CASEWORKER_ANONYMOUS_USERNAME=civilmoneyclaims+anonymouscitizen@gmail.com
       - IDAM_CASEWORKER_ANONYMOUS_PASSWORD=Password12
       - IDAM_CASEWORKER_SYSTEM_USERNAME=civilmoneyclaims+systemupdate@gmail.com
@@ -87,8 +87,8 @@ services:
       - APPINSIGHTS_INSTRUMENTATIONKEY=${APPINSIGHTS_INSTRUMENTATIONKEY:-fake-key}
       - OAUTH2_CLIENT_SECRET=12345678
       - DOCUMENT_MANAGEMENT_USERROLES=caseworker-cmc,citizen
-      - PAY_URL=http://payments-api:8080
-      - FEES_URL=http://fees-api:8080
+      - PAY_URL=http://wiremock:8080
+      - FEES_URL=http://wiremock:8080
       - SCHEDULE_STATE_TRANSITION_STAY_CLAIM
       - SCHEDULE_STATE_TRANSITION_WAITING_TRANSFER
       - MILO_CSV_RECIPIENT=${MILO_CSV_RECIPIENT:-civilmoneyclaims+milorecipient@gmail.com}

@@ -17,6 +17,37 @@
         },
         "bodyFileName": "payment/successResponse.json"
       }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "urlPath": "/card-payments",
+        "bodyPatterns": [
+          {
+            "contains": "Money Claims"
+          }
+        ]
+      },
+      "response": {
+        "status": 201,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "payment/successResponseOcmc.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPath": "/card-payments/RC-1234-1234-1234-1234"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "payment/successResponseOcmc.json"
+      }
     }
   ]
 }
