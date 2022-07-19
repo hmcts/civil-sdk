@@ -1,0 +1,143 @@
+version: '2.4'
+services:
+  citizen-frontend:
+    image: hmctspublic.azurecr.io/cmc/citizen-frontend:${CITIZEN_FRONTEND_VERSION:-latest}
+    environment:
+      - TESTING_SUPPORT_ENABLED=true
+      - NODE_ENV=dockertests
+      - IDAM_API_URL=http://idam-api:5000
+      - IDAM_AUTHENTICATION_WEB_URL=http://idam-web-public:9002
+      - IDAM_S2S_AUTH=http://service-auth-provider-api:8080
+      - PAY_URL=http://payments-api:8080
+      - CLAIM_STORE_URL=${CLAIM_STORE_URL:-http://claim-store-api:4400}
+      - FEES_URL=http://fees-api:8080
+      - PDF_SERVICE_URL=http://pdf-service-api:5500
+      - DRAFT_STORE_URL=http://draft-store-api:8800
+      - POSTCODE_LOOKUP_API_KEY
+      - LOG_LEVEL
+      - UV_THREADPOOL_SIZE=64
+      - WEBCHAT_CHAT_ID=17284281475d5519274e25a3.69472655
+      - WEBCHAT_TENANT=aG1jdHNzdGFnaW5nMDE
+      - WEBCHAT_BUTTON_NO_AGENTS=7732814745cac6f4603c4d1.53357933
+      - WEBCHAT_BUTTON_AGENTS_BUSY=2042157415cc19c95669039.65793052
+      - WEBCHAT_BUTTON_SERVICE_CLOSED=20199488815cc1a89e0861d5.73103009
+      - http_proxy
+      - https_proxy
+      - no_proxy=claim-store-api, fees-api, payments-api, idam-api, service-auth-provider-api, draft-store-api
+      - LAUNCH_DARKLY_SDK_KEY=${LAUNCH_DARKLY_SDK_KEY:-sdk-c732c882-b5df-4e9b-9ec1-679836b93907}
+      - LAUNCH_DARKLY_OFFLINE_MODE
+    mem_limit: 1024m
+    memswap_limit: 0
+    ports:
+      - 3002:3000
+    depends_on:
+      draft-store-api:
+        condition: service_started
+    networks:
+      - ccd-network
+  claim-store-api:
+    image: hmctspublic.azurecr.io/cmc/claim-store:${CLAIM_STORE_API_VERSION:-latest}
+    healthcheck:
+      retries: 40
+    environment:
+      - JAVA_OPTS=-Xms256m -Xmx512m -Djava.security.egd=file:/dev/./urandom -XX:MaxMetaspaceSize=128m
+      - CMC_DB_HOST=ccd-shared-database
+      - CMC_DB_PORT=5432
+      - CMC_DB_USERNAME=ccd
+      - CMC_DB_PASSWORD=ccd
+      - IDAM_API_URL=http://idam-api:5000
+      - IDAM_S2S_AUTH_URL=http://service-auth-provider-api:8080
+      - GOV_NOTIFY_API_KEY=genericteam-37ba0bfe-68ed-4e8e-9e19-f3a4cc331d80-f3254537-8758-457d-8c8f-41cc2833bea4
+      - FRONTEND_BASE_URL=https://localhost:3000
+      - RESPOND_TO_CLAIM_URL=https://localhost:3000/first-contact/start
+      - CLAIM_STORE_TEST_SUPPORT_ENABLED=true
+      - STAFF_NOTIFICATIONS_SENDER=noreply@mail-money-claims-nonprod.platform.hmcts.net
+      - STAFF_NOTIFICATIONS_RECIPIENT=${STAFF_NOTIFICATIONS_RECIPIENT:-civilmoneyclaims+staff-int-tests@gmail.com}
+      - RPA_NOTIFICATIONS_SENDER=noreply@mail-money-claims-nonprod.platform.hmcts.net
+      - STAFF_NOTIFICATIONS_LEGAL_RECIPIENT=${STAFF_NOTIFICATIONS_LEGAL_RECIPIENT:-civilmoneyclaims+staff-int-tests@gmail.com}
+      - RPA_NOTIFICATIONS_SEALEDCLAIMRECIPIENT=${RPA_NOTIFICATIONS_SEALEDCLAIMRECIPIENT:-civilmoneyclaimsdemo@gmail.com}
+      - RPA_NOTIFICATIONS_LEGALSEALEDCLAIMRECIPIENT=${RPA_NOTIFICATIONS_LEGALSEALEDCLAIMRECIPIENT:-civilmoneyclaimsdemo@gmail.com}
+      - RPA_NOTIFICATIONS_MORETIMEREQUESTEDRECIPIENT=${RPA_NOTIFICATIONS_MORETIMEREQUESTEDRECIPIENT:-civilmoneyclaimsdemo@gmail.com}
+      - RPA_NOTIFICATIONS_RESPONSERECIPIENT=${RPA_NOTIFICATIONS_RESPONSERECIPIENT:-civilmoneyclaimsdemo@gmail.com}
+      - RPA_NOTIFICATIONS_COUNTYCOURTJUDGEMENTRECIPIENT=${RPA_NOTIFICATIONS_COUNTYCOURTJUDGEMENTRECIPIENT:-civilmoneyclaimsdemo@gmail.com}
+      - RPA_NOTIFICATIONS_PAIDINFULLRECIPIENT=${RPA_NOTIFICATIONS_PAIDINFULLRECIPIENT:-civilmoneyclaimsdemo@gmail.com}
+      - SPRING_MAIL_HOST=smtp-server
+      - SPRING_MAIL_PORT=1025
+      - PDF_SERVICE_URL=http://pdf-service-api:5500
+      - DOCUMENT_MANAGEMENT_URL=http://dm-store:4460
+      - CORE_CASE_DATA_API_URL=http://ccd-data-store-api:4452
+      - FEATURE_TOGGLES_SAVE_CLAIM_STATE_ENABLED=true
+      - FEATURE_TOGGLES_DIRECTIONS_QUESTIONNAIRE_ENABLED=true
+      - DOC_ASSEMBLY_URL=http://doc-assembly-api:8080
+      - JSON_CONSOLE_PRETTY_PRINT
+      - ROOT_LOGGING_LEVEL
+      - REFORM_SERVICE_NAME=claim-store
+      - REFORM_TEAM
+      - REFORM_ENVIRONMENT
+      - http_proxy
+      - https_proxy
+      - no_proxy
+      - IDAM_CASEWORKER_ANONYMOUS_USERNAME=civilmoneyclaims+anonymouscitizen@gmail.com
+      - IDAM_CASEWORKER_ANONYMOUS_PASSWORD=Password12
+      - IDAM_CASEWORKER_SYSTEM_USERNAME=civilmoneyclaims+systemupdate@gmail.com
+      - IDAM_CASEWORKER_SYSTEM_PASSWORD=Password12
+      - OIDC_ISSUER=http://fr-am:8080/openam/oauth2/hmcts
+      - IDAM_WEB_URL=http://idam-web-public:8080
+      - SEND_LETTER_URL=http://send-letter-api:8485
+      - APPINSIGHTS_INSTRUMENTATIONKEY=${APPINSIGHTS_INSTRUMENTATIONKEY:-fake-key}
+      - OAUTH2_CLIENT_SECRET=12345678
+      - DOCUMENT_MANAGEMENT_USERROLES=caseworker-cmc,citizen
+      - PAY_URL=http://payments-api:8080
+      - FEES_URL=http://fees-api:8080
+      - SCHEDULE_STATE_TRANSITION_STAY_CLAIM
+      - SCHEDULE_STATE_TRANSITION_WAITING_TRANSFER
+      - MILO_CSV_RECIPIENT=${MILO_CSV_RECIPIENT:-civilmoneyclaims+milorecipient@gmail.com}
+      - MILO_CSV_SENDER=civilmoneyclaims+milosender@gmail.com
+      - FEATURE_TOGGLES_CTSC_ENABLED=${FEATURE_TOGGLES_CTSC_ENABLED:-false}
+      - FEATURE_TOGGLES_STAFF_EMAILS_ENABLED=${FEATURE_TOGGLES_STAFF_EMAILS_ENABLED:-true}
+      - FEATURE_TOGGLES_BULK_PRINT_TRANSFER_ENABLED=${FEATURE_TOGGLES_BULK_PRINT_TRANSFER_ENABLED:-false}
+      - RPA_NOTIFICATIONS_BREATHINGSPACERECIPIENT=${RPA_NOTIFICATIONS_SEALEDCLAIMRECIPIENT:-civilmoneyclaimsdemo@gmail.com}
+      - LAUNCH_DARKLY_SDK_KEY
+      - SENDGRID_API_KEY
+    mem_limit: 800m
+    memswap_limit: 0
+    depends_on:
+      ccd-shared-database:
+        condition: service_healthy
+      smtp-server:
+        condition: service_started
+    ports:
+      - "4400:4400"
+    networks:
+      - ccd-network
+  draft-store-api:
+    image: hmctspublic.azurecr.io/draft-store/service:${DRAFT_STORE_API_VERSION:-latest}
+    healthcheck:
+      retries: 40
+    environment:
+      - JAVA_OPTS=-Xms8m -Xmx256m -Djava.security.egd=file:/dev/./urandom -XX:MaxMetaspaceSize=128m
+      - DRAFT_STORE_DB_HOST=ccd-shared-database
+      - DRAFT_STORE_DB_USERNAME=ccd
+      - DRAFT_STORE_DB_PASSWORD=ccd
+      - DRAFT_STORE_DB_PORT=5432
+      - IDAM_URL=http://idam-api:5000
+      - S2S_URL=http://service-auth-provider-api:8080
+      - ROOT_APPENDER
+      - JSON_CONSOLE_PRETTY_PRINT
+      - ROOT_LOGGING_LEVEL
+    mem_limit: 512m
+    memswap_limit: 0
+    depends_on:
+      ccd-shared-database:
+        condition: service_healthy
+      service-auth-provider-api:
+        condition: service_started
+    ports:
+        - "8800:8800"
+    networks:
+      - ccd-network
+
+networks:
+  ccd-network:
+    external: true
+
