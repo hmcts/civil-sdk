@@ -1,0 +1,194 @@
+{
+  "account_number": "string",
+  "amount": 0,
+  "currency": "GBP",
+  "customer_reference": "string",
+  "date_created": "string",
+  "error": {
+    "error_code": "string",
+    "error_message": "string"
+  },
+  "organisation_name": "string",
+  "payment_reference": "2022-1655915218557",
+  "status": "string",
+  "status_histories": [
+    {
+      "dateCreated": "2022-07-20T16:40:32.095Z",
+      "dateUpdated": "2022-07-20T16:40:32.095Z",
+      "errorCode": "string",
+      "externalStatus": "string",
+      "id": 0,
+      "message": "string",
+      "payment": {
+        "amount": 0,
+        "bankedDate": "2022-07-20T16:40:32.095Z",
+        "cancelUrl": "string",
+        "caseReference": "string",
+        "ccdCaseNumber": "string",
+        "currency": "string",
+        "customerReference": "string",
+        "dateCreated": "2022-07-20T16:40:32.095Z",
+        "dateUpdated": "2022-07-20T16:40:32.095Z",
+        "description": "string",
+        "documentControlNumber": "string",
+        "email": "string",
+        "externalReference": "string",
+        "finished": true,
+        "giroSlipNo": "string",
+        "id": 0,
+        "internalReference": "string",
+        "nextUrl": "string",
+        "organisationName": "string",
+        "payerName": "string",
+        "paymentAllocation": [
+          {
+            "dateCreated": "2022-07-20T16:40:32.096Z",
+            "explanation": "string",
+            "id": 0,
+            "paymentAllocationStatus": {
+              "description": "string",
+              "name": "string"
+            },
+            "paymentGroupReference": "string",
+            "paymentReference": "string",
+            "reason": "string",
+            "receivingOffice": "string",
+            "unidentifiedReason": "string",
+            "userId": "string",
+            "userName": "string"
+          }
+        ],
+        "paymentChannel": {
+          "description": "string",
+          "name": "string"
+        },
+        "paymentLink": {
+          "apportions": [
+            {
+              "apportionAmount": 0,
+              "apportionType": "string",
+              "callSurplusAmount": 0,
+              "ccdCaseNumber": "string",
+              "createdBy": "string",
+              "dateCreated": "2022-07-20T16:40:32.096Z",
+              "dateUpdated": "2022-07-20T16:40:32.096Z",
+              "feeAmount": 0,
+              "feeId": 0,
+              "id": 0,
+              "paymentAmount": 0,
+              "paymentId": 0
+            }
+          ],
+          "callBackUrl": "string",
+          "caseReference": "string",
+          "ccdCaseNumber": "string",
+          "dateCreated": "2022-07-20T16:40:32.096Z",
+          "dateUpdated": "2022-07-20T16:40:32.096Z",
+          "enterpriseServiceName": "string",
+          "fees": [
+            {
+              "allocatedAmount": 0,
+              "amountDue": 0,
+              "apportionAmount": 0,
+              "calculatedAmount": 0,
+              "ccdCaseNumber": "string",
+              "code": "string",
+              "dateApportioned": "2022-07-20T16:40:32.096Z",
+              "dateCreated": {
+                "date": 0,
+                "day": 0,
+                "hours": 0,
+                "minutes": 0,
+                "month": 0,
+                "nanos": 0,
+                "seconds": 0,
+                "time": 0,
+                "timezoneOffset": 0,
+                "year": 0
+              },
+              "dateUpdated": {
+                "date": 0,
+                "day": 0,
+                "hours": 0,
+                "minutes": 0,
+                "month": 0,
+                "nanos": 0,
+                "seconds": 0,
+                "time": 0,
+                "timezoneOffset": 0,
+                "year": 0
+              },
+              "feeAmount": 0,
+              "id": 0,
+              "netAmount": 0,
+              "reference": "string",
+              "remissions": [
+                {
+                  "beneficiaryName": "string",
+                  "caseReference": "string",
+                  "ccdCaseNumber": "string",
+                  "dateCreated": "2022-07-20T16:40:32.096Z",
+                  "dateUpdated": "2022-07-20T16:40:32.096Z",
+                  "hwfAmount": 0,
+                  "hwfReference": "string",
+                  "id": 0,
+                  "remissionReference": "string",
+                  "siteId": "string"
+                }
+              ],
+              "version": "string",
+              "volume": 0
+            }
+          ],
+          "id": 0,
+          "orgId": "string",
+          "paymentReference": "string",
+          "payments": [
+            null
+          ],
+          "remissions": [
+            {
+              "beneficiaryName": "string",
+              "caseReference": "string",
+              "ccdCaseNumber": "string",
+              "dateCreated": "2022-07-20T16:40:32.096Z",
+              "dateUpdated": "2022-07-20T16:40:32.096Z",
+              "hwfAmount": 0,
+              "hwfReference": "string",
+              "id": 0,
+              "remissionReference": "string",
+              "siteId": "string"
+            }
+          ]
+        },
+        "paymentMethod": {
+          "description": "string",
+          "name": "string"
+        },
+        "paymentProvider": {
+          "description": "string",
+          "name": "string"
+        },
+        "paymentStatus": {
+          "description": "string",
+          "name": "string"
+        },
+        "pbaNumber": "string",
+        "reference": "string",
+        "refundsUrl": "string",
+        "reportedDateOffline": "2022-07-20T16:40:32.096Z",
+        "returnUrl": "string",
+        "s2sServiceName": "string",
+        "serviceCallbackUrl": "string",
+        "serviceType": "string",
+        "siteId": "string",
+        "status": "string",
+        "statusHistories": [
+          null
+        ],
+        "userId": "string"
+      },
+      "status": "string"
+    }
+  ]
+}
