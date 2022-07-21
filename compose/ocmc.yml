@@ -29,7 +29,7 @@ services:
     mem_limit: 1024m
     memswap_limit: 0
     ports:
-      - 3002:3000
+      - 3000:3000
     depends_on:
       draft-store-api:
         condition: service_started

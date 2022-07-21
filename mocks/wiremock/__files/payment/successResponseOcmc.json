@@ -1,14 +1,10 @@
 {
-  "_links": {
-    "next_url": {
-      "href": "https://localhost:3000/dashboard",
-      "method": "get"
-    }
-  },
+  "_links": {},
   "reference": "RC-1234-1234-1234-1234",
   "date_created": "2020-02-20T20:20:20.222+0000",
   "status": "Success",
   "payment_group_reference": "2020-1582230020222",
+  "payment_reference": "DUMMY-PAYMENT-REF",
   "status_histories": [
     {
       "status": "success",
