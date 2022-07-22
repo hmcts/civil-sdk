@@ -11,6 +11,10 @@ services:
       - 8765:8080
     networks:
       - ccd-network
+    command:
+      - -global-response-templating
+      - -local-response-templating
+      - -verbose
 
 networks:
   ccd-network:
