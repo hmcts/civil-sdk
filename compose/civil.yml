@@ -13,8 +13,6 @@ services:
       - ccd-network
     command:
       - -global-response-templating
-      - -local-response-templating
-      - -verbose
 
 networks:
   ccd-network:
