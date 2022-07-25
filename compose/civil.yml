@@ -4,7 +4,7 @@ version: '2.4'
 services:
   wiremock:
     container_name: wiremock
-    image: rodolpheche/wiremock
+    image: wiremock/wiremock
     volumes:
       - ./../mocks/wiremock:/home/wiremock:rw
     ports:
