@@ -22,6 +22,7 @@
   {"email": "judge-dredd-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "standard"},
   {"email": "task-supervisor-civil-01@example.com", ",roles": "caseworker,caseworker-civil", "lastName": "standard"},
   {"email": "case-allocator-civil-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "standard"},
-  {"email": "jane.smith@gmail.com", "roles": "citizen", "lastName": "Smith"}
+  {"email": "jane.smith@gmail.com", "roles": "citizen", "lastName": "Smith"},
+  {"email": "tribunal-caseworker-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "tribunal-caseworker"}
 ]
 
