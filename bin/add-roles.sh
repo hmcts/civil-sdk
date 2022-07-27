@@ -27,7 +27,7 @@ do
   ${dir}/utils/ccd-add-role.sh "caseworker-civil-${role}"
 done
 
-accessprofiles=("judge-profile" "basic-access")
+accessprofiles=("judge-profile" "basic-access" "legal-adviser")
 for accessprofile in "${accessprofiles[@]}"
 do
   ${dir}/utils/ccd-add-role.sh "${accessprofile}"
