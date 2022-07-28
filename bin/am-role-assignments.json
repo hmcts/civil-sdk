@@ -37,6 +37,16 @@
         "readOnly": false,
         "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
         "authorisations": []
+      },
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "fee-paid-judge",
+        "grantType": "SPECIFIC",
+        "roleCategory": "JUDICIAL",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "GENERALAPPLICATION", "jurisdiction": "CIVIL" },
+        "authorisations": []
       }
     ],
     "overrideAll": true
@@ -52,6 +62,16 @@
         "classification": "PUBLIC",
         "readOnly": false,
         "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
+        "authorisations": []
+      },
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "leadership-judge",
+        "grantType": "STANDARD",
+        "roleCategory": "JUDICIAL",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "GENERALAPPLICATION", "jurisdiction": "CIVIL" },
         "authorisations": []
       }
     ],
@@ -69,6 +89,16 @@
         "readOnly": false,
         "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
         "authorisations": []
+      },
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "hmcts-judiciary",
+        "grantType": "SPECIFIC",
+        "roleCategory": "JUDICIAL",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "GENERALAPPLICATION", "jurisdiction": "CIVIL" },
+        "authorisations": []
       }
     ],
     "overrideAll": true
@@ -84,6 +114,16 @@
         "classification": "PUBLIC",
         "readOnly": false,
         "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
+        "authorisations": []
+      },
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "circuit-judge",
+        "grantType": "STANDARD",
+        "roleCategory": "JUDICIAL",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "GENERALAPPLICATION", "jurisdiction": "CIVIL" },
         "authorisations": []
       }
     ],
@@ -101,6 +141,16 @@
         "readOnly": false,
         "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
         "authorisations": []
+      },
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "judge",
+        "grantType": "STANDARD",
+        "roleCategory": "JUDICIAL",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "GENERALAPPLICATION", "jurisdiction": "CIVIL" },
+        "authorisations": []
       }
     ],
     "overrideAll": true
@@ -117,6 +167,16 @@
         "readOnly": false,
         "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
         "authorisations": []
+      },
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "task-supervisor",
+        "grantType": "STANDARD",
+        "roleCategory": "JUDICIAL",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "GENERALAPPLICATION", "jurisdiction": "CIVIL" },
+        "authorisations": []
       }
     ],
     "overrideAll": true
@@ -132,6 +192,16 @@
         "classification": "PUBLIC",
         "readOnly": false,
         "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
+        "authorisations": []
+      },
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "case-allocator",
+        "grantType": "STANDARD",
+        "roleCategory": "JUDICIAL",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "GENERALAPPLICATION", "jurisdiction": "CIVIL" },
         "authorisations": []
       }
     ],
