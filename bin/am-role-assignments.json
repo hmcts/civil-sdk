@@ -238,5 +238,21 @@
       }
     ],
     "overrideAll": true
+  },
+  {
+    "email": "hmcts-staff-09@example.com",
+    "roleAssignments": [
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "hmcts-admin",
+        "grantType": "STANDARD",
+        "roleCategory": "LEGAL_OPERATIONS",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
+        "authorisations": []
+      }
+    ],
+    "overrideAll": true
   }
 ]
