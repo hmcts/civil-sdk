@@ -6,16 +6,16 @@
         "urlPattern": "/service-request/(\\d*-\\d*)/pba-payments",
         "bodyPatterns": [
           {
-            "contains": "\"PBA0079005\""
+            "contains": "\"PBA0078095\""
           }
         ]
       },
       "response": {
-        "status": 400,
+        "status": 404,
         "headers": {
           "Content-Type": "application/json"
         },
-        "body": "Payment creation failed"
+        "body": "Account information could not be found"
       }
     }
   ]

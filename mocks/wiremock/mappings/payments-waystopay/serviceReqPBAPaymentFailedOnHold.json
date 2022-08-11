@@ -6,7 +6,7 @@
         "urlPattern": "/service-request/(\\d*-\\d*)/pba-payments",
         "bodyPatterns": [
           {
-            "contains": "\"PBA0079005\""
+            "contains": "\"PBA0078095\""
           }
         ]
       },
