@@ -13,7 +13,7 @@ services:
       - AUTH_PROVIDER_BASE_URL=http://service-auth-provider-api:8080
       - VERBOSE=true
       - MICROSERVICE=ccd_gw
-      - REDIRECT_URI=https://localhost:3002/receiver
+      - REDIRECT_URI=https://localhost:3000/receiver
       - CLIENT_ID=cmc_citizen
       - CLIENT_SECRET=12345678
       - CCD_DEF_FILENAME=cmc-ccd.xlsx

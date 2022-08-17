@@ -13,13 +13,34 @@
         "equalTo": "county court"
       },
       "channel": {
-        "equalTo": "default"
+        "or": [
+          {
+            "equalTo": "default"
+          },
+          {
+            "equalTo": "online"
+          }
+        ]
       },
       "event": {
-        "equalTo": "issue"
+        "or": [
+          {
+            "equalTo": "issue"
+          },
+          {
+            "equalTo": "hearing"
+          }
+        ]
       },
       "amount_or_volume": {
-        "matches": "(500[1-9]|50[1-9][0-9]|5[1-9][0-9]{2}|[6-9][0-9]{3}|10000)\\.\\d{2}"
+        "or": [
+          {
+            "matches": "(500[1-9]|50[1-9][0-9]|5[1-9][0-9]{2}|[6-9][0-9]{3}|10000)\\.\\d{2}"
+          },
+          {
+            "matches": "(500[1-9]|50[1-9][0-9]|5[1-9][0-9]{2}|[6-9][0-9]{3}|10000)"
+          }
+        ]
       }
     }
   },
