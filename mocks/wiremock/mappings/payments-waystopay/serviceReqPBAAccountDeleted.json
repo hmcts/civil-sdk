@@ -6,16 +6,16 @@
         "urlPattern": "/service-request/(\\d*-\\d*)/pba-payments",
         "bodyPatterns": [
           {
-            "contains": "\"PBA0079005\""
+            "contains": "\"PBA0085286\""
           }
         ]
       },
       "response": {
-        "status": 404,
+        "status": 410,
         "headers": {
           "Content-Type": "application/json"
         },
-        "body": "Technical error occurred"
+        "body": "Your Account is Deleted"
       }
     }
   ]
