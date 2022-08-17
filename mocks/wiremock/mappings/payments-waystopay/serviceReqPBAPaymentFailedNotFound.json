@@ -15,7 +15,7 @@
         "headers": {
           "Content-Type": "application/json"
         },
-        "body": "Technical error occurred"
+        "body": "Account information could not be found"
       }
     }
   ]
