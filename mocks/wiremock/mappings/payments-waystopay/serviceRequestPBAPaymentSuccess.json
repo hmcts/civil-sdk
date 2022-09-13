@@ -3,15 +3,10 @@
     {
       "request": {
         "method": "POST",
-        "urlPattern": "/service-request/(\\d*-\\d*)/pba-payments",
-        "bodyPatterns": [
-          {
-            "contains": "\"PBA0088192\""
-          }
-        ]
+        "urlPattern": "/service-request/(\\d*-\\d*)/pba-payments"
       },
       "response": {
-        "status": 200,
+        "status": 201,
         "headers": {
           "Content-Type": "application/json"
         },
