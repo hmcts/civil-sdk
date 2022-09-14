@@ -26,6 +26,7 @@
   {"email": "tribunal-caseworker-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "tribunal-caseworker"},
   {"email": "hearing-centre-admin-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "Admin"},
   {"email": "hmcts-staff-09@example.com", "roles": "caseworker,caseworker-civil", "lastName": "standard"},
-  {"email": "hmcts-hearing-teamleader@example.com", "roles": "caseworker,caseworker-civil", "lastName": "standard"}
+  {"email": "hmcts-hearing-teamleader@example.com", "roles": "caseworker,caseworker-civil", "lastName": "Staff"}
 ]
+
 
