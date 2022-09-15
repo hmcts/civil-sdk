@@ -1,0 +1,23 @@
+{
+  "organisationIdentifier": "N5AFUXG",
+  "users": [
+    {
+      "userIdentifier": "uid-string",
+      "firstName": "civil",
+      "lastName": "organisation 3",
+      "email": "civil.damages.claims+organisation.2.superuser@gmail.com",
+      "idamStatus": "ACTIVE",
+      "idamStatusCode": "200",
+      "idamMessage": "11 OK"
+    },
+    {
+      "userIdentifier": "82cc5d60-8682-4344-847f-886920d56097",
+      "firstName": "civil damages claims organisation 2",
+      "lastName": "solicitor 1",
+      "email": "civil.damages.claims+organisation.2.solicitor.1@gmail.com",
+      "idamStatus": "ACTIVE",
+      "idamStatusCode": "200",
+      "idamMessage": "11 OK"
+    }
+  ]
+}
