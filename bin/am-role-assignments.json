@@ -224,13 +224,29 @@
     "overrideAll": true
   },
   {
+    "email": "hmcts-hearing-teamleader@example.com",
+    "roleAssignments": [
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "hearing-centre-team-leader",
+        "grantType": "STANDARD",
+        "roleCategory": "ADMIN",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
+        "authorisations": []
+      }
+    ],
+    "overrideAll": true
+  },
+  {
     "email": "hearing-centre-admin-01@example.com",
     "roleAssignments": [
       {
         "roleType": "ORGANISATION",
         "roleName": "hearing-centre-admin",
         "grantType": "STANDARD",
-        "roleCategory": "ADMINISTRATOR",
+        "roleCategory": "ADMIN",
         "classification": "PUBLIC",
         "readOnly": false,
         "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
