@@ -283,6 +283,16 @@
         "readOnly": false,
         "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
         "authorisations": []
+      },
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "senior-tribunal-caseworker",
+        "grantType": "STANDARD",
+        "roleCategory": "LEGAL_OPERATIONS",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "GENERALAPPLICATION", "jurisdiction": "CIVIL" },
+        "authorisations": []
       }
     ],
     "overrideAll": true
