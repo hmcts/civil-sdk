@@ -3,8 +3,8 @@
 repository=${1}
 prNumber=${2}
 
-if [[ ${repository} != "service" && ${repository} != "citizen-ui" && ${repository} != "ga-ccd" && ${repository} != "general-applications" && ${repository} != "ccd" && ${repository} != "camunda" ]]; then
-  echo "Supported repositories: ga-ccd,citizen-ui,ccd, camunda,service,general applications"
+if [[ ${repository} != "service" && ${repository} != "citizen-ui" && ${repository} != "ga-ccd" && ${repository} != "general-applications" && ${repository} != "ccd" && ${repository} != "camunda"  && ${repository} != "task-configuration" ]]; then
+  echo "Supported repositories: ga-ccd,citizen-ui,ccd, camunda,service,general applications, task-configuration"
   exit 1
 fi
 
