@@ -12,7 +12,7 @@ services:
       S2S_MICROSERVICE: rd_user_profile_api
       S2S_SECRET: "${OAUTH2_CLIENT_RD_USER_PROFILE}"
       S2S_URL: http://service-auth-provider-api:8080
-      idam_url: http://idam-api:5000
+      idam_url: http://sidam-simulator:5000
       REFORM_SERVICE_NAME: rd_user_profile_api
       ROOT_LOGGING_LEVEL: debug
       OPEN_ID_API_BASE_URI: http://idam-web-public:8080/o

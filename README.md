@@ -6,7 +6,7 @@
 - [Camunda](#camunda)
 - [Useful scripts](#useful-scripts)
 - [License](#license)
-
+- [Wa integration for running post deployment tests](#Wa integration for running post deployment tests)
 ## Prerequisites
 
 - [Docker](https://www.docker.com)
@@ -26,7 +26,96 @@
 ```shell
 ./ccd login
 ```
+## WA integration for running post deployment tests
+* Increase Docker memory to at least 14 GB
+* switch to https://github.com/hmcts/civil-sdk/tree/WA-CP-integration branch
+* run command ```az login```
+* you may have issue pulling all images, you can run this command ```az acr login --name hmctsprivate --subscription DCD-CNP-PROD && az acr login --name hmctspublic --subscription DCD-CNP-PROD && az acr login --name hmctspublic --subscription DCD-CNP-DEV && az acr login --name hmctspublic --subscription DCD-CFT-Sandbox```
+* run command ```./ccd compose pull```
+* ```source ${CCD_DOCKER_PATH}/.wa-env``` where CCD_DOCKER_PATH is the location of ia-docker repository
+### Make sure the below environment variables are defined in your bash profile with the correct values
+* WA_CAMUNDA_NEXUS_PASSWORD
+* WA_CAMUNDA_NEXUS_USER
+* AM_ROLE_SERVICE_SDK_KEY
+* ADDRESS_LOOKUP_TOKEN
+* IA_GOV_NOTIFY_KEY
+* DOCMOSIS_ACCESS_KEY
+* WA_TASK_DMNS_BPMNS_PATH
+* WA_BPMNS_DMNS_PATH
+* IA_TASK_DMNS_BPMNS_PATH
+* LAUNCH_DARKLY_ACCESS_TOKEN
+* LAUNCH_DARKLY_SDK_KEY
+* AZURE_SERVICE_BUS_CONNECTION_STRING
+* AZURE_SERVICE_BUS_TOPIC_NAME
+* AZURE_SERVICE_BUS_SUBSCRIPTION_NAME
+* AZURE_SERVICE_BUS_CCD_CASE_EVENTS_SUBSCRIPTION_NAME
+* AZURE_SERVICE_BUS_FEATURE_TOGGLE
+* WA_DLQ_PROCESS_ENABLED
+* AZURE_SERVICE_BUS_MESSAGE_AUTHOR
 
+### Create a static ip for callbacks
+For the application to handle callbacks correctly, create a new network interface with a static ip called 'StaticIP' (go to Mac: System Preferences → Network → Location = 'WiFi').
+Once StaticIP is created.Select this network interface, click on Advanced
+* Under TCP/IP tab, set the following:
+  IPv4 Address: 192.12.12.12
+  Subnet Mask: 255.255.255.0
+* Edit the hosts and include the following entry:
+  192.12.12.12 ia-case-api
+### Running the applications
+* run command ```./ccd compose up -d ``` (it takes few minutes to make all applications running, so you may repeat the command several times)
+* check excited containers with ```docker ps --filter "status=exited"```
+* go to bin folder (cd bin)
+* run command ```ROLE_ASSIGNMENT_URL=http://localhost:4096 CCD_URL=http://ccd-data-store-api:4452 ./wa-setup.sh```
+* upload IA CCD definition and WA CCD definition:
+    * switch to wa-ccd-definitions and run command ```yarn upload```
+    * switch to ia-ccd-definitions and run command ```yarn upload```
+* edit your hosts file and add
+  ```127.0.0.1 host.docker.internal gateway.docker.internal sidam-simulator ccd-data-store-api dm-store am-role-assignment-service wa_task_management_api camunda-bpm wa-workflow-api wa-case-event-handler```
+* connect the VPN
+* open 3 new terminals:
+    * source ${CCD_DOCKER_PATH}/.wa-env where CCD_DOCKER_PATH is the location of ia-docker repository
+    * source your bash profile
+    * run in each terminal one of the following service:
+    * ia-case-api
+    * ia-case-notifications-api
+    * ia-case-documents-api
+* open a new terminal and clone the repo https://github.com/hmcts/wa-post-deployment-ft-tests and switch to master branch
+* ```source  ${CCD_DOCKER_PATH}/.wa-env```
+* ```source  your batch profile```
+* run the command ```CCD_URL=http://ccd-data-store-api:4452 ./gradlew functional```
+### if you see the following error in Camunda logs,
+``` 
+Caused by: org.apache.ibatis.executor.BatchExecutorException: org.camunda.bpm.engine.impl.persistence.entity.AuthorizationEntity.insertAuthorization (batch index #1) failed. Cause: java.sql.BatchUpdateException: Batch entry 0 insert into ACT_RU_AUTHORIZATION (
+ID_,
+TYPE_,
+GROUP_ID_,
+USER_ID_,
+RESOURCE_TYPE_,
+RESOURCE_ID_,
+PERMS_,
+ROOT_PROC_INST_ID_,
+REMOVAL_TIME_,
+REV_
+)
+values (
+'1d7985ca-101e-11ed-9d2d-0242ac15000d',
+1,
+NULL,
+'wa_workflow_api',
+1,
+'wa_workflow_api',
+2147483647,
+NULL,
+NULL,
+1
+) was aborted: ERROR: duplicate key value violates unique constraint "act_uniq_auth_user" 
+```
+you can run the below query to fix it.
+```
+delete from ACT_RU_AUTHORIZATION
+where USER_ID_='wa_workflow_api'
+```
+If an error happened with ia-case-api, you can read the rest of this readme file
 **Note:** If you experience any error with the above command, try `az login` first
 
 2. Pulling latest Docker images:

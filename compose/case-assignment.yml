@@ -5,8 +5,8 @@ services:
   manage-case-assignment:
     image:  'hmctspublic.azurecr.io/aac/manage-case-assignment:latest'
     environment:
-      IDAM_OIDC_URL: http://idam-api:5000
-      IDAM_API_URL: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}"
+      IDAM_OIDC_URL: http://sidam-simulator:5000
+      IDAM_API_URL: "${IDAM_STUB_SERVICE_NAME:-http://sidam-simulator:5000}"
       IDAM_CLIENT_ID: aac_manage_case_assignment
       IDAM_CLIENT_SECRET: "${IDAM_KEY_CASE_ASSIGNMENT}"
       IDAM_CLIENT_REDIRECT_URL: http://localhost:3333/oauth2/callback
@@ -17,7 +17,7 @@ services:
       IDAM_SYSTEM_USER_USERNAME: caseworker-caa@mailnesia.com
       IDAM_SYSTEM_USER_PASSWORD: Password12!
       ROOT_LOGGING_LEVEL: debug
-      IDAM_URL: http://idam-api:5000
+      IDAM_URL: http://sidam-simulator:5000
       S2S_URL: http://service-auth-provider-api:8080
       MANAGE_CASE_S2S_KEY: "${IDAM_KEY_CASE_ASSIGNMENT}"
       MANAGE_CASE_S2S_AUTHORISED_SERVICES: ccd_gw,xui_webapp,ccd_data
@@ -31,7 +31,7 @@ services:
       NOTIFY_MCA_API_KEY: "notify-test-api-key"
       ROLE_ASSIGNMENT_URL: "${ROLE_ASSIGNMENT_URL:-http://am-role-assignment-service:4096}"
       #      JAVA_TOOL_OPTIONS: '-XX:InitialRAMPercentage=30.0 -XX:MaxRAMPercentage=65.0 -XX:MinRAMPercentage=30.0 -XX:+UseConcMarkSweepGC -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5006'
-      OIDC_ISSUER_URL: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}/openam/oauth2/hmcts"
+      OIDC_ISSUER_URL: "${IDAM_STUB_SERVICE_NAME:-http://sidam-simulator:5000}/openam/oauth2/hmcts"
     ports:
       - 4454:4454
     networks:
