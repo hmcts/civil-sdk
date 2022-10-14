@@ -286,5 +286,33 @@
       }
     ],
     "overrideAll": true
+  },
+  {
+    "email": "4924246EMP-@ejudiciary.net",
+    "roleAssignments": [
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "judge",
+        "grantType": "STANDARD",
+        "roleCategory": "JUDICIAL",
+        "classification": "PUBLIC",
+        "regionId": "4",
+        "readOnly": false,
+        "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
+        "authorisations": []
+      },
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "judge",
+        "grantType": "STANDARD",
+        "roleCategory": "JUDICIAL",
+        "classification": "PUBLIC",
+        "regionId": "4",
+        "readOnly": false,
+        "attributes": { "caseType": "GENERALAPPLICATION", "jurisdiction": "CIVIL" },
+        "authorisations": []
+      }
+    ],
+    "overrideAll": true
   }
 ]
