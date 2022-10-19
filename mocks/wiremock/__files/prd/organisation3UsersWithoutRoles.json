@@ -1,0 +1,32 @@
+{
+  "organisationIdentifier": "H2156A0",
+  "users": [
+    {
+      "userIdentifier": "uid-string",
+      "firstName": "civil",
+      "lastName": "organisation 3",
+      "email": "hmcts.civil+organisation.3.superuser@gmail.com",
+      "idamStatus": "ACTIVE",
+      "idamStatusCode": "200",
+      "idamMessage": "11 OK"
+    },
+    {
+      "userIdentifier": "a5a8f08e-f8cc-4f81-82f1-247ebaad2503",
+      "firstName": "civil",
+      "lastName": "organisation 3 solicitor 1",
+      "email": "hmcts.civil+organisation.3.solicitor.1@gmail.com",
+      "idamStatus": "ACTIVE",
+      "idamStatusCode": "200",
+      "idamMessage": "11 OK"
+    },
+    {
+      "userIdentifier": "uid-string",
+      "firstName": "civil",
+      "lastName": "organisation 3 solicitor 2",
+      "email": "hmcts.civil+organisation.3.solicitor.2@gmail.com",
+      "idamStatus": "ACTIVE",
+      "idamStatusCode": "200",
+      "idamMessage": "11 OK"
+    }
+  ]
+}
