@@ -1,0 +1,14 @@
+{
+  "organisationIdentifier": "Q1KOKP2",
+  "users": [
+    {
+      "userIdentifier": "c02d600a-be84-44d3-99e0-ea29bd837982",
+      "firstName": "civil",
+      "lastName": "organisation 1 solicitor 1",
+      "email": "hmcts.civil+organisation.1.solicitor.1@gmail.com",
+      "idamStatus": "ACTIVE",
+      "idamStatusCode": "200",
+      "idamMessage": "11 OK"
+    }
+  ]
+}
