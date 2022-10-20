@@ -4,7 +4,7 @@
     "urlPath": "/fees-register/fees/lookup",
     "queryParameters": {
       "service": {
-        "equalTo": "general"
+        "equalTo": "insolvency"
       },
       "jurisdiction1": {
         "equalTo": "civil"
@@ -16,10 +16,10 @@
         "equalTo": "default"
       },
       "event": {
-        "equalTo": "general application"
+        "equalTo": "copies"
       },
       "keyword": {
-        "matches": "GeneralAppFree"
+        "matches": "CopyPagesUpTo10"
       }
     }
   },
@@ -28,6 +28,6 @@
     "headers": {
       "Content-Type": "application/json"
     },
-    "body": "{\"code\":\"FEEFREE\",\"description\":\"General application (by consent/without notice) excl HA'97 & Court Fund Pay Out\",\"version\":2,\"fee_amount\":0}"
+    "body": "{\"code\":\"FEE0414\",\"description\":\"Copy of a document (10 pages or less) FEE AMOUNT = 10\",\"version\":1,\"fee_amount\":0}"
   }
 }
