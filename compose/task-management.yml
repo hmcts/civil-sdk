@@ -13,6 +13,8 @@ services:
       CCD_CASE_EVENTS_DESTINATION: "${AZURE_SERVICE_BUS_TOPIC_NAME}"
     ports:
       - 4456:4456
+    networks:
+      - ccd-network
 
   camunda-bpm:
     image: "hmctsprivate.azurecr.io/camunda/bpm:latest"
@@ -39,6 +41,8 @@ services:
     links:
       - ccd-shared-database
       - service-auth-provider-api
+    networks:
+      - ccd-network
 
   wa-workflow-api:
     image: "hmctspublic.azurecr.io/wa/workflow-api:latest"
@@ -64,6 +68,8 @@ services:
       - ccd-shared-database
       - service-auth-provider-api
       - camunda-bpm
+    networks:
+      - ccd-network
 
   wa-task-management-api:
     image: "hmctspublic.azurecr.io/wa/task-management-api:latest"
@@ -90,6 +96,8 @@ services:
       - ccd-shared-database
       - service-auth-provider-api
       - camunda-bpm
+    networks:
+      - ccd-network
 
   case-event-handler:
     image: "hmctspublic.azurecr.io/wa/case-event-handler:latest"
@@ -126,6 +134,8 @@ services:
       - camunda-bpm
       - am-role-assignment-service
       - wa-workflow-api
+    networks:
+      - ccd-network
 
   wa-task-monitor:
     image: "hmctspublic.azurecr.io/wa/task-monitor:latest"
@@ -161,3 +171,5 @@ services:
       - wa-task-management-api
       - ccd-elasticsearch
       - am-role-assignment-service
+    networks:
+      - ccd-network

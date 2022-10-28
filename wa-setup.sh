@@ -3,14 +3,14 @@
 export ROLE_ASSIGNMENT_URL=http://localhost:4096
 export CCD_URL=http://ccd-data-store-api:4452
 # Setup Users
-./wa-create-users.sh
+./bin/utils/wa-create-users.sh
 
 # Register roles
-./wa-register-roles.sh
+./bin/utils/wa-register-roles.sh
 
 echo ""
 echo "Setup Wiremock responses for Professional Reference Data based on existing Idam users..."
-./wiremock.sh
+./bin/utils/wiremock.sh
 
 echo "Deploying camunda bpmn and dmn"
-./camunda-deployment.sh
+./bin/utils/camunda-deployment.sh

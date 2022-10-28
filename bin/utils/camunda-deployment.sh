@@ -6,15 +6,15 @@
 ##
 ## deploys bpmn/dmn to camunda.
 
-SERVICE_TOKEN="$(sh ./idam-service-token.sh "wa_camunda_pipeline_upload")"
+SERVICE_TOKEN="$(sh ./bin/utils/idam-service-token.sh "wa_camunda_pipeline_upload")"
 
 echo "Uploading Camunda BPMs and DMNs..."
 if [[ -z "${WA_BPMNS_DMNS_PATH}" ]]; then
   echo "Environment variable WA_BPMNS_DMNS_PATH was not set skipping deployment."
 else
   echo "Deploying WA Standalone Task BPMN and DMNs"
+  echo "Path" $WA_BPMNS_DMNS_PATH
   $WA_BPMNS_DMNS_PATH/camunda-deployment.sh $SERVICE_TOKEN
-
 fi
 
 if [[ -z "${WA_TASK_DMNS_BPMNS_PATH}" ]]; then
