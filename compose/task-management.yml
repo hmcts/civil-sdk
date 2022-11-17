@@ -77,10 +77,10 @@ services:
     environment:
       CAMUNDA_URL: http://camunda-bpm:8999/engine-rest
       S2S_URL: http://service-auth-provider-api:8080
-      IDAM_URL: http://sidam-simulator:5000
+      IDAM_URL: http://idam-api:5000
       CCD_URL: http://ccd-data-store-api:4452
       POSTGRES_HOST: ccd-shared-database
-      OPEN_ID_IDAM_URL: http://sidam-simulator:5000
+      OPEN_ID_IDAM_URL: http://idam-api:5000
       ROLE_ASSIGNMENT_URL: http://am-role-assignment-service:4096
       POSTGRES_PORT: 5432
       POSTGRES_NAME: cft_task_db
@@ -113,8 +113,8 @@ services:
       ENVIRONMENT: "local"
       S2S_URL: http://service-auth-provider-api:8080
       WA_WORKFLOW_API_URL: http://wa-workflow-api:8099
-      OPEN_ID_IDAM_URL: http://sidam-simulator:5000
-      IDAM_URL: http://sidam-simulator:5000
+      OPEN_ID_IDAM_URL: http://idam-api:5000
+      IDAM_URL: http://idam-api:5000
       ROLE_ASSIGNMENT_URL: http://am-role-assignment-service:4096
       CAMUNDA_URL: http://camunda-bpm:8999/engine-rest
       CCD_URL: http://ccd-data-store-api:4452
@@ -143,8 +143,8 @@ services:
     environment:
       S2S_URL: http://service-auth-provider-api:8080
       WA_WORKFLOW_API_URL: http://wa-workflow-api:8099
-      OPEN_ID_IDAM_URL: http://sidam-simulator:5000
-      IDAM_URL: http://sidam-simulator:5000
+      OPEN_ID_IDAM_URL: http://idam-api:5000
+      IDAM_URL: http://idam-api:5000
       ROLE_ASSIGNMENT_URL: http://am-role-assignment-service:4096
       CAMUNDA_URL: http://camunda-bpm:8999/engine-rest
       CCD_URL: http://ccd-data-store-api:4452

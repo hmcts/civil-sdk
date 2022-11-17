@@ -70,7 +70,7 @@ Once StaticIP is created.Select this network interface, click on Advanced
     * switch to wa-ccd-definitions and run command ```yarn upload```
     * switch to ia-ccd-definitions and run command ```yarn upload```
 * edit your hosts file and add
-  ```127.0.0.1 host.docker.internal gateway.docker.internal sidam-simulator ccd-data-store-api dm-store am-role-assignment-service wa_task_management_api camunda-bpm wa-workflow-api wa-case-event-handler```
+  ```127.0.0.1 host.docker.internal gateway.docker.internal idam-api ccd-data-store-api dm-store am-role-assignment-service wa_task_management_api camunda-bpm wa-workflow-api wa-case-event-handler```
 * connect the VPN
 * open 3 new terminals:
     * source ${CCD_DOCKER_PATH}/.wa-env where CCD_DOCKER_PATH is the location of ia-docker repository

@@ -22,7 +22,7 @@ services:
     ports:
       - 1025:1025
       - 8025:8025
-  sidam-simulator:
+  idam-api:
     ports:
       - 5000:5000
     tmpfs: /opt/app/es
@@ -54,11 +54,11 @@ services:
       - 9002:8080
     environment:
       - JAVA_OPTS=-Xms128m -Xms512m
-      - STRATEGIC_SERVICE_URL=http://sidam-simulator:5000
+      - STRATEGIC_SERVICE_URL=http://idam-api:5000
   idam-web-admin:
     ports:
       - 8082:8080
     environment:
       - JAVA_OPTS=-Xms128m -Xms512m
-      - STRATEGIC_SERVICE_URL=http://sidam-simulator:5000
+      - STRATEGIC_SERVICE_URL=http://idam-api:5000
       - STRATEGIC_PUBLIC_URL=http://localhost:9002

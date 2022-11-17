@@ -5,7 +5,7 @@ services:
     environment:
       - TESTING_SUPPORT_ENABLED=true
       - NODE_ENV=dockertests
-      - IDAM_API_URL=http://sidam-simulator:5000
+      - IDAM_API_URL=http://idam-api:5000
       - IDAM_AUTHENTICATION_WEB_URL=http://idam-web-public:9002
       - IDAM_S2S_AUTH=http://service-auth-provider-api:8080
       - PAY_URL=http://wiremock:8080
@@ -23,7 +23,7 @@ services:
       - WEBCHAT_BUTTON_SERVICE_CLOSED=20199488815cc1a89e0861d5.73103009
       - http_proxy
       - https_proxy
-      - no_proxy=claim-store-api, fees-api, payments-api, sidam-simulator, service-auth-provider-api, draft-store-api
+      - no_proxy=claim-store-api, fees-api, payments-api, idam-api, service-auth-provider-api, draft-store-api
       - LAUNCH_DARKLY_SDK_KEY=${LAUNCH_DARKLY_SDK_KEY:-sdk-28c71191-54b1-4d81-8c8d-add52b134bc7}
       - LAUNCH_DARKLY_OFFLINE_MODE
     mem_limit: 1024m
@@ -45,7 +45,7 @@ services:
       - CMC_DB_PORT=5432
       - CMC_DB_USERNAME=ccd
       - CMC_DB_PASSWORD=ccd
-      - IDAM_API_URL=http://sidam-simulator:5000
+      - IDAM_API_URL=http://idam-api:5000
       - IDAM_S2S_AUTH_URL=http://service-auth-provider-api:8080
       - GOV_NOTIFY_API_KEY=genericteam-37ba0bfe-68ed-4e8e-9e19-f3a4cc331d80-f3254537-8758-457d-8c8f-41cc2833bea4
       - FRONTEND_BASE_URL=https://localhost:3000
@@ -76,7 +76,7 @@ services:
       - REFORM_ENVIRONMENT
       - http_proxy
       - https_proxy
-      - no_proxy=sidam-simulator,service-auth-provider-api,pdf-service-api,ccd-data-store-api,dm-store
+      - no_proxy=idam-api,service-auth-provider-api,pdf-service-api,ccd-data-store-api,dm-store
       - IDAM_CASEWORKER_ANONYMOUS_USERNAME=civilmoneyclaims+anonymouscitizen@gmail.com
       - IDAM_CASEWORKER_ANONYMOUS_PASSWORD=Password12
       - IDAM_CASEWORKER_SYSTEM_USERNAME=civilmoneyclaims+systemupdate@gmail.com
@@ -120,7 +120,7 @@ services:
       - DRAFT_STORE_DB_USERNAME=ccd
       - DRAFT_STORE_DB_PASSWORD=ccd
       - DRAFT_STORE_DB_PORT=5432
-      - IDAM_URL=http://sidam-simulator:5000
+      - IDAM_URL=http://idam-api:5000
       - S2S_URL=http://service-auth-provider-api:8080
       - ROOT_APPENDER
       - JSON_CONSOLE_PRETTY_PRINT

@@ -37,9 +37,9 @@ services:
       SPRING_PROFILES_ACTIVE: dev
       IDAM_TESTING_SUPPORT_ENABLED: "true"
       LOGGING_LEVEL_UK_GOV_HMCTS_IDAM: DEBUG
-      IDAM_USER_BASE_URI: "${IDAM_STUB_SERVICE_NAME:-http://sidam-simulator:5000}"
+      IDAM_USER_BASE_URI: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}"
       IDAM_S2S_BASE_URI: http://service-auth-provider-api:8080
-      S2S_NAMES_WHITELIST: sscs,divorce,ccd,em_gw,document-management-store,sidam-simulator,xui_webapp,ccd_gw,civil_service,ccd_case_document_am_api,wa_task_management_api,wa_workflow_api,wa_case_event_handler,wa_task_monitor
+      S2S_NAMES_WHITELIST: sscs,divorce,ccd,em_gw,document-management-store,idam-api,xui_webapp,ccd_gw,civil_service,ccd_case_document_am_api,wa_task_management_api,wa_workflow_api,wa_case_event_handler,wa_task_monitor
       http_proxy:
       https_proxy:
       no_proxy:

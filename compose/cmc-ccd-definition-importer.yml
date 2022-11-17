@@ -4,12 +4,12 @@ services:
     image: hmctspublic.azurecr.io/cmc/ccd-definition-importer:${CMC_CCD_DEFINITION_VERSION:-1.10.24}
     environment:
       - VERBOSE=${VERBOSE:-false}
-      - WAIT_HOSTS=ccd-user-profile-api:4453, ccd-definition-store-api:4451, service-auth-provider-api:8080, ccd-api-gateway:3453, sidam-simulator:5000
+      - WAIT_HOSTS=ccd-user-profile-api:4453, ccd-definition-store-api:4451, service-auth-provider-api:8080, ccd-api-gateway:3453, idam-api:5000
       - WAIT_HOSTS_TIMEOUT=900
       - IMPORTER_USERNAME=ccd.docker.default@hmcts.net
       - IMPORTER_PASSWORD=Password12!
       - CCD_STORE_BASE_URL=http://ccd-definition-store-api:4451
-      - IDAM_URI=http://sidam-simulator:5000
+      - IDAM_URI=http://idam-api:5000
       - AUTH_PROVIDER_BASE_URL=http://service-auth-provider-api:8080
       - VERBOSE=true
       - MICROSERVICE=ccd_gw

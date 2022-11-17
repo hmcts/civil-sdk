@@ -12,7 +12,7 @@ services:
       S2S_MICROSERVICE: rd_professional_api
       S2S_SECRET: "${OAUTH2_CLIENT_RD_PROFESSIONAL}"
       S2S_URL: http://service-auth-provider-api:8080
-      idam_url: http://sidam-simulator:5000
+      idam_url: http://idam-api:5000
       LD_SDK_KEY: sdk-b1310c4a-e522-4512-9e68-d75d23b04c5d
       ACTIVE_ORG_EXT: "true"
       ROOT_LOGGING_LEVEL: debug

@@ -22,7 +22,7 @@ services:
     image: hmctsprivate.azurecr.io/idam/shared-db:latest
   smtp-server:
     image: mailhog/mailhog
-  sidam-simulator:
+  idam-api:
     image: hmctspublic.azurecr.io/idam/api:stable
     depends_on:
       fr-am:
@@ -32,10 +32,10 @@ services:
   idam-web-public:
     image: hmctspublic.azurecr.io/idam/web-public:stable
     depends_on:
-      sidam-simulator:
+      idam-api:
         condition: service_started
   idam-web-admin:
     image: hmctspublic.azurecr.io/idam/web-admin:stable
     depends_on:
-      sidam-simulator:
+      idam-api:
         condition: service_started
