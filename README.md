@@ -449,6 +449,16 @@ Example:
 ./bin/remove-stuck-pr.sh general-apps-ccd-definition 306
 ```
 
+
+###Find chart versions for applications
+```shell
+./bin/find-chart-version.sh {APPLICATION_CHART_NAME}
+```
+Example:
+```shell
+./bin/find-chart-version.sh camunda-bpm
+```
+
 ### Run tests against AAT
 
 ```shell
