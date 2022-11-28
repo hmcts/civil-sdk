@@ -13,7 +13,7 @@ if [[ -z "${WA_BPMNS_DMNS_PATH}" ]]; then
   echo "Environment variable WA_BPMNS_DMNS_PATH was not set skipping deployment."
 else
   echo "Deploying WA Standalone Task BPMN and DMNs"
-  echo "Path" $WA_BPMNS_DMNS_PATH
+  echo "Path" $WA_BPMNS_DMNS_PATH :$SERVICE_TOKEN
   $WA_BPMNS_DMNS_PATH/camunda-deployment.sh $SERVICE_TOKEN
 fi
 
