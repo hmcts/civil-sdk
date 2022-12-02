@@ -4,7 +4,7 @@
     "urlPath": "/refdata/location/court-venues",
     "queryParameters": {
       "epimms_id": {
-        "equalTo": "214320"
+        "equalTo": "000000"
       }
     }
   },
