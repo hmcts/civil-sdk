@@ -4,13 +4,15 @@ version: '2.4'
 services:
   wiremock:
     container_name: wiremock
-    image: rodolpheche/wiremock
+    image: wiremock/wiremock
     volumes:
       - ./../mocks/wiremock:/home/wiremock:rw
     ports:
       - 8765:8080
     networks:
       - ccd-network
+    command:
+      - -global-response-templating
 
 networks:
   ccd-network:

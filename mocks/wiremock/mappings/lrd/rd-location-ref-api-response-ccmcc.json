@@ -3,11 +3,8 @@
     "method": "GET",
     "urlPath": "/refdata/location/court-venues",
     "queryParameters": {
-      "is_hearing_location": {
-        "equalTo": "Y"
-      },
-      "location_type": {
-        "equalTo": "Court"
+      "court_venue_name": {
+        "equalTo": "County Court Money Claims Centre"
       }
     }
   },
@@ -16,6 +13,6 @@
     "headers": {
       "Content-Type": "application/json"
     },
-    "bodyFileName": "lrd/hearingLocationsResponse.json"
+    "bodyFileName": "lrd/ccmccLocation.json"
   }
 }

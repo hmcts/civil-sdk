@@ -23,3 +23,13 @@ psql -v ON_ERROR_STOP=1 --username postgres --set USERNAME=$DB_USERNAME --set PA
 EOSQL
   echo "Database $service: Created"
 done
+
+echo "Database/User draftstore: Creating..."
+psql -v ON_ERROR_STOP=1 --username postgres --set USERNAME=draftstore --set PASSWORD=draftstore --set DATABASE=draftstore <<-EOSQL
+  CREATE USER :USERNAME WITH PASSWORD ':PASSWORD';
+  CREATE DATABASE :DATABASE
+    WITH OWNER = :USERNAME
+    ENCODING = 'UTF-8'
+    CONNECTION LIMIT = -1;
+EOSQL
+echo "Database/User draftstore Created"
