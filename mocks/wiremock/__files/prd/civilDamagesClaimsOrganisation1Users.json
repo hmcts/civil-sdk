@@ -1,0 +1,46 @@
+{
+  "organisationIdentifier": "0FA7S8S",
+  "users": [
+    {
+      "userIdentifier": "uid-string",
+      "firstName": "civil",
+      "lastName": "organisation 3",
+      "email": "civil.damages.claims+organisation.1.superuser@gmail.com",
+      "idamStatus": "ACTIVE",
+      "roles": [
+        "payments",
+        "pui-finance-manager",
+        "pui-organisation-manager",
+        "pui-case-manager",
+        "pui-user-manager",
+        "pui-caa",
+        "payments-refund-approver",
+        "payments-refund",
+        "caseworker",
+        "caseworker-civil",
+        "caseworker-civil-solicitor"
+      ],
+      "idamStatusCode": "200",
+      "idamMessage": "11 OK"
+    },
+    {
+      "userIdentifier": "6c0445ce-33ed-4441-a1ab-e73586c7cfc5",
+      "firstName": "civil damages claims organisation 1",
+      "lastName": "solicitor 1",
+      "email": "civil.damages.claims+organisation.1.solicitor.1@gmail.com",
+      "idamStatus": "ACTIVE",
+      "roles": [
+        "payments",
+        "pui-organisation-manager",
+        "payments-refund-approver",
+        "payments-refund",
+        "pui-case-manager",
+        "caseworker",
+        "caseworker-civil",
+        "caseworker-civil-solicitor"
+      ],
+      "idamStatusCode": "200",
+      "idamMessage": "11 OK"
+    }
+  ]
+}
