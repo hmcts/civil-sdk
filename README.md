@@ -124,7 +124,7 @@ docker-compose -f compose/cmc-ccd-definition-importer.yml up cmc-ccd-definition-
 To stop the containers and preserve the data run:
 
 ```shell
-/ccd compose down -t 1
+./ccd compose down -t 1
 ```
 
 ### Notes
@@ -267,7 +267,7 @@ To delete all deployments and process instances from your local env run the scri
 To deploy new bpmn diagrams stored in `civil-camunda-bpmn-definition` repo run the script:
 
 ```shell
-./bin/import-bpmn-diagram.sh .
+./bin/import-bpmn-diagram.sh
 ```
 
 ----
