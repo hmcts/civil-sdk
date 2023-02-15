@@ -319,10 +319,7 @@
           "empty": true,
           "present": true
         },
-        "moneyReceivedOn": {
-          "empty": true,
-          "present": true
-        },
+        "moneyReceivedOn": "2022-06-21",
         "moreTimeRequested": true,
         "paperFormIssueDate": "string",
         "paperFormServedDate": "string",
