@@ -40,7 +40,7 @@ else
     echo FAIL
 fi
 
-${dir}/process-and-import-ccd-definition.sh
+${dir}/process-and-import-ccd-definition.sh "-e *-prod.json,*-GAR2GAspec-nonprod.json,*HNL-nonprod.json,*CUI-nonprod.json"
 
 if [ $? -eq 0 ]; then
     echo OK
@@ -51,7 +51,7 @@ fi
 cd ..
 cd civil-sdk
 
-${dir}/process-and-import-general-apps-ccd-definition.sh
+${dir}/process-and-import-general-apps-ccd-definition.sh "-e *-prod.json"
 
 if [ $? -eq 0 ]; then
     echo OK
