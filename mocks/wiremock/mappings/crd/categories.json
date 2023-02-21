@@ -1,10 +1,10 @@
 {
   "request": {
     "method": "GET",
-    "urlPath": "refdata/commondata/lov/categories/HearingChannel?serviceId=AAA6",
+    "urlPath": "/refdata/commondata/lov/categories/HearingChannel",
     "queryParameters": {
-      "flag-type": {
-        "equalTo": "CASE"
+      "serviceId": {
+        "equalTo": "AAA6"
       }
     }
   },
