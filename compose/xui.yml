@@ -3,7 +3,7 @@ version: '2.4'
 
 services:
   xui:
-    image: "hmctspublic.azurecr.io/xui/webapp:latest"
+    image: "hmctspublic.azurecr.io/xui/webapp:pr-2583"
     environment:
       MICROSERVICE: xui_webapp
       PROTOCOL: http
@@ -21,6 +21,11 @@ services:
       SERVICES_IDAM_CLIENT_ID: xui_webapp
       SERVICES_PAYMENTS_URL: http://wiremock:8080
       SERVICES_PRD_API: http://wiremock:8080
+      SERVICES_PRD_COMMONDATA_API: http://wiremock:8080
+      SERVICES_PRD_API_URL: http://wiremock:8080
+      SERVICES_LOCATION_REF_API_URL: http://wiremock:8080
+      SERVICES_PRD_JUDICIAL_API: http://wiremock:8080
+      SERVICES_PRD_LOCATION_API: http://wiremock:8080
 
       SERVICES_EM_ANNO_API: http://ccd-api-gateway:3453
       REDISCLOUD_URL: http://dummyrediscloudurl
