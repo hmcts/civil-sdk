@@ -31,6 +31,14 @@
           "empty": true,
           "present": true
         },
+        "response": {
+          "responseType": "PART_ADMISSION",
+          "amount": 200,
+          "paymentIntention": {
+            "paymentOption": "IMMEDIATELY",
+            "paymentDate": "2022-06-21"
+          }
+        },
         "claim": {
           "amount": {
             "rows": [
@@ -98,30 +106,10 @@
                 "present": true
               },
               "id": "546d8752-abbf-0acfd08d713b",
-              "name": "Mr Bad Guy",
-              "phone": {
-                "empty": true,
-                "present": true
-              },
-              "representative": {
-                "empty": true,
-                "present": true
-              },
-              "serviceAddress": {
-                "empty": true,
-                "present": true
-              }
+              "name": "Mr Bad Guy"
             }
           ],
-          "evidence": {
-            "empty": true,
-            "present": true
-          },
           "externalId": "4c1e8c4e-891f-4588-b665-f1061e67c238",
-          "externalReferenceNumber": {
-            "empty": true,
-            "present": true
-          },
           "feeAccountNumber": {
             "empty": true,
             "present": true
@@ -275,7 +263,7 @@
             "present": true
           }
         },
-        "createdAt": "2022-06-21T12:18:59.827Z",
+        "createdAt": "2022-06-21",
         "dateReferredForDirections": {
           "empty": true,
           "present": true
@@ -330,18 +318,6 @@
           "present": true
         },
         "proceedOfflineOtherReasonDescription": "string",
-        "proceedOfflineReason": {
-          "empty": true,
-          "present": true
-        },
-        "reDetermination": {
-          "empty": true,
-          "present": true
-        },
-        "reDeterminationRequestedAt": {
-          "empty": true,
-          "present": true
-        },
         "referenceNumber": "256MC007",
         "responseDeadline": "2023-02-05",
         "reviewOrder": {
@@ -350,8 +326,7 @@
         },
         "serviceDate": "string",
         "settlement": {
-          "empty": true,
-          "present": true
+
         },
         "state": "CREATE",
         "submitterEmail": "string",
@@ -620,7 +595,7 @@
           "sealedClaimUpload": "YES",
           "staffNotification": "YES"
         },
-        "createdAt": "2022-06-21T12:18:59.827Z",
+        "createdAt": "2022-06-21",
         "dateReferredForDirections": {
           "empty": true,
           "present": true
@@ -675,22 +650,9 @@
           "present": true
         },
         "proceedOfflineOtherReasonDescription": "string",
-        "proceedOfflineReason": {
-          "empty": true,
-          "present": true
-        },
-        "reDetermination": {
-          "empty": true,
-          "present": true
-        },
-        "reDeterminationRequestedAt": {
-          "empty": true,
-          "present": true
-        },
         "referenceNumber": "256MC008",
         "response": {
-          "empty": true,
-          "present": true
+          "responseMethod": "OFFLINE"
         },
         "responseDeadline": "2023-05-22",
         "reviewOrder": {
@@ -732,6 +694,322 @@
           "hearingCourtName": "string",
           "reasonForTransfer": "string"
         }
+      },
+      {
+        "amountWithInterest": {
+          "empty": true,
+          "present": true
+        },
+        "amountWithInterestUntilIssueDate": {
+          "empty": true,
+          "present": true
+        },
+        "bespokeOrderDirection": {
+          "empty": true,
+          "present": true
+        },
+        "bulkPrintDetails": [
+          {
+            "id": "string",
+            "printRequestId": "string",
+            "printRequestType": "PIN_LETTER_TO_DEFENDANT",
+            "printRequestedAt": "string"
+          }
+        ],
+        "ccdCaseId": 1638199478521121,
+        "channel": {
+          "empty": true,
+          "present": true
+        },
+        "claim": {
+          "amount": {
+            "rows": [
+              {
+                "reason": "Some weird reason but you owe me money",
+                "amount": 200.00
+              },
+              {
+                "reason": "Some weird reason2 but you owe me money",
+                "amount": 100.00
+              }
+            ]
+          },
+          "breathingSpace": {
+            "empty": true,
+            "present": true
+          },
+          "claimants": [
+            {
+              "address": {
+                "city": "London",
+                "county": "United Kingdom",
+                "line1": "123 Church road",
+                "line2": "",
+                "line3": "",
+                "postcode": "SW1H 9AJ"
+              },
+              "correspondenceAddress": {
+                "empty": true,
+                "present": true
+              },
+              "id": "5caa4f80-eeb9-483d-bb31-6884cd4f8db9",
+              "name": "Mr John Clark",
+              "pcqId": "string",
+              "phone": {
+                "empty": true,
+                "present": true
+              },
+              "representative": {
+                "empty": true,
+                "present": true
+              }
+            }
+          ],
+          "defendants": [
+            {
+              "address": {
+                "city": "London",
+                "county": "United Kingdom",
+                "line1": "123 Church road",
+                "line2": "",
+                "line3": "",
+                "postcode": "SW1H 9AJ"
+              },
+              "claimantProvidedAddress": {
+                "city": "London",
+                "county": "United Kingdom",
+                "line1": "123 Church road",
+                "line2": "",
+                "line3": "",
+                "postcode": "SW1H 9AJ"
+              },
+              "email": {
+                "empty": true,
+                "present": true
+              },
+              "id": "546d8752-abbf-0acfd08d713b",
+              "name": "Mr Bad Guy",
+              "phone": {
+                "empty": true,
+                "present": true
+              },
+              "representative": {
+                "empty": true,
+                "present": true
+              },
+              "serviceAddress": {
+                "empty": true,
+                "present": true
+              }
+            }
+          ],
+          "evidence": {
+            "empty": true,
+            "present": true
+          },
+          "externalId": "4c1e8c4e-891f-4588-b665-f1061e67c238",
+          "externalReferenceNumber": {
+            "empty": true,
+            "present": true
+          },
+          "feeAccountNumber": {
+            "empty": true,
+            "present": true
+          },
+          "feeAmountAfterRemission": {
+            "empty": true,
+            "present": true
+          },
+          "feeAmountInPennies": {
+            "empty": true,
+            "present": true
+          },
+          "feeCode": {
+            "empty": true,
+            "present": true
+          },
+          "feeRemitted": {
+            "empty": true,
+            "present": true
+          },
+          "helpWithFeesNumber": {
+            "empty": true,
+            "present": true
+          },
+          "helpWithFeesType": {
+            "empty": true,
+            "present": true
+          },
+          "housingDisrepair": {
+            "empty": true,
+            "present": true
+          },
+          "hwfDocumentsToBeSentBefore": "string",
+          "hwfFeeDetailsSummary": {
+            "empty": true,
+            "present": true
+          },
+          "hwfMandatoryDetails": {
+            "empty": true,
+            "present": true
+          },
+          "hwfMoreInfoNeededDocuments": [
+            "string"
+          ],
+          "interest": {
+            "interestBreakdown": {
+              "explanation": "string",
+              "totalAmount": 0
+            },
+            "interestDate": {
+              "chronology": {
+                "calendarType": "string",
+                "id": "string"
+              },
+              "dayOfMonth": 0,
+              "dayOfWeek": "MONDAY",
+              "dayOfYear": 0,
+              "endDateType": "SETTLED_OR_JUDGMENT",
+              "era": "BCE",
+              "leapYear": true,
+              "month": "JANUARY",
+              "monthValue": 0,
+              "reason": "string",
+              "type": "CUSTOM",
+              "year": 0
+            },
+            "lastInterestCalculationDate": "2022-06-21",
+            "rate": 0,
+            "reason": "string",
+            "specificDailyAmount": {
+              "empty": true,
+              "present": true
+            },
+            "type": "STANDARD"
+          },
+          "moreInfoDetails": {
+            "empty": true,
+            "present": true
+          },
+          "outstandingFeeAmountInPennies": {
+            "empty": true,
+            "present": true
+          },
+          "payment": {
+            "empty": true,
+            "present": true
+          },
+          "personalInjury": {
+            "empty": true,
+            "present": true
+          },
+          "preferredCourt": {
+            "empty": true,
+            "present": true
+          },
+          "reason": "string",
+          "statementOfTruth": {
+            "empty": true,
+            "present": true
+          },
+          "timeline": {
+            "empty": true,
+            "present": true
+          }
+        },
+        "claimantRespondedAt": {
+          "empty": true,
+          "present": true
+        },
+        "claimantResponse": {
+          "empty": true,
+          "present": true
+        },
+        "claimantResponseDeadline": {
+          "empty": true,
+          "present": true
+        },
+        "createdAt": "2022-06-21",
+        "dateReferredForDirections": {
+          "empty": true,
+          "present": true
+        },
+        "defendantEmail": "defendant@email.com",
+        "defendantId": "546d8752-abbf-0acfd08d713b",
+        "directionOrder": {
+          "empty": true,
+          "present": true
+        },
+        "directionOrderType": {
+          "empty": true,
+          "present": true
+        },
+        "directionsQuestionnaireDeadline": "string",
+        "evidenceHandled": "YES",
+        "externalId": "string",
+        "failedMediationReason": {
+          "empty": true,
+          "present": true
+        },
+        "features": [
+          "string"
+        ],
+        "id": 0,
+        "intentionToProceedDeadline": "string",
+        "issuedOn": {
+          "empty": true,
+          "present": true
+        },
+        "lastEventTriggeredForHwfCase": "string",
+        "lastModified": "2022-06-21",
+        "letterHolderId": "string",
+        "mediationOutcome": {
+          "empty": true,
+          "present": true
+        },
+        "mediationSettlementReachedAt": {
+          "empty": true,
+          "present": true
+        },
+        "moneyReceivedOn": "2022-06-21",
+        "moreTimeRequested": true,
+        "paperFormIssueDate": "string",
+        "paperFormServedDate": "string",
+        "paperResponse": "YES",
+        "preferredDQCourt": {
+          "empty": true,
+          "present": true
+        },
+        "preferredDQPilotCourt": {
+          "empty": true,
+          "present": true
+        },
+        "proceedOfflineOtherReasonDescription": "string",
+        "referenceNumber": "256MC009",
+        "respondedAt": "2022-06-21",
+        "response": {
+          "empty": true,
+          "present": true
+        },
+        "responseDeadline": "2022-06-21",
+        "reviewOrder": {
+          "empty": true,
+          "present": true
+        },
+        "serviceDate": "string",
+        "settlement": {
+          "empty": true,
+          "present": true
+        },
+        "state": "BUSINESS_QUEUE",
+        "submitterEmail": "email",
+        "submitterId": "string",
+        "totalAmountTillDateOfIssue": {
+          "empty": true,
+          "present": true
+        },
+        "totalAmountTillToday": 1000,
+        "totalClaimAmount": 1000
       }
     ],
     "headers": {
