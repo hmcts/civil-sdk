@@ -6,18 +6,6 @@
   "response": {
     "jsonBody":[
       {
-        "amountWithInterest": {
-          "empty": true,
-          "present": true
-        },
-        "amountWithInterestUntilIssueDate": {
-          "empty": true,
-          "present": true
-        },
-        "bespokeOrderDirection": {
-          "empty": true,
-          "present": true
-        },
         "bulkPrintDetails": [
           {
             "id": "string",
@@ -51,10 +39,6 @@
                 "amount": 100
               }
             ]
-          },
-          "breathingSpace": {
-            "empty": true,
-            "present": true
           },
           "claimants": [
             {
@@ -101,123 +85,12 @@
                 "line3": "",
                 "postcode": "SW1H 9AJ"
               },
-              "email": {
-                "empty": true,
-                "present": true
-              },
               "id": "546d8752-abbf-0acfd08d713b",
               "name": "Mr Bad Guy"
             }
           ],
           "externalId": "4c1e8c4e-891f-4588-b665-f1061e67c238",
-          "feeAccountNumber": {
-            "empty": true,
-            "present": true
-          },
-          "feeAmountAfterRemission": {
-            "empty": true,
-            "present": true
-          },
-          "feeAmountInPennies": {
-            "empty": true,
-            "present": true
-          },
-          "feeCode": {
-            "empty": true,
-            "present": true
-          },
-          "feeRemitted": {
-            "empty": true,
-            "present": true
-          },
-          "helpWithFeesNumber": {
-            "empty": true,
-            "present": true
-          },
-          "helpWithFeesType": {
-            "empty": true,
-            "present": true
-          },
-          "housingDisrepair": {
-            "empty": true,
-            "present": true
-          },
-          "hwfDocumentsToBeSentBefore": "string",
-          "hwfFeeDetailsSummary": {
-            "empty": true,
-            "present": true
-          },
-          "hwfMandatoryDetails": {
-            "empty": true,
-            "present": true
-          },
-          "hwfMoreInfoNeededDocuments": [
-            "string"
-          ],
-          "interest": {
-            "interestBreakdown": {
-              "explanation": "string",
-              "totalAmount": 0
-            },
-            "interestDate": {
-              "chronology": {
-                "calendarType": "string",
-                "id": "string"
-              },
-              "dayOfMonth": 0,
-              "dayOfWeek": "MONDAY",
-              "dayOfYear": 0,
-              "endDateType": "SETTLED_OR_JUDGMENT",
-              "era": "BCE",
-              "leapYear": true,
-              "month": "JANUARY",
-              "monthValue": 0,
-              "reason": "string",
-              "type": "CUSTOM",
-              "year": 0
-            },
-            "lastInterestCalculationDate": "2022-06-21",
-            "rate": 0,
-            "reason": "string",
-            "specificDailyAmount": {
-              "empty": true,
-              "present": true
-            },
-            "type": "STANDARD"
-          },
-          "moreInfoDetails": {
-            "empty": true,
-            "present": true
-          },
-          "outstandingFeeAmountInPennies": {
-            "empty": true,
-            "present": true
-          },
-          "payment": {
-            "empty": true,
-            "present": true
-          },
-          "personalInjury": {
-            "empty": true,
-            "present": true
-          },
-          "preferredCourt": {
-            "empty": true,
-            "present": true
-          },
-          "reason": "string",
-          "statementOfTruth": {
-            "empty": true,
-            "present": true
-          },
-          "timeline": {
-            "empty": true,
-            "present": true
-          }
-        },
-        "claimDocumentCollection": {
-          "empty": true,
-          "present": true
+          "reason": "string"
         },
         "claimSubmissionOperationIndicators": {
           "bulkPrint": "YES",
@@ -228,66 +101,15 @@
           "sealedClaimUpload": "YES",
           "staffNotification": "YES"
         },
-        "claimantRespondedAt": {
-          "empty": true,
-          "present": true
-        },
         "claimantResponse": {
           "type": "ACCEPTATION"
         },
-        "claimantResponseDeadline": {
-          "empty": true,
-          "present": true
-        },
-        "countyCourtJudgment": {
-          "ccjType": "DEFAULT",
-          "defendantDateOfBirth": {
-            "empty": true,
-            "present": true
-          },
-          "paidAmount": {
-            "empty": true,
-            "present": true
-          },
-          "payBySetDate": {
-            "empty": true,
-            "present": true
-          },
-          "paymentOption": "IMMEDIATELY",
-          "repaymentPlan": {
-            "empty": true,
-            "present": true
-          },
-          "statementOfTruth": {
-            "empty": true,
-            "present": true
-          }
-        },
         "createdAt": "2022-06-21",
-        "dateReferredForDirections": {
-          "empty": true,
-          "present": true
-        },
         "defendantEmail": "defendant@email.com",
         "defendantId": "546d8752-abbf-0acfd08d713b",
-        "directionOrder": {
-          "empty": true,
-          "present": true
-        },
-        "directionOrderType": {
-          "empty": true,
-          "present": true
-        },
         "directionsQuestionnaireDeadline": "string",
         "evidenceHandled": "YES",
         "externalId": "string",
-        "failedMediationReason": {
-          "empty": true,
-          "present": true
-        },
-        "features": [
-          "string"
-        ],
         "id": 0,
         "intentionToProceedDeadline": "string",
         "issuedOn": {
@@ -296,27 +118,6 @@
         },
         "lastEventTriggeredForHwfCase": "string",
         "lastModified": "2022-06-21",
-        "letterHolderId": "string",
-        "mediationOutcome": {
-          "empty": true,
-          "present": true
-        },
-        "mediationSettlementReachedAt": {
-          "empty": true,
-          "present": true
-        },
-        "moreTimeRequested": true,
-        "paperFormIssueDate": "string",
-        "paperFormServedDate": "string",
-        "paperResponse": "YES",
-        "preferredDQCourt": {
-          "empty": true,
-          "present": true
-        },
-        "preferredDQPilotCourt": {
-          "empty": true,
-          "present": true
-        },
         "proceedOfflineOtherReasonDescription": "string",
         "referenceNumber": "256MC007",
         "responseDeadline": "2023-02-05",
@@ -336,42 +137,9 @@
           "present": true
         },
         "totalAmountTillToday": 1000,
-        "totalClaimAmount": 1000,
-        "totalInterest": {
-          "empty": true,
-          "present": true
-        },
-        "totalInterestTillDateOfIssue": {
-          "empty": true,
-          "present": true
-        },
-        "transferContent": {
-          "dateOfTransfer": "string",
-          "hearingCourtAddress": {
-            "city": "string",
-            "county": "string",
-            "line1": "string",
-            "line2": "string",
-            "line3": "string",
-            "postcode": "string"
-          },
-          "hearingCourtName": "string",
-          "reasonForTransfer": "string"
-        }
+        "totalClaimAmount": 1000
       },
       {
-        "amountWithInterest": {
-          "empty": true,
-          "present": true
-        },
-        "amountWithInterestUntilIssueDate": {
-          "empty": true,
-          "present": true
-        },
-        "bespokeOrderDirection": {
-          "empty": true,
-          "present": true
-        },
         "bulkPrintDetails": [
           {
             "id": "string",
@@ -381,10 +149,6 @@
           }
         ],
         "ccdCaseId": 1638199478521121,
-        "channel": {
-          "empty": true,
-          "present": true
-        },
         "claim": {
           "amount": {
             "rows": [
@@ -448,143 +212,13 @@
                 "line3": "",
                 "postcode": "SW1H 9AJ"
               },
-              "email": {
-                "empty": true,
-                "present": true
-              },
               "id": "546d8752-abbf-0acfd08d713b",
-              "name": "Mr Bad Guy",
-              "phone": {
-                "empty": true,
-                "present": true
-              },
-              "representative": {
-                "empty": true,
-                "present": true
-              },
-              "serviceAddress": {
-                "empty": true,
-                "present": true
-              }
+              "name": "Mr Bad Guy"
             }
           ],
-          "evidence": {
-            "empty": true,
-            "present": true
-          },
           "externalId": "4c1e8c4e-891f-4588-b665-f1061e67c239",
-          "externalReferenceNumber": {
-            "empty": true,
-            "present": true
-          },
-          "feeAccountNumber": {
-            "empty": true,
-            "present": true
-          },
-          "feeAmountAfterRemission": {
-            "empty": true,
-            "present": true
-          },
-          "feeAmountInPennies": {
-            "empty": true,
-            "present": true
-          },
-          "feeCode": {
-            "empty": true,
-            "present": true
-          },
-          "feeRemitted": {
-            "empty": true,
-            "present": true
-          },
-          "helpWithFeesNumber": {
-            "empty": true,
-            "present": true
-          },
-          "helpWithFeesType": {
-            "empty": true,
-            "present": true
-          },
-          "housingDisrepair": {
-            "empty": true,
-            "present": true
-          },
           "hwfDocumentsToBeSentBefore": "string",
-          "hwfFeeDetailsSummary": {
-            "empty": true,
-            "present": true
-          },
-          "hwfMandatoryDetails": {
-            "empty": true,
-            "present": true
-          },
-          "hwfMoreInfoNeededDocuments": [
-            "string"
-          ],
-          "interest": {
-            "interestBreakdown": {
-              "explanation": "string",
-              "totalAmount": 0
-            },
-            "interestDate": {
-              "chronology": {
-                "calendarType": "string",
-                "id": "string"
-              },
-              "dayOfMonth": 0,
-              "dayOfWeek": "MONDAY",
-              "dayOfYear": 0,
-              "endDateType": "SETTLED_OR_JUDGMENT",
-              "era": "BCE",
-              "leapYear": true,
-              "month": "JANUARY",
-              "monthValue": 0,
-              "reason": "string",
-              "type": "CUSTOM",
-              "year": 0
-            },
-            "lastInterestCalculationDate": "2022-06-21",
-            "rate": 0,
-            "reason": "string",
-            "specificDailyAmount": {
-              "empty": true,
-              "present": true
-            },
-            "type": "STANDARD"
-          },
-          "moreInfoDetails": {
-            "empty": true,
-            "present": true
-          },
-          "outstandingFeeAmountInPennies": {
-            "empty": true,
-            "present": true
-          },
-          "payment": {
-            "empty": true,
-            "present": true
-          },
-          "personalInjury": {
-            "empty": true,
-            "present": true
-          },
-          "preferredCourt": {
-            "empty": true,
-            "present": true
-          },
-          "reason": "string",
-          "statementOfTruth": {
-            "empty": true,
-            "present": true
-          },
-          "timeline": {
-            "empty": true,
-            "present": true
-          }
-        },
-        "claimDocumentCollection": {
-          "empty": true,
-          "present": true
+          "reason": "string"
         },
         "claimSubmissionOperationIndicators": {
           "bulkPrint": "YES",
@@ -596,114 +230,29 @@
           "staffNotification": "YES"
         },
         "createdAt": "2022-06-21",
-        "dateReferredForDirections": {
-          "empty": true,
-          "present": true
-        },
         "defendantEmail": "defendant@email.com",
         "defendantId": "546d8752-abbf-0acfd08d713b",
-        "directionOrder": {
-          "empty": true,
-          "present": true
-        },
-        "directionOrderType": {
-          "empty": true,
-          "present": true
-        },
         "directionsQuestionnaireDeadline": "string",
         "evidenceHandled": "YES",
         "externalId": "string",
-        "failedMediationReason": {
-          "empty": true,
-          "present": true
-        },
-        "features": [
-          "string"
-        ],
         "id": 0,
-        "intentionToProceedDeadline": "string",
-        "issuedOn": {
-          "empty": true,
-          "present": true
-        },
-        "lastEventTriggeredForHwfCase": "string",
         "lastModified": "2022-06-21",
         "letterHolderId": "string",
-        "mediationOutcome": {
-          "empty": true,
-          "present": true
-        },
-        "mediationSettlementReachedAt": {
-          "empty": true,
-          "present": true
-        },
         "moreTimeRequested": true,
-        "paperFormIssueDate": "string",
-        "paperFormServedDate": "string",
         "paperResponse": "YES",
-        "preferredDQCourt": {
-          "empty": true,
-          "present": true
-        },
-        "preferredDQPilotCourt": {
-          "empty": true,
-          "present": true
-        },
         "proceedOfflineOtherReasonDescription": "string",
         "referenceNumber": "256MC008",
         "response": {
           "responseMethod": "OFFLINE"
         },
         "responseDeadline": "2023-05-22",
-        "reviewOrder": {
-          "empty": true,
-          "present": true
-        },
-        "serviceDate": "string",
-        "settlement": {
-          "empty": true,
-          "present": true
-        },
         "state": "CREATE",
         "submitterEmail": "string",
         "submitterId": "string",
-        "totalAmountTillDateOfIssue": {
-          "empty": true,
-          "present": true
-        },
         "totalAmountTillToday": 1000,
-        "totalClaimAmount": 1000,
-        "totalInterest": {
-          "empty": true,
-          "present": true
-        },
-        "totalInterestTillDateOfIssue": {
-          "empty": true,
-          "present": true
-        },
-        "transferContent": {
-          "dateOfTransfer": "string",
-          "hearingCourtAddress": {
-            "city": "string",
-            "county": "string",
-            "line1": "string",
-            "line2": "string",
-            "line3": "string",
-            "postcode": "string"
-          },
-          "hearingCourtName": "string",
-          "reasonForTransfer": "string"
-        }
+        "totalClaimAmount": 1000
       },
       {
-        "amountWithInterest": {
-          "empty": true,
-          "present": true
-        },
-        "amountWithInterestUntilIssueDate": {
-          "empty": true,
-          "present": true
-        },
         "bespokeOrderDirection": {
           "empty": true,
           "present": true
@@ -717,10 +266,6 @@
           }
         ],
         "ccdCaseId": 1638199478521121,
-        "channel": {
-          "empty": true,
-          "present": true
-        },
         "claim": {
           "amount": {
             "rows": [
@@ -734,10 +279,6 @@
               }
             ]
           },
-          "breathingSpace": {
-            "empty": true,
-            "present": true
-          },
           "claimants": [
             {
               "address": {
@@ -748,21 +289,8 @@
                 "line3": "",
                 "postcode": "SW1H 9AJ"
               },
-              "correspondenceAddress": {
-                "empty": true,
-                "present": true
-              },
               "id": "5caa4f80-eeb9-483d-bb31-6884cd4f8db9",
-              "name": "Mr John Clark",
-              "pcqId": "string",
-              "phone": {
-                "empty": true,
-                "present": true
-              },
-              "representative": {
-                "empty": true,
-                "present": true
-              }
+              "name": "Mr John Clark"
             }
           ],
           "defendants": [
@@ -783,151 +311,12 @@
                 "line3": "",
                 "postcode": "SW1H 9AJ"
               },
-              "email": {
-                "empty": true,
-                "present": true
-              },
               "id": "546d8752-abbf-0acfd08d713b",
-              "name": "Mr Bad Guy",
-              "phone": {
-                "empty": true,
-                "present": true
-              },
-              "representative": {
-                "empty": true,
-                "present": true
-              },
-              "serviceAddress": {
-                "empty": true,
-                "present": true
-              }
+              "name": "Mr Bad Guy"
             }
           ],
-          "evidence": {
-            "empty": true,
-            "present": true
-          },
           "externalId": "4c1e8c4e-891f-4588-b665-f1061e67c238",
-          "externalReferenceNumber": {
-            "empty": true,
-            "present": true
-          },
-          "feeAccountNumber": {
-            "empty": true,
-            "present": true
-          },
-          "feeAmountAfterRemission": {
-            "empty": true,
-            "present": true
-          },
-          "feeAmountInPennies": {
-            "empty": true,
-            "present": true
-          },
-          "feeCode": {
-            "empty": true,
-            "present": true
-          },
-          "feeRemitted": {
-            "empty": true,
-            "present": true
-          },
-          "helpWithFeesNumber": {
-            "empty": true,
-            "present": true
-          },
-          "helpWithFeesType": {
-            "empty": true,
-            "present": true
-          },
-          "housingDisrepair": {
-            "empty": true,
-            "present": true
-          },
-          "hwfDocumentsToBeSentBefore": "string",
-          "hwfFeeDetailsSummary": {
-            "empty": true,
-            "present": true
-          },
-          "hwfMandatoryDetails": {
-            "empty": true,
-            "present": true
-          },
-          "hwfMoreInfoNeededDocuments": [
-            "string"
-          ],
-          "interest": {
-            "interestBreakdown": {
-              "explanation": "string",
-              "totalAmount": 0
-            },
-            "interestDate": {
-              "chronology": {
-                "calendarType": "string",
-                "id": "string"
-              },
-              "dayOfMonth": 0,
-              "dayOfWeek": "MONDAY",
-              "dayOfYear": 0,
-              "endDateType": "SETTLED_OR_JUDGMENT",
-              "era": "BCE",
-              "leapYear": true,
-              "month": "JANUARY",
-              "monthValue": 0,
-              "reason": "string",
-              "type": "CUSTOM",
-              "year": 0
-            },
-            "lastInterestCalculationDate": "2022-06-21",
-            "rate": 0,
-            "reason": "string",
-            "specificDailyAmount": {
-              "empty": true,
-              "present": true
-            },
-            "type": "STANDARD"
-          },
-          "moreInfoDetails": {
-            "empty": true,
-            "present": true
-          },
-          "outstandingFeeAmountInPennies": {
-            "empty": true,
-            "present": true
-          },
-          "payment": {
-            "empty": true,
-            "present": true
-          },
-          "personalInjury": {
-            "empty": true,
-            "present": true
-          },
-          "preferredCourt": {
-            "empty": true,
-            "present": true
-          },
-          "reason": "string",
-          "statementOfTruth": {
-            "empty": true,
-            "present": true
-          },
-          "timeline": {
-            "empty": true,
-            "present": true
-          }
-        },
-        "claimantRespondedAt": {
-          "empty": true,
-          "present": true
-        },
-        "claimantResponse": {
-          "empty": true,
-          "present": true
-        },
-        "claimantResponseDeadline": {
-          "empty": true,
-          "present": true
+          "reason": "string"
         },
         "createdAt": "2022-06-21",
         "dateReferredForDirections": {
@@ -936,78 +325,19 @@
         },
         "defendantEmail": "defendant@email.com",
         "defendantId": "546d8752-abbf-0acfd08d713b",
-        "directionOrder": {
-          "empty": true,
-          "present": true
-        },
-        "directionOrderType": {
-          "empty": true,
-          "present": true
-        },
-        "directionsQuestionnaireDeadline": "string",
         "evidenceHandled": "YES",
         "externalId": "string",
-        "failedMediationReason": {
-          "empty": true,
-          "present": true
-        },
-        "features": [
-          "string"
-        ],
         "id": 0,
         "intentionToProceedDeadline": "string",
-        "issuedOn": {
-          "empty": true,
-          "present": true
-        },
-        "lastEventTriggeredForHwfCase": "string",
         "lastModified": "2022-06-21",
-        "letterHolderId": "string",
-        "mediationOutcome": {
-          "empty": true,
-          "present": true
-        },
-        "mediationSettlementReachedAt": {
-          "empty": true,
-          "present": true
-        },
         "moneyReceivedOn": "2022-06-21",
         "moreTimeRequested": true,
-        "paperFormIssueDate": "string",
-        "paperFormServedDate": "string",
-        "paperResponse": "YES",
-        "preferredDQCourt": {
-          "empty": true,
-          "present": true
-        },
-        "preferredDQPilotCourt": {
-          "empty": true,
-          "present": true
-        },
-        "proceedOfflineOtherReasonDescription": "string",
         "referenceNumber": "256MC009",
         "respondedAt": "2022-06-21",
-        "response": {
-          "empty": true,
-          "present": true
-        },
         "responseDeadline": "2022-06-21",
-        "reviewOrder": {
-          "empty": true,
-          "present": true
-        },
-        "serviceDate": "string",
-        "settlement": {
-          "empty": true,
-          "present": true
-        },
         "state": "BUSINESS_QUEUE",
         "submitterEmail": "email",
         "submitterId": "string",
-        "totalAmountTillDateOfIssue": {
-          "empty": true,
-          "present": true
-        },
         "totalAmountTillToday": 1000,
         "totalClaimAmount": 1000
       }
