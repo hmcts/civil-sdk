@@ -1,0 +1,100 @@
+{
+  "flags": [
+    {
+      "FlagDetails": [
+        {
+          "name": "Case",
+          "hearingRelevant": false,
+          "flagComment": false,
+          "defaultStatus": "Active",
+          "externallyAvailable": false,
+          "flagCode": "CATGRY",
+          "childFlags": [
+            {
+              "name": "Complex Case",
+              "hearingRelevant": false,
+              "flagComment": false,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "CF0002",
+              "childFlags": [],
+              "isParent": false,
+              "Path": [
+                "Case"
+              ]
+            },
+            {
+              "name": "Urgent case",
+              "hearingRelevant": true,
+              "flagComment": false,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "CF0007",
+              "childFlags": [],
+              "isParent": false,
+              "Path": [
+                "Case"
+              ]
+            },
+            {
+              "name": "Power of arrest with Police",
+              "hearingRelevant": true,
+              "flagComment": false,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "CF0008",
+              "childFlags": [],
+              "isParent": false,
+              "Path": [
+                "Case"
+              ]
+            },
+            {
+              "name": "Warrant of arrest conclusion/withdrawn",
+              "hearingRelevant": false,
+              "flagComment": false,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "CF0009",
+              "childFlags": [],
+              "isParent": false,
+              "Path": [
+                "Case"
+              ]
+            },
+            {
+              "name": "Welsh forms and communications",
+              "hearingRelevant": true,
+              "flagComment": false,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "CF0014",
+              "childFlags": [],
+              "isParent": false,
+              "Path": [
+                "Case"
+              ]
+            },
+            {
+              "name": "Other",
+              "hearingRelevant": true,
+              "flagComment": true,
+              "defaultStatus": "Active",
+              "externallyAvailable": false,
+              "flagCode": "OT0001",
+              "childFlags": [],
+              "isParent": false,
+              "Path": [
+                "Case"
+              ]
+            }
+          ],
+          "isParent": true,
+          "Path": [
+            ""
+          ]
+        }
+      ]
+    }
+  ]
+}
