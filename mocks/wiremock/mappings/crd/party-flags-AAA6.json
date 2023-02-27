@@ -1,0 +1,18 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/refdata/commondata/caseflags/service-id=AAA6",
+    "queryParameters": {
+      "flag-type": {
+        "equalTo": "PARTY"
+      }
+    }
+  },
+  "response": {
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "bodyFileName": "crd/party-flags-AAA6.json"
+    }
+  }
