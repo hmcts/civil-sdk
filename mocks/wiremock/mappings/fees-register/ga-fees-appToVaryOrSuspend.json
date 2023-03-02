@@ -4,7 +4,7 @@
     "urlPath": "/fees-register/fees/lookup",
     "queryParameters": {
       "service": {
-        "equalTo": "general"
+        "equalTo": "other"
       },
       "jurisdiction1": {
         "equalTo": "civil"
@@ -16,7 +16,7 @@
         "equalTo": "default"
       },
       "event": {
-        "equalTo": "general application"
+        "equalTo": "miscellaneous"
       },
       "keyword": {
         "matches": "AppnToVaryOrSuspend"
