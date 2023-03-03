@@ -276,6 +276,32 @@
     "overrideAll": true
   },
   {
+    "email": "ga_hearing_centre_admin_nw@justice.gov.uk",
+    "roleAssignments": [
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "hearing-centre-admin",
+        "grantType": "STANDARD",
+        "roleCategory": "ADMIN",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "CIVIL", "jurisdiction": "CIVIL" },
+        "authorisations": []
+      },
+      {
+        "roleType": "ORGANISATION",
+        "roleName": "hearing-centre-admin",
+        "grantType": "STANDARD",
+        "roleCategory": "JUDICIAL",
+        "classification": "PUBLIC",
+        "readOnly": false,
+        "attributes": { "caseType": "GENERALAPPLICATION", "jurisdiction": "CIVIL" },
+        "authorisations": []
+      }
+    ],
+    "overrideAll": true
+  },
+  {
     "email": "hmcts-staff-09@example.com",
     "roleAssignments": [
       {
