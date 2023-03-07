@@ -15,10 +15,7 @@
           }
         ],
         "ccdCaseId": 1638199478521122,
-        "channel": {
-          "empty": true,
-          "present": true
-        },
+        "countyCourtJudgmentRequestedAt": "2023-02-24T16:58:47.116323",
         "response": {
           "responseType": "PART_ADMISSION",
           "amount": 200,
