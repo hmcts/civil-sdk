@@ -131,6 +131,9 @@ To stop the containers and preserve the data run:
 
 To enable stubbing of the `PROXY_PAYMENTS` set the `PROXY_PAYMENTS_STUB` environment variable to the desired url.
 
+`mocks/wiremock/__files/crd/categories.json` was created based on ListOfValues_24.01.2023.csv which contains errors.
+When updated version of CSV is issued, the JSON has to be updated as well.
+
 ## Elastic search
 
 ### Information

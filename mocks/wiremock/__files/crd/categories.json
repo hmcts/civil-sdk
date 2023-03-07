@@ -1,0 +1,444 @@
+{
+  "list_of_values": [
+    {
+      "active_flag": "D",
+      "category_key": "HearingChannel",
+      "hint_text_cy": "",
+      "hint_text_en": "",
+      "key": "INTER",
+      "lov_order": 0,
+      "parent_category": "",
+      "parent_key": "",
+      "value_cy": "",
+      "value_en": "In Person",
+      "child_nodes": [
+        {
+          "active_flag": "D",
+          "category_key": "HearingSubChannel",
+          "hint_text_cy": "",
+          "hint_text_en": "",
+          "key": "INTER",
+          "lov_order": 0,
+          "parent_category": "HearingChannel",
+          "parent_key": "INTER",
+          "value_cy": "",
+          "value_en": "In Person",
+          "child_nodes": []
+        },
+        {
+          "active_flag": "Y",
+          "category_key": "HearingSubChannel",
+          "hint_text_cy": "",
+          "hint_text_en": "",
+          "key": "INTER",
+          "lov_order": 0,
+          "parent_category": "HearingChannel",
+          "parent_key": "INTER",
+          "value_cy": "Yn Bersonol",
+          "value_en": "In Person",
+          "child_nodes": []
+        }
+      ]
+    },
+    {
+      "active_flag": "D",
+      "category_key": "HearingChannel",
+      "hint_text_cy": "",
+      "hint_text_en": "",
+      "key": "TEL",
+      "lov_order": 0,
+      "parent_category": "",
+      "parent_key": "",
+      "value_cy": "",
+      "value_en": "Telephone",
+      "child_nodes": [
+        {
+          "active_flag": "D",
+          "category_key": "HearingSubChannel",
+          "hint_text_cy": "",
+          "hint_text_en": "",
+          "key": "TELBTM",
+          "lov_order": 0,
+          "parent_category": "HearingChannel",
+          "parent_key": "TEL",
+          "value_cy": "",
+          "value_en": "Telephone - BTMeetme",
+          "child_nodes": []
+        },
+        {
+          "active_flag": "Y",
+          "category_key": "HearingSubChannel",
+          "hint_text_cy": "",
+          "hint_text_en": "",
+          "key": "TELBTM",
+          "lov_order": 0,
+          "parent_category": "HearingChannel",
+          "parent_key": "TEL",
+          "value_cy": "Dros y Ffôn - BTMeetme",
+          "value_en": "Telephone - BTMeetme",
+          "child_nodes": []
+        }
+      ]
+    },
+    {
+      "active_flag": "D",
+      "category_key": "HearingChannel",
+      "hint_text_cy": "",
+      "hint_text_en": "",
+      "key": "VID",
+      "lov_order": 0,
+      "parent_category": "",
+      "parent_key": "",
+      "value_cy": "",
+      "value_en": "Video",
+      "child_nodes": [
+        {
+          "active_flag": "D",
+          "category_key": "HearingSubChannel",
+          "hint_text_cy": "",
+          "hint_text_en": "",
+          "key": "VIDCVP",
+          "lov_order": 0,
+          "parent_category": "HearingChannel",
+          "parent_key": "VID",
+          "value_cy": "",
+          "value_en": "Video - CVP",
+          "child_nodes": []
+        },
+        {
+          "active_flag": "Y",
+          "category_key": "HearingSubChannel",
+          "hint_text_cy": "",
+          "hint_text_en": "",
+          "key": "VIDCVP",
+          "lov_order": 0,
+          "parent_category": "HearingChannel",
+          "parent_key": "VID",
+          "value_cy": "Drwy Fideo - CVP",
+          "value_en": "Video - CVP",
+          "child_nodes": []
+        }
+      ]
+    },
+    {
+      "active_flag": "D",
+      "category_key": "HearingChannel",
+      "hint_text_cy": "",
+      "hint_text_en": "",
+      "key": "NA",
+      "lov_order": 0,
+      "parent_category": "",
+      "parent_key": "",
+      "value_cy": "",
+      "value_en": "Not in Attendance",
+      "child_nodes": [
+        {
+          "active_flag": "D",
+          "category_key": "HearingSubChannel",
+          "hint_text_cy": "",
+          "hint_text_en": "",
+          "key": "NA",
+          "lov_order": 0,
+          "parent_category": "HearingChannel",
+          "parent_key": "NA",
+          "value_cy": "",
+          "value_en": "Not in Attendance",
+          "child_nodes": []
+        },
+        {
+          "active_flag": "Y",
+          "category_key": "HearingSubChannel",
+          "hint_text_cy": "",
+          "hint_text_en": "",
+          "key": "NA",
+          "lov_order": 0,
+          "parent_category": "HearingChannel",
+          "parent_key": "NA",
+          "value_cy": "Ddim yn Bresennol",
+          "value_en": "Not in Attendance",
+          "child_nodes": []
+        }
+      ]
+    },
+    {
+      "active_flag": "D",
+      "category_key": "HearingChannel",
+      "hint_text_cy": "",
+      "hint_text_en": "",
+      "key": "INTER",
+      "lov_order": 0,
+      "parent_category": "",
+      "parent_key": "",
+      "value_cy": "Ffôn",
+      "value_en": "In Person",
+      "child_nodes": [
+        {
+          "active_flag": "D",
+          "category_key": "HearingSubChannel",
+          "hint_text_cy": "",
+          "hint_text_en": "",
+          "key": "INTER",
+          "lov_order": 0,
+          "parent_category": "HearingChannel",
+          "parent_key": "INTER",
+          "value_cy": "",
+          "value_en": "In Person",
+          "child_nodes": []
+        },
+        {
+          "active_flag": "Y",
+          "category_key": "HearingSubChannel",
+          "hint_text_cy": "",
+          "hint_text_en": "",
+          "key": "INTER",
+          "lov_order": 0,
+          "parent_category": "HearingChannel",
+          "parent_key": "INTER",
+          "value_cy": "Yn Bersonol",
+          "value_en": "In Person",
+          "child_nodes": []
+        }
+      ]
+    },
+    {
+      "active_flag": "D",
+      "category_key": "HearingChannel",
+      "hint_text_cy": "",
+      "hint_text_en": "",
+      "key": "TEL",
+      "lov_order": 0,
+      "parent_category": "",
+      "parent_key": "",
+      "value_cy": "Fideo",
+      "value_en": "Telephone",
+      "child_nodes": [
+        {
+          "active_flag": "D",
+          "category_key": "HearingSubChannel",
+          "hint_text_cy": "",
+          "hint_text_en": "",
+          "key": "TELBTM",
+          "lov_order": 0,
+          "parent_category": "HearingChannel",
+          "parent_key": "TEL",
+          "value_cy": "",
+          "value_en": "Telephone - BTMeetme",
+          "child_nodes": []
+        },
+        {
+          "active_flag": "Y",
+          "category_key": "HearingSubChannel",
+          "hint_text_cy": "",
+          "hint_text_en": "",
+          "key": "TELBTM",
+          "lov_order": 0,
+          "parent_category": "HearingChannel",
+          "parent_key": "TEL",
+          "value_cy": "Dros y Ffôn - BTMeetme",
+          "value_en": "Telephone - BTMeetme",
+          "child_nodes": []
+        }
+      ]
+    },
+    {
+      "active_flag": "D",
+      "category_key": "HearingChannel",
+      "hint_text_cy": "",
+      "hint_text_en": "",
+      "key": "VID",
+      "lov_order": 0,
+      "parent_category": "",
+      "parent_key": "",
+      "value_cy": "Ddim yn Bresennol",
+      "value_en": "Video",
+      "child_nodes": [
+        {
+          "active_flag": "D",
+          "category_key": "HearingSubChannel",
+          "hint_text_cy": "",
+          "hint_text_en": "",
+          "key": "VIDCVP",
+          "lov_order": 0,
+          "parent_category": "HearingChannel",
+          "parent_key": "VID",
+          "value_cy": "",
+          "value_en": "Video - CVP",
+          "child_nodes": []
+        },
+        {
+          "active_flag": "Y",
+          "category_key": "HearingSubChannel",
+          "hint_text_cy": "",
+          "hint_text_en": "",
+          "key": "VIDCVP",
+          "lov_order": 0,
+          "parent_category": "HearingChannel",
+          "parent_key": "VID",
+          "value_cy": "Drwy Fideo - CVP",
+          "value_en": "Video - CVP",
+          "child_nodes": []
+        }
+      ]
+    },
+    {
+      "active_flag": "Y",
+      "category_key": "HearingChannel",
+      "hint_text_cy": "",
+      "hint_text_en": "",
+      "key": "NA",
+      "lov_order": 0,
+      "parent_category": "",
+      "parent_key": "",
+      "value_cy": "Ddim yn Bresennol",
+      "value_en": "Not in Attendance",
+      "child_nodes": [
+        {
+          "active_flag": "D",
+          "category_key": "HearingSubChannel",
+          "hint_text_cy": "",
+          "hint_text_en": "",
+          "key": "NA",
+          "lov_order": 0,
+          "parent_category": "HearingChannel",
+          "parent_key": "NA",
+          "value_cy": "",
+          "value_en": "Not in Attendance",
+          "child_nodes": []
+        },
+        {
+          "active_flag": "Y",
+          "category_key": "HearingSubChannel",
+          "hint_text_cy": "",
+          "hint_text_en": "",
+          "key": "NA",
+          "lov_order": 0,
+          "parent_category": "HearingChannel",
+          "parent_key": "NA",
+          "value_cy": "Ddim yn Bresennol",
+          "value_en": "Not in Attendance",
+          "child_nodes": []
+        }
+      ]
+    },
+    {
+      "active_flag": "Y",
+      "category_key": "HearingChannel",
+      "hint_text_cy": "",
+      "hint_text_en": "",
+      "key": "INTER",
+      "lov_order": 0,
+      "parent_category": "",
+      "parent_key": "",
+      "value_cy": "Yn Bersonol",
+      "value_en": "In Person",
+      "child_nodes": [
+        {
+          "active_flag": "D",
+          "category_key": "HearingSubChannel",
+          "hint_text_cy": "",
+          "hint_text_en": "",
+          "key": "INTER",
+          "lov_order": 0,
+          "parent_category": "HearingChannel",
+          "parent_key": "INTER",
+          "value_cy": "",
+          "value_en": "In Person",
+          "child_nodes": []
+        },
+        {
+          "active_flag": "Y",
+          "category_key": "HearingSubChannel",
+          "hint_text_cy": "",
+          "hint_text_en": "",
+          "key": "INTER",
+          "lov_order": 0,
+          "parent_category": "HearingChannel",
+          "parent_key": "INTER",
+          "value_cy": "Yn Bersonol",
+          "value_en": "In Person",
+          "child_nodes": []
+        }
+      ]
+    },
+    {
+      "active_flag": "Y",
+      "category_key": "HearingChannel",
+      "hint_text_cy": "",
+      "hint_text_en": "",
+      "key": "TEL",
+      "lov_order": 0,
+      "parent_category": "",
+      "parent_key": "",
+      "value_cy": "Ffôn",
+      "value_en": "Telephone",
+      "child_nodes": [
+        {
+          "active_flag": "D",
+          "category_key": "HearingSubChannel",
+          "hint_text_cy": "",
+          "hint_text_en": "",
+          "key": "TELBTM",
+          "lov_order": 0,
+          "parent_category": "HearingChannel",
+          "parent_key": "TEL",
+          "value_cy": "",
+          "value_en": "Telephone - BTMeetme",
+          "child_nodes": []
+        },
+        {
+          "active_flag": "Y",
+          "category_key": "HearingSubChannel",
+          "hint_text_cy": "",
+          "hint_text_en": "",
+          "key": "TELBTM",
+          "lov_order": 0,
+          "parent_category": "HearingChannel",
+          "parent_key": "TEL",
+          "value_cy": "Dros y Ffôn - BTMeetme",
+          "value_en": "Telephone - BTMeetme",
+          "child_nodes": []
+        }
+      ]
+    },
+    {
+      "active_flag": "Y",
+      "category_key": "HearingChannel",
+      "hint_text_cy": "",
+      "hint_text_en": "",
+      "key": "VID",
+      "lov_order": 0,
+      "parent_category": "",
+      "parent_key": "",
+      "value_cy": "Fideo",
+      "value_en": "Video",
+      "child_nodes": [
+        {
+          "active_flag": "D",
+          "category_key": "HearingSubChannel",
+          "hint_text_cy": "",
+          "hint_text_en": "",
+          "key": "VIDCVP",
+          "lov_order": 0,
+          "parent_category": "HearingChannel",
+          "parent_key": "VID",
+          "value_cy": "",
+          "value_en": "Video - CVP",
+          "child_nodes": []
+        },
+        {
+          "active_flag": "Y",
+          "category_key": "HearingSubChannel",
+          "hint_text_cy": "",
+          "hint_text_en": "",
+          "key": "VIDCVP",
+          "lov_order": 0,
+          "parent_category": "HearingChannel",
+          "parent_key": "VID",
+          "value_cy": "Drwy Fideo - CVP",
+          "value_en": "Video - CVP",
+          "child_nodes": []
+        }
+      ]
+    }
+  ]
+}
