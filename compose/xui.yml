@@ -31,6 +31,7 @@ services:
       REDISCLOUD_URL: http://dummyrediscloudurl
       SERVICES_ROLE_ASSIGNMENT_API: http://am-role-assignment-service:4096
       SERVICES_CCD_CASE_ASSIGNMENT_API: http://manage-case-assignment:4454
+      SERVICES_HEARINGS_COMPONENT_API_CIVIL: http://localhost:4000
 
       #LAUNCH_DARKLY_CLIENT_ID must be set to enable share a case functionality
       LAUNCH_DARKLY_CLIENT_ID: 5de6610b23ce5408280f2268
