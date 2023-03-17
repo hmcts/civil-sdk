@@ -1,0 +1,19 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/refdata/location/orgServices",
+    "queryParameters": {
+      "ccdServiceNames": {
+        "equalTo": "CIVIL"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "lrd/orgServices.json"
+  }
+}
+

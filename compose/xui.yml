@@ -21,11 +21,18 @@ services:
       SERVICES_IDAM_CLIENT_ID: xui_webapp
       SERVICES_PAYMENTS_URL: http://wiremock:8080
       SERVICES_PRD_API: http://wiremock:8080
+      SERVICES_PRD_COMMONDATA_API: http://wiremock:8080
+      SERVICES_PRD_API_URL: http://wiremock:8080
+      SERVICES_LOCATION_REF_API_URL: http://wiremock:8080
+      SERVICES_PRD_JUDICIAL_API: http://wiremock:8080
+      SERVICES_PRD_LOCATION_API: http://wiremock:8080
 
       SERVICES_EM_ANNO_API: http://ccd-api-gateway:3453
       REDISCLOUD_URL: http://dummyrediscloudurl
       SERVICES_ROLE_ASSIGNMENT_API: http://am-role-assignment-service:4096
       SERVICES_CCD_CASE_ASSIGNMENT_API: http://manage-case-assignment:4454
+      SERVICES_HEARINGS_COMPONENT_API_CIVIL: http://docker.for.mac.localhost:4000
+      SERVICES_HMC_HEARINGS_COMPONENT_API: http://wiremock:8080
 
       #LAUNCH_DARKLY_CLIENT_ID must be set to enable share a case functionality
       LAUNCH_DARKLY_CLIENT_ID: 5de6610b23ce5408280f2268
@@ -33,6 +40,9 @@ services:
       FEATURE_REDIS_ENABLED: "false"
       FEATURE_APP_INSIGHTS_ENABLED: "false"
       FEATURE_SECURE_COOKIE_ENABLED: "false"
+      FEATURE_WORKALLOCATION_ENABLED: "false"
+      FEATURE_PROXY_ENABLED: "false"
+      WA_SUPPORTED_JURISDICTIONS: "IA,PRIVATELAW"
       APPINSIGHTS_INSTRUMENTATIONKEY: fake
 
       S2S_SECRET:  "${IDAM_KEY_XUI_WEBAPP}"

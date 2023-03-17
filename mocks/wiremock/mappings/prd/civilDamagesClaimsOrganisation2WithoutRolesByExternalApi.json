@@ -1,0 +1,18 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/refdata/internal/v1/organisations/N5AFUXG/users",
+    "queryParameters": {
+      "returnRoles": {
+        "equalTo": "false"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "prd/civilDamagesClaimsOrganisation2UsersWithoutRoles.json"
+  }
+}

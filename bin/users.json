@@ -7,6 +7,10 @@
   {"email": "hmcts.civil+organisation.2.solicitor.2@gmail.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager", "lastName": "Defendant-solicitor-2"},
   {"email": "hmcts.civil+organisation.3.superuser@gmail.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager", "lastName": "Defendant-solicitor"},
   {"email": "hmcts.civil+organisation.3.solicitor.1@gmail.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager", "lastName": "Defendant-solicitor"},
+  {"email": "civil.damages.claims+organisation.1.superuser@gmail.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager", "lastName": "Super-User"},
+  {"email": "civil.damages.claims+organisation.1.solicitor.1@gmail.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager,payments", "lastName": "Solicitor"},
+  {"email": "civil.damages.claims+organisation.2.superuser@gmail.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager", "lastName": "Super-User"},
+  {"email": "civil.damages.claims+organisation.2.solicitor.1@gmail.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager,payments", "lastName": "Solicitor"},
   {"email": "civil-system-update@mailnesia.com", "roles": "caseworker,caseworker-civil,caseworker-civil-systemupdate", "lastName": "System-update"},
   {"email": "caseworker-caa@mailnesia.com", "roles": "caseworker,caseworker-caa", "lastName": "caseworker-caa-manager"},
   {"email": "organisation-approver@mailnesia.com", "roles": "prd-admin", "lastName": "Org-approver"},
@@ -25,6 +29,7 @@
   {"email": "jane.smith@gmail.com", "roles": "citizen,caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager,payments", "lastName": "Smith"},
   {"email": "tribunal-caseworker-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "tribunal-caseworker"},
   {"email": "hearing-centre-admin-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "Admin"},
+  {"email": "ga_hearing_centre_admin_nw@justice.gov.uk", "roles": "caseworker,caseworker-civil", "lastName": "Admin"},
   {"email": "hmcts-staff-09@example.com", "roles": "caseworker,caseworker-civil", "lastName": "standard"},
   {"email": "hmcts-hearing-teamleader@example.com", "roles": "caseworker,caseworker-civil", "lastName": "Staff"},
   {"email": "senior-tribunal-caseworker-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "senior-tribunal-caseworker"},
@@ -32,5 +37,4 @@
   {"email": "approver-noc@mailnesia.com", "roles": "caseworker,caseworker-approver, prd-aac-system", "lastName": "Approver-NoC"},
   {"email": "approver-caseworker@mailnesia.com", "roles": "caseworker,caseworker-approver, prd-aac-system", "lastName": "Approver-System"}
 ]
-
 
