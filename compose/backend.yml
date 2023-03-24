@@ -71,7 +71,7 @@ services:
       DATA_STORE_DB_USE_SSL: "${DB_USE_SSL}"
       DATA_STORE_IDAM_KEY: "${IDAM_KEY_CCD_DATA_STORE}"
       DATA_STORE_TOKEN_SECRET: iuasbcuasdcbasdgcasdgcuysachjsacyasdgjcgasdj
-      DATA_STORE_S2S_AUTHORISED_SERVICES: ccd_gw,ccd_gateway,civil_service,ccd_data,ccd_ps,aac_manage_case_assignment,xui_webapp,ccd_case_document_am_api,am_role_assignment_service,cmc_claim_store
+      DATA_STORE_S2S_AUTHORISED_SERVICES: ccd_gw,ccd_gateway,civil_service,ccd_data,ccd_ps,aac_manage_case_assignment,xui_webapp,ccd_case_document_am_api,am_role_assignment_service,cmc_claim_store,civil_general_applications
       DEFINITION_STORE_HOST: http://ccd-definition-store-api:4451
       USER_PROFILE_HOST: http://ccd-user-profile-api:4453
       IDAM_API_BASE_URL: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}"
@@ -128,7 +128,7 @@ services:
       AM_ROLE_ASSIGNMENT_SERVICE_SECRET: "${IDAM_KEY_AM_ROLE_ASSIGNMENT}"
       ROLE_ASSIGNMENT_IDAM_KEY:
       ROLE_ASSIGNMENT_TOKEN_SECRET:
-      ROLE_ASSIGNMENT_S2S_AUTHORISED_SERVICES: ccd_gw,am_role_assignment_service,am_org_role_mapping_service,wa_task_management_api,xui_webapp,ccd_data,civil_service
+      ROLE_ASSIGNMENT_S2S_AUTHORISED_SERVICES: ccd_gw,am_role_assignment_service,am_org_role_mapping_service,wa_task_management_api,xui_webapp,ccd_data,civil_service,civil_general_applications
       IDAM_USER_URL: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}"
       IDAM_S2S_URL: http://service-auth-provider-api:8080
       OPEN_ID_API_BASE_URI: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}/o"
@@ -182,6 +182,7 @@ services:
       MICROSERVICEKEYS_CCD_ADMIN: "${IDAM_KEY_CCD_ADMIN}"
       MICROSERVICEKEYS_CCD_PS: "${IDAM_KEY_CCD_PS}"
       MICROSERVICEKEYS_CIVIL_SERVICE: "${IDAM_KEY_CIVIL_SERVICE}"
+      MICROSERVICEKEYS_CIVIL_GENERAL_APPLICATIONS: "${IDAM_KEY_CIVIL_SERVICE}"
       MICROSERVICEKEYS_XUI_WEBAPP: "${IDAM_KEY_XUI_WEBAPP}"
       MICROSERVICEKEYS_AAC_MANAGE_CASE_ASSIGNMENT: "${IDAM_KEY_CASE_ASSIGNMENT}"
       MICROSERVICEKEYS_RD_PROFESSIONAL_API: "${OAUTH2_CLIENT_RD_PROFESSIONAL}"
