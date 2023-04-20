@@ -26,6 +26,7 @@ do
     -H "ServiceAuthorization: Bearer ${serviceToken}" \
     -F "deployment-name=${filename}" \
     -F "deploy-changed-only=true" \
+    -F "tenant-id=civil" \
     -F "file=@${filePath}")
 
   uploadHttpCode=$(echo "$uploadResponse" | tail -n1)
