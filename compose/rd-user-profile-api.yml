@@ -17,7 +17,7 @@ services:
       ROOT_LOGGING_LEVEL: debug
       OPEN_ID_API_BASE_URI: http://idam-web-public:8080/o
       OIDC_ISSUER_URL: http://fr-am:8080/openam/oauth2/hmcts
-      PRD_S2S_AUTHORISED_SERVICES: civil_service,xui_webapp_mo,rd_professional_api,rd_user_profile_api,xui_webapp,finrem_payment_service,fpl_case_service,iac,aac_manage_case_assignment
+      PRD_S2S_AUTHORISED_SERVICES: civil_service,xui_webapp_mo,rd_professional_api,rd_user_profile_api,xui_webapp,finrem_payment_service,fpl_case_service,iac,aac_manage_case_assignment,civil_general_applications
     ports:
       - 8091:8091
     networks:
