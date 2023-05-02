@@ -34,6 +34,7 @@
   {"email": "hmcts-hearing-teamleader@example.com", "roles": "caseworker,caseworker-civil", "lastName": "Staff"},
   {"email": "senior-tribunal-caseworker-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "senior-tribunal-caseworker"},
   {"email": "4924246EMP-@ejudiciary.net", "roles": "caseworker,caseworker-civil,caseworker-civil-judge,judge,hmcts-judiciary", "lastName": "Judge-Region-4"},
+  {"email": "4917924EMP-@ejudiciary.net", "roles": "caseworker,caseworker-civil,caseworker-civil-judge,judge,hmcts-judiciary", "lastName": "Judge-Region-1"},
   {"email": "approver-noc@mailnesia.com", "roles": "caseworker,caseworker-approver, prd-aac-system", "lastName": "Approver-NoC"},
   {"email": "approver-caseworker@mailnesia.com", "roles": "caseworker,caseworker-approver, prd-aac-system", "lastName": "Approver-System"}
 ]
