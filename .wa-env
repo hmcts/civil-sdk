@@ -1,47 +1,3 @@
-# Database
-export DB_USERNAME=ccd
-export DB_PASSWORD=ccd
-export DB_USE_SSL=false
-export DB_HOST_COMMON=ccd-shared-database
-export DB_PORT_COMMON=5432
-export AM_DB=am
-export AM_DB_USERNAME=amuser
-export AM_DB_PASSWORD=ampass
-
-# IDAM Keys
-export IDAM_KEY_CCD_DEFINITION_STORE=AAAAAAAAAAAAAAAA
-export IDAM_KEY_CCD_DEFINITION_DESIGNER=AAAAAAAAAAAAAAAE
-export IDAM_KEY_CCD_DATA_STORE=AAAAAAAAAAAAAAAB
-export IDAM_KEY_CCD_GATEWAY=AAAAAAAAAAAAAAAC
-export IDAM_KEY_CCD_ADMIN=AAAAAAAAAAAAAAAD
-export IDAM_KEY_DM_STORE=AAAAAAAAAAAAAAAA
-export IDAM_KEY_CCD_PS=AAAAAAAAAAAAAAAA
-export IDAM_KEY_CIVIL_SERVICE=AABBCCDDEEFFGGHH
-export IDAM_KEY_XUI_WEBAPP=XUIXUIXUIXUIXUIX
-export IDAM_KEY_CASE_ASSIGNMENT=OOOOOOOOOOOOOOOO
-export IDAM_KEY_AM_ROLE_ASSIGNMENT=AAAAAAAAAAAAAAAA
-export IDAM_KEY_CASE_DOCUMENT=CNTOE7D2NX6XHBKT
-
-# IDAM OAuth2 secrets
-export OAUTH2_CLIENT_CCD_GATEWAY=OOOOOOOOOOOOOOOO
-export OAUTH2_CLIENT_CCD_ADMIN=IIIIIIIIIIIIIIII
-export OAUTH2_CLIENT_XUI=OOOOOOOOOOOOOOOO
-export OAUTH2_CLIENT_XUI_MO=OOOOOOOOOOOOOOOO
-export OAUTH2_CLIENT_CASE_ASSIGNMENT=OOOOOOOOOOOOOOOO
-export OAUTH2_CLIENT_RD_PROFESSIONAL=OOOOOOOOOOOOOOOO
-export OAUTH2_CLIENT_RD_USER_PROFILE=OOOOOOOOOOOOOOOO
-export BEFTA_S2S_CLIENT_SECRET_OF_XUI_WEBAPP=OOOOOOOOOOOOOOOO
-# Microsoft Insights Key
-export APPINSIGHTS_INSTRUMENTATIONKEY=SomeRandomStringForLocalDocker
-
-export WIREMOCK_SERVER_MAPPINGS_PATH=wiremock
-
-export ES_ENABLED_DOCKER=true
-
-#uncomment to enable Idam Stub
-#IDAM_STUB_SERVICE_NAME=http://ccd-test-stubs-service:5555
-#IDAM_STUB_LOCALHOST=http://localhost:5555
-
 export S2S_URL=http://localhost:8080
 export S2S_URL=http://localhost:4502
 export CAMUNDA_URL=http://localhost:8999/engine-rest
@@ -112,7 +68,7 @@ export IA_UPPER_TRIBUNAL_NOTICES_EMAIL=upper-tribunal-notices@example.com
 export IA_BAIL_GOV_NOTIFY_KEY=OOOOOOOOOOOOOOOO
 
 # ASB related variables
-export AZURE_SERVICE_BUS_CONNECTION_STRING="Endpoint=sb://ccd-servicebus-demo.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=Eaill9SIVE+J1silfEgfTa/5L/vZCF1O4/Xldi11UFE="
+export AZURE_SERVICE_BUS_CONNECTION_STRING=Endpoint=sb://ccd-servicebus-demo.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=Eaill9SIVE+J1silfEgfTa/5L/vZCF1O4/Xldi11UFE=
 export AZURE_SERVICE_BUS_TOPIC_NAME=ccd-servicebus-demo/wa-caseprogression-case-event-handler-topic-sessions
 
 export AZURE_SERVICE_BUS_SUBSCRIPTION_NAME=ccd-servicebus-demo/wa-caseprogression-case-event-handler-topic-sessions/wa-case-progression-case-event-subscription
@@ -121,7 +77,7 @@ export AZURE_SERVICE_BUS_CCD_CASE_EVENTS_SUBSCRIPTION_NAME=ccd-servicebus-demo/c
 export AZURE_SERVICE_BUS_FEATURE_TOGGLE=true
 export WA_DLQ_PROCESS_ENABLED=true
 export AZURE_SERVICE_BUS_MESSAGE_AUTHOR=NDeekonda
-export LAUNCH_DARKLY_ACCESS_TOKEN=api-0ba8bb5e-0b11-4f84-9655-93f9f8ccca94
+export LAUNCH_DARKLY_ACCESS_TOKEN=replace_me
 export DOCMOSIS_ACCESS_KEY=3VAD-KLTI-JALP-FKIA-EBBH-2ELH-RBKQ-LS07-E7E1-B-F2AE
 export DOCMOSIS_ENDPOINT=http://localhost:5544
 export DOCMOSIS_SITE="Free Trial Tornado"
@@ -179,7 +135,7 @@ export HOME_OFFICE_EMAIL_APC=ia-respondentapc@fake.hmcts.net
 export HOME_OFFICE_EMAIL_LART=ia-respondentlart@fake.hmcts.net
 export TEST_HOMEOFFICE_LART_USERNAME=ia-respondentlart@fake.hmcts.net
 export TEST_HOMEOFFICE_LART_PASSWORD=London11
-export EST_HOMEOFFICE_POU_USERNAME=ia-respondentpou@fake.hmcts.net
+export TEST_HOMEOFFICE_POU_USERNAME=ia-respondentpou@fake.hmcts.net
 export TEST_HOMEOFFICE_POU_PASSWORD=London12
 export TEST_HOMEOFFICE_GENERIC_USERNAME=ia-respondentgen@fake.hmcts.net
 export TEST_HOMEOFFICE_GENERIC_PASSWORD=London13
@@ -195,9 +151,5 @@ export TEST_LAW_FIRM_SHARE_CASE_B_PASSWORD=London17
 export TEST_JUDGE_X_USERNAME=ia.iacjudge.ccd@fake.hmcts.net
 export TEST_JUDGE_X_PASSWORD=London20
 
-export SERVER_PORT=4550
-export CCD_DOCKER_PATH=/mnt/c/Users/DeekondaN/dev/civil/civil-sdk
-echo $SERVER_PORT
-
-export WA_TASK_DMNS_BPMNS_PATH=/mnt/c/Users/DeekondaN/dev/civil/civil-wa-task-configuration
-export WA_BPMNS_DMNS_PATH=/mnt/c/Users/DeekondaN/dev/civil/wa-standalone-task-bpmn
+export WA_TASK_DMNS_BPMNS_PATH="C:/Users/DeekondaN/dev/civil/civil-wa-task-configuration"
+export WA_BPMNS_DMNS_PATH="C:/Users/DeekondaN/dev/civil/wa-standalone-task-bpmn"
