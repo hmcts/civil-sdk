@@ -1061,7 +1061,7 @@
               "defaultStatus": "Active",
               "externallyAvailable": false,
               "flagCode": "PF0015",
-              "listOfValuesLength": 191,
+              "listOfValuesLength": 205,
               "listOfValues": [
                 {
                   "key": "abr",
@@ -1098,6 +1098,10 @@
                 {
                   "key": "ara-ana",
                   "value": "Arabic North African"
+                },
+                {
+                  "key": "ara-mag",
+                  "value": "Maghreb"
                 },
                 {
                   "key": "arq",
@@ -1154,6 +1158,10 @@
                 {
                   "key": "bjs",
                   "value": "Bajan (West Indian)"
+                },
+                {
+                  "key": "bnt-kic",
+                  "value": "Kichagga"
                 },
                 {
                   "key": "bod",
@@ -1300,6 +1308,10 @@
                   "value": "Kachi"
                 },
                 {
+                  "key": "glg",
+                  "value": "Galician"
+                },
+                {
                   "key": "guj",
                   "value": "Gujarati"
                 },
@@ -1336,6 +1348,10 @@
                   "value": "Hindko"
                 },
                 {
+                  "key": "hno",
+                  "value": "Northern Hindko"
+                },
+                {
                   "key": "hun",
                   "value": "Hungarian"
                 },
@@ -1358,6 +1374,10 @@
                 {
                   "key": "ind",
                   "value": "Indonesian"
+                },
+                {
+                  "key": "ish",
+                  "value": "Esan"
                 },
                 {
                   "key": "iso",
@@ -1434,6 +1454,14 @@
                 {
                   "key": "kru",
                   "value": "Kru"
+                },
+                {
+                  "key": "krx",
+                  "value": "Karon"
+                },
+                {
+                  "key": "kur-fey",
+                  "value": "Feyli"
                 },
                 {
                   "key": "kur-kbr",
@@ -1536,6 +1564,10 @@
                   "value": "Burmese"
                 },
                 {
+                  "key": "myx",
+                  "value": "Masaaba"
+                },
+                {
                   "key": "nde",
                   "value": "Ndebele"
                 },
@@ -1562,6 +1594,10 @@
                 {
                   "key": "nya",
                   "value": "Chichewa"
+                },
+                {
+                  "key": "nyn",
+                  "value": "Nyankole"
                 },
                 {
                   "key": "nyo",
@@ -1601,7 +1637,7 @@
                 },
                 {
                   "key": "phr",
-                  "value": "Pothohari"
+                  "value": "Pahari-Potwari"
                 },
                 {
                   "key": "pol",
@@ -1660,6 +1696,10 @@
                   "value": "Saraiki (Seraiki)"
                 },
                 {
+                  "key": "skt",
+                  "value": "Sakata"
+                },
+                {
                   "key": "slk",
                   "value": "Slovak"
                 },
@@ -1676,12 +1716,20 @@
                   "value": "Sindhi"
                 },
                 {
+                  "key": "snk",
+                  "value": "Soninke"
+                },
+                {
                   "key": "som",
                   "value": "Somali"
                 },
                 {
                   "key": "spa",
                   "value": "Spanish"
+                },
+                {
+                  "key": "spv",
+                  "value": "Kosli, Sambalpuri"
                 },
                 {
                   "key": "sqi",
@@ -1706,6 +1754,10 @@
                 {
                   "key": "swe",
                   "value": "Swedish"
+                },
+                {
+                  "key": "swh",
+                  "value": "Kiswahili"
                 },
                 {
                   "key": "syl",
@@ -1818,6 +1870,10 @@
                 {
                   "key": "zag",
                   "value": "Zaghawa"
+                },
+                {
+                  "key": "zho-hok",
+                  "value": "Hokkein"
                 },
                 {
                   "key": "zul",
