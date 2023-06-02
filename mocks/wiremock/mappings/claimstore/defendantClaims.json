@@ -101,7 +101,7 @@
         "claimantResponse": {
           "type": "ACCEPTATION"
         },
-        "createdAt": "2022-06-21",
+        "createdAt": "2023-04-09T10:51:52.411212",
         "defendantEmail": "defendant@email.com",
         "defendantId": "546d8752-abbf-0acfd08d713b",
         "directionsQuestionnaireDeadline": "string",
@@ -226,7 +226,7 @@
           "sealedClaimUpload": "YES",
           "staffNotification": "YES"
         },
-        "createdAt": "2022-06-21",
+        "createdAt": "2023-04-09T10:51:52.411212",
         "defendantEmail": "defendant@email.com",
         "defendantId": "546d8752-abbf-0acfd08d713b",
         "directionsQuestionnaireDeadline": "string",
@@ -315,7 +315,7 @@
           "externalId": "4c1e8c4e-891f-4588-b665-f1061e67c238",
           "reason": "string"
         },
-        "createdAt": "2022-06-21",
+        "createdAt": "2023-04-09T10:51:52.411212",
         "dateReferredForDirections": {
           "empty": true,
           "present": true
