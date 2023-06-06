@@ -497,7 +497,6 @@
         "totalAmountTillToday": 1000,
         "totalClaimAmount": 1000
       }
-      
     ],
     "headers": {
       "Content-Type": "application/json"
