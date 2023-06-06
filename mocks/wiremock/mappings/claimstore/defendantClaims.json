@@ -337,7 +337,167 @@
         "submitterId": "string",
         "totalAmountTillToday": 1000,
         "totalClaimAmount": 1000
+      },
+      {
+        "bulkPrintDetails": [
+          {
+            "id": "string",
+            "printRequestId": "string",
+            "printRequestType": "PIN_LETTER_TO_DEFENDANT",
+            "printRequestedAt": "string"
+          }
+        ],
+        "ccdCaseId": 1638199478521115,
+        "countyCourtJudgmentRequestedAt": "2023-02-24T16:58:47.116323",
+        "claim": {
+          "amount": {
+            "rows": [
+              {
+                "reason": "Some weird reason but you owe me money",
+                "amount": 200
+              },
+              {
+                "reason": "Some weird reason2 but you owe me money",
+                "amount": 100
+              }
+            ]
+          },
+          "claimants": [
+            {
+              "address": {
+                "city": "London",
+                "county": "United Kingdom",
+                "line1": "123 Church road",
+                "line2": "",
+                "line3": "",
+                "postcode": "SW1H 9AJ"
+              },
+              "correspondenceAddress": {
+                "empty": true,
+                "present": true
+              },
+              "id": "5caa4f80-eeb9-483d-bb31-6884cd4f8db9",
+              "name": "Mr Baddy Bad",
+              "pcqId": "string",
+              "phone": {
+                "empty": true,
+                "present": true
+              },
+              "representative": {
+                "empty": true,
+                "present": true
+              }
+            }
+          ],
+          "defendants": [
+            {
+              "address": {
+                "city": "London",
+                "county": "United Kingdom",
+                "line1": "123 Church road",
+                "line2": "",
+                "line3": "",
+                "postcode": "SW1H 9AJ"
+              },
+              "claimantProvidedAddress": {
+                "city": "London",
+                "county": "United Kingdom",
+                "line1": "123 Church road",
+                "line2": "",
+                "line3": "",
+                "postcode": "SW1H 9AJ"
+              },
+              "id": "546d8752-abbf-0acfd08d713b",
+              "name": "Mr Bad Guy"
+            }
+          ],
+          "externalId": "4c1e8c4e-891f-4588-b665-f1061e67c238",
+          "reason": "string"
+        },
+        "claimSubmissionOperationIndicators": {
+          "bulkPrint": "YES",
+          "claimIssueReceiptUpload": "YES",
+          "claimantNotification": "YES",
+          "defendantNotification": "YES",
+          "rpa": "YES",
+          "sealedClaimUpload": "YES",
+          "staffNotification": "YES"
+        },
+        "claimantResponse": {
+          "type": "ACCEPTATION"
+        },
+        "createdAt": "2023-04-09T10:51:52.411212",
+        "defendantEmail": "defendant@email.com",
+        "defendantId": "546d8752-abbf-0acfd08d713b",
+        "directionsQuestionnaireDeadline": "string",
+        "evidenceHandled": "YES",
+        "externalId": "string",
+        "id": 0,
+        "intentionToProceedDeadline": "string",
+        "issuedOn": {
+          "empty": true,
+          "present": true
+        },
+        "response": {
+          "defendant": {
+            "type": {
+              "value": "individual",
+              "name": "Individual"
+            },
+            "name": "John Smith",
+            "address": {
+              "line1": "Flat 2",
+              "line2": "Street 2",
+              "line3": "Cool house name",
+              "city": "London",
+              "postcode": "E2 8FA"
+            },
+            "hasCorrespondenceAddress": true,
+            "correspondenceAddress": {
+              "line1": "Flat 20",
+              "line2": "Street 20",
+              "line3": "Cooler house name",
+              "city": "Belfast",
+              "postcode": "BT2 5GB"
+            },
+            "dateOfBirth": "1999-01-01",
+            "phone": "0700000001",
+            "email": "individual@example.com"
+          },
+          "moreTimeNeeded": "no",
+          "freeMediation": "no",
+          "responseMethod": "DIGITAL",
+          "responseType": "PART_ADMISSION",
+          "amount": 30,
+          "paymentIntention": {
+            "paymentOption": "IMMEDIATELY",
+            "paymentDate": "2023-06-11"
+          }
+        },
+        "lastEventTriggeredForHwfCase": "string",
+        "lastModified": "2022-06-21",
+        "proceedOfflineOtherReasonDescription": "string",
+        "referenceNumber": "256MC010",
+        "responseDeadline": "2023-02-05",
+        "reviewOrder": {
+          "empty": true,
+          "present": true
+        },
+        "serviceDate": "string",
+        "settlement": {
+
+        },
+        "state": "CREATE",
+        "submitterEmail": "string",
+        "submitterId": "string",
+        "totalAmountTillDateOfIssue": {
+          "empty": true,
+          "present": true
+        },
+        "totalAmountTillToday": 1000,
+        "totalClaimAmount": 1000
       }
+      
     ],
     "headers": {
       "Content-Type": "application/json"
