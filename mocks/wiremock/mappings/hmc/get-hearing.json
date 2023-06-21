@@ -1,7 +1,7 @@
 {
   "request": {
     "method": "GET",
-    "urlPath": "/hearing/2000005721*"
+    "urlPath": "/hearing/2000005721"
   },
   "response": {
     "status": 200,
