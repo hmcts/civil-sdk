@@ -1,0 +1,54 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/fees-register/fees/lookup",
+    "queryParameters": {
+      "service": {
+        "equalTo": "civil money claims"
+      },
+      "jurisdiction1": {
+        "equalTo": "civil"
+      },
+      "jurisdiction2": {
+        "equalTo": "civil"
+      },
+      "channel": {
+        "or": [
+          {
+            "equalTo": "default"
+          },
+          {
+            "equalTo": "online"
+          }
+        ]
+      },
+      "event": {
+        "or": [
+          {
+            "equalTo": "issue"
+          },
+          {
+            "equalTo": "hearing"
+          }
+        ]
+      },
+      "amount_or_volume": {
+        "or": [
+          {
+            "matches": "(1000[1-9]|100[1-9][0-9]|10[1-9][0-9]{2}|1[1-9][0-9]{3}|[1-2][0-9]{4}|1[0-9]{5}|29999)\\.\\d{2}"
+          },
+          {
+            "matches": "(1000[1-9]|100[1-9][0-9]|10[1-9][0-9]{2}|1[1-9][0-9]{3}|[1-2][0-9]{4}|1[0-9]{5}|29999)"
+          }
+        ]
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": "{\"code\": \"FEE0209\", \"description\": \"Civil Court fees - Money Claims - Claim Amount - 10000.01 up to 29999 GBP.\", \"version\": 3, \"fee_amount\": 550.00}"
+  }
+}
