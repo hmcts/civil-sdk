@@ -14,7 +14,7 @@ services:
       SERVICES_DOCUMENTS_API: http://dm-store:8080
       SERVICES_DOCUMENTS_API_V2: http://ccd-case-document-am-api:4455
       SERVICES_S2S: http://service-auth-provider-api:8080
-      SERVICES_IDAM_LOGIN_URL: "${IDAM_STUB_LOCALHOST:-http://localhost:3501}"
+      SERVICES_IDAM_LOGIN_URL: "${IDAM_STUB_LOCALHOST:-http://idam-web-public:8080}"
       SERVICES_IDAM_API_URL: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}"
       SERVICES_IDAM_INDEX_URL: /
       SERVICES_IDAM_OAUTH_CALLBACK_URL: /oauth2/callback
