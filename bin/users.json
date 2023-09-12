@@ -1,7 +1,7 @@
 [
   {"email": "solicitor@example.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,,pui-organisation-manager,pui-case-manager,pui-user-manager", "lastName": "Solicitor"},
   {"email": "hmcts.civil+organisation.1.superuser@gmail.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager", "lastName": "Claimant-solicitor"},
-  {"email": "hmcts.civil+organisation.1.solicitor.1@gmail.com", "roles": "citizen-profile,caseworker,caseworker-civil,caseworker-civil-admin,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager,payments", "lastName": "Claimant-solicitor"},
+  {"email": "hmcts.civil+organisation.1.solicitor.1@gmail.com", "roles": "citizen,caseworker,caseworker-civil,caseworker-civil-admin,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager,payments", "lastName": "Claimant-solicitor"},
   {"email": "hmcts.civil+organisation.2.superuser@gmail.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager", "lastName": "Defendant-solicitor"},
   {"email": "hmcts.civil+organisation.2.solicitor.1@gmail.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager", "lastName": "Defendant-solicitor"},
   {"email": "hmcts.civil+organisation.2.solicitor.2@gmail.com", "roles": "caseworker,caseworker-civil,caseworker-civil-solicitor,pui-caa,pui-case-manager,pui-organisation-manager,pui-user-manager", "lastName": "Defendant-solicitor-2"},
@@ -26,7 +26,8 @@
   {"email": "judge-dredd-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "standard"},
   {"email": "task-supervisor-civil-01@example.com", ",roles": "caseworker,caseworker-civil", "lastName": "standard"},
   {"email": "case-allocator-civil-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "standard"},
-  {"email": "jane.smith@gmail.com", "roles": "citizen-profile", "lastName": "Smith"},
+  {"email": "jane.smith@gmail.com", "roles": "citizen", "lastName": "Smith"},
+  {"email": "civilmoneyclaimsdemo@gmail.com", "roles": "citizen", "lastName": "Citizen"}
   {"email": "tribunal-caseworker-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "tribunal-caseworker"},
   {"email": "hearing-centre-admin-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "Admin"},
   {"email": "ga_hearing_centre_admin_nw@justice.gov.uk", "roles": "caseworker,caseworker-civil", "lastName": "Admin"},
