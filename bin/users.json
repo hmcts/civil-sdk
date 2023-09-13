@@ -27,7 +27,7 @@
   {"email": "task-supervisor-civil-01@example.com", ",roles": "caseworker,caseworker-civil", "lastName": "standard"},
   {"email": "case-allocator-civil-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "standard"},
   {"email": "jane.smith@gmail.com", "roles": "citizen", "lastName": "Smith"},
-  {"email": "civilmoneyclaimsdemo@gmail.com", "roles": "citizen", "lastName": "Citizen"}
+  {"email": "civilmoneyclaimsdemo@gmail.com", "roles": "citizen", "lastName": "Citizen"},
   {"email": "tribunal-caseworker-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "tribunal-caseworker"},
   {"email": "hearing-centre-admin-01@example.com", "roles": "caseworker,caseworker-civil", "lastName": "Admin"},
   {"email": "ga_hearing_centre_admin_nw@justice.gov.uk", "roles": "caseworker,caseworker-civil", "lastName": "Admin"},
