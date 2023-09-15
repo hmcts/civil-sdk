@@ -108,7 +108,7 @@
         "evidenceHandled": "YES",
         "externalId": "string",
         "id": 0,
-        "intentionToProceedDeadline": "2022-06-21T10:51:52.411212",
+        "intentionToProceedDeadline": "2022-06-21",
         "issuedOn": {
           "empty": true,
           "present": true
@@ -331,7 +331,7 @@
         "referenceNumber": "256MC009",
         "respondedAt": "2022-06-21",
         "responseDeadline": "2022-06-21",
-        "intentionToProceedDeadline": "2022-06-21T10:51:52.411212",
+        "intentionToProceedDeadline": "2022-06-21",
         "state": "BUSINESS_QUEUE",
         "submitterEmail": "email",
         "submitterId": "string",
@@ -433,7 +433,7 @@
         "evidenceHandled": "YES",
         "externalId": "string",
         "id": 0,
-        "intentionToProceedDeadline": "string",
+        "intentionToProceedDeadline": "2022-06-21",
         "issuedOn": {
           "empty": true,
           "present": true
