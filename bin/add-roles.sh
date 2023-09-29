@@ -57,6 +57,7 @@ ${dir}/utils/idam-add-role.sh "caseworker-divorce"
 ${dir}/utils/idam-add-role.sh "caseworker-divorce-solicitor"
 ${dir}/utils/idam-add-role.sh "caseworker-divorce-financialremedy"
 ${dir}/utils/idam-add-role.sh "caseworker-divorce-financialremedy-solicitor"
+${dir}/utils/idam-add-role.sh  "caseworker-civil-citizen-ui-pcqextractor"
 
 prdRoles=('"caseworker"','"caseworker-caa"','"caseworker-divorce"','"caseworker-divorce-solicitor"','"caseworker-divorce-financialremedy"','"caseworker-divorce-financialremedy-solicitor"','"caseworker-probate"','"caseworker-ia"','"caseworker-probate-solicitor"','"caseworker-publiclaw"','"caseworker-ia-legalrep-solicitor"','"caseworker-publiclaw-solicitor"','"caseworker-civil"','"caseworker-civil-solicitor"','"xui-approver-userdata"','"pui-caa"','"prd-admin"','"pui-case-manager"','"pui-finance-manager"','"pui-organisation-manager"','"pui-user-manager"')
 ${dir}/utils/idam-add-role.sh "prd-admin" "${prdRoles[@]}"
