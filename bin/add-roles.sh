@@ -29,7 +29,8 @@ done
 
 accessprofiles=("judge-profile" "basic-access" "ga-basic-access" "legal-adviser" "GS_profile" "caseworker-ras-validation" "full-access" "admin-access"
 "civil-administrator-basic" "civil-administrator-standard" "caseworker-wa-task-configuration" "hearing-schedule-access" "APP-SOL-UNSPEC-PROFILE" "APP-SOL-SPEC-PROFILE" "RES-SOL-ONE-UNSPEC-PROFILE"
-"RES-SOL-ONE-SPEC-PROFILE" "RES-SOL-TWO-UNSPEC-PROFILE" "RES-SOL-TWO-SPEC-PROFILE" "payment-access" "caseflags-admin" "caseflags-viewer" "hearing-manager" "hearing-viewer" "caseworker-wa-task-configuration" "CITIZEN-CLAIMANT-PROFILE" "CITIZEN-DEFENDANT-PROFILE" "cui-admin-profile" "cui-nbc-profile" "citizen-profile")
+"RES-SOL-ONE-SPEC-PROFILE" "RES-SOL-TWO-UNSPEC-PROFILE" "RES-SOL-TWO-SPEC-PROFILE" "payment-access" "caseflags-admin" "caseflags-viewer" "hearing-manager" "hearing-viewer" "caseworker-wa-task-configuration" "CITIZEN-CLAIMANT-PROFILE" "CITIZEN-DEFENDANT-PROFILE" "cui-admin-profile" "cui-nbc-profile" "citizen-profile" 
+"caseworker-civil-citizen-ui-pcqextractor")
 
 for accessprofile in "${accessprofiles[@]}"
 do
@@ -57,7 +58,6 @@ ${dir}/utils/idam-add-role.sh "caseworker-divorce"
 ${dir}/utils/idam-add-role.sh "caseworker-divorce-solicitor"
 ${dir}/utils/idam-add-role.sh "caseworker-divorce-financialremedy"
 ${dir}/utils/idam-add-role.sh "caseworker-divorce-financialremedy-solicitor"
-${dir}/utils/idam-add-role.sh  "caseworker-civil-citizen-ui-pcqextractor"
 
 prdRoles=('"caseworker"','"caseworker-caa"','"caseworker-divorce"','"caseworker-divorce-solicitor"','"caseworker-divorce-financialremedy"','"caseworker-divorce-financialremedy-solicitor"','"caseworker-probate"','"caseworker-ia"','"caseworker-probate-solicitor"','"caseworker-publiclaw"','"caseworker-ia-legalrep-solicitor"','"caseworker-publiclaw-solicitor"','"caseworker-civil"','"caseworker-civil-solicitor"','"xui-approver-userdata"','"pui-caa"','"prd-admin"','"pui-case-manager"','"pui-finance-manager"','"pui-organisation-manager"','"pui-user-manager"')
 ${dir}/utils/idam-add-role.sh "prd-admin" "${prdRoles[@]}"
