@@ -20,6 +20,8 @@ ${dir}/utils/ccd-add-role.sh "caseworker-approver"
 ${dir}/utils/idam-add-role.sh "prd-aac-system"
 ${dir}/utils/ccd-add-role.sh "prd-aac-system"
 
+${dir}/utils/ccd-add-role.sh "citizen"
+
 roles=("solicitor" "systemupdate" "admin" "staff" "judge")
 for role in "${roles[@]}"
 do
