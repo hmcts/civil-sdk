@@ -1,0 +1,18 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/refdata/location/court-venues",
+    "queryParameters": {
+      "court_venue_name": {
+        "equalTo": "Liverpool Civil and Family Court"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "lrd/liverpoolLocation.json"
+  }
+}

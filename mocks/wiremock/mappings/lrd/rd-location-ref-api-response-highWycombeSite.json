@@ -1,0 +1,18 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/refdata/location/court-venues",
+    "queryParameters": {
+      "court_venue_name": {
+        "equalTo": "High Wycombe Law Courts"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "lrd/highWycombeLocation.json"
+  }
+}
