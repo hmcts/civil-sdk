@@ -37,6 +37,7 @@
   {"email": "4924246EMP-@ejudiciary.net", "roles": "caseworker,caseworker-civil,caseworker-civil-judge,judge,hmcts-judiciary", "lastName": "Judge-Region-4"},
   {"email": "4917924EMP-@ejudiciary.net", "roles": "caseworker,caseworker-civil,caseworker-civil-judge,judge,hmcts-judiciary", "lastName": "Judge-Region-1"},
   {"email": "approver-noc@mailnesia.com", "roles": "caseworker,caseworker-approver, prd-aac-system", "lastName": "Approver-NoC"},
-  {"email": "approver-caseworker@mailnesia.com", "roles": "caseworker,caseworker-approver, prd-aac-system", "lastName": "Approver-System"}
+  {"email": "approver-caseworker@mailnesia.com", "roles": "caseworker,caseworker-approver, prd-aac-system", "lastName": "Approver-System"},
+  {"email": "nbc-team-leader@mailnesia.com", "roles": "caseworker,caseworker-civil,national-business-centre,nbc-team-leader", "lastName": "National business centre"}
 ]
 
