@@ -4,6 +4,14 @@ set -eu
 
 dir=$(dirname ${0})
 
+${dir}/utils/idam-add-role.sh "national-business-centre"
+${dir}/utils/idam-add-role.sh "nbc-team-leader"
+${dir}/utils/idam-add-role.sh "ctsc-team-leader"
+${dir}/utils/idam-add-role.sh "ctsc"
+${dir}/utils/idam-add-role.sh "task-supervisor"
+${dir}/utils/idam-add-role.sh "cwd-user"
+${dir}/utils/idam-add-role.sh "civil-national-business-centre"
+
 ${dir}/utils/idam-add-role.sh "ccd-import"
 ${dir}/utils/idam-add-role.sh "caseworker"
 ${dir}/utils/idam-add-role.sh "caseworker-civil"
