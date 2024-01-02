@@ -3,12 +3,7 @@
     {
       "request": {
         "method": "POST",
-        "urlPattern": "/service-request/.*/card-payments",
-        "bodyPatterns": [
-          {
-            "contains": "hearing-payment-confirmation"
-          }
-        ]
+        "urlPattern": "/service-request/.*/card-payments"
       },
       "response": {
         "status": 201,
