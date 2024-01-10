@@ -135,7 +135,9 @@
         "totalInterest": {
           "empty": true,
           "present": true
-        }
+        },
+        "claimantRespondedAt":"2023-11-21T13:02:59.515989989",
+        "reDeterminationRequestedAt":"2023-11-21T13:02:59.515989989"
       }
     ],
     "headers": {
