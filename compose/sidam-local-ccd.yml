@@ -13,11 +13,11 @@ services:
       JAVA_OPTS: -Xms128m -Xmx512m
     networks:
       - ccd-network
-  shared-db:
-    ports:
-      - 5051:5432
-    networks:
-      - ccd-network
+#  shared-db:
+#    ports:
+#      - 5051:5432
+#    networks:
+#      - ccd-network
   idam-api:
     environment:
       JAVA_OPTS: -Xms128m -Xmx512m

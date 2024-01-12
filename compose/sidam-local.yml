@@ -15,9 +15,9 @@ services:
     ports:
       - 18080:18080
       - 9010:9010
-  shared-db:
-    ports:
-      - 5432:5432
+#  shared-db:
+#    ports:
+#      - 5432:5432
   smtp-server:
     ports:
       - 1025:1025
@@ -33,7 +33,7 @@ services:
       - STRATEGIC_ADMIN_URL=http://idam-web-admin:8082
       - STRATEGIC_WEBPUBLIC_URL=http://localhost:9002
       - SPRING_PROFILES_ACTIVE=local
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://shared-db:5432/openidm?currentSchema=fridam
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://ccd-shared-database:5432/openidm?currentSchema=fridam
       - SPRING_DATASOURCE_USERNAME=openidm
       - SPRING_DATASOURCE_PASSWORD=openidm
       - SECURITY_OAUTH2_CLIENT_CLIENTSECRET=password

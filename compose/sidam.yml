@@ -8,7 +8,7 @@ services:
     image: hmctsprivate.azurecr.io/idam/idam-fr-am:latest
     hostname: localam
     depends_on:
-      shared-db:
+      ccd-shared-database:
         condition: service_started
   fr-idm:
     image: hmctsprivate.azurecr.io/idam/idam-fr-idm:latest
@@ -16,10 +16,10 @@ services:
     depends_on:
       fr-am:
         condition: service_started
-      shared-db:
+      ccd-shared-database:
         condition: service_started
-  shared-db:
-    image: hmctsprivate.azurecr.io/idam/shared-db:latest
+#  shared-db:
+#    image: hmctsprivate.azurecr.io/idam/shared-db:latest
   smtp-server:
     image: mailhog/mailhog
   idam-api:
@@ -27,7 +27,7 @@ services:
     depends_on:
       fr-am:
         condition: service_started
-      shared-db:
+      ccd-shared-database:
         condition: service_started
   idam-web-public:
     image: hmctspublic.azurecr.io/idam/web-public:stable
