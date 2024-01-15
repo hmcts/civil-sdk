@@ -134,7 +134,9 @@
           "present": true
         },
         "totalAmountTillToday": 1000,
-        "totalClaimAmount": 1000
+        "totalClaimAmount": 1000,
+        "claimantRespondedAt":"2023-11-20T13:02:59.515989989",
+        "reDeterminationRequestedAt":"2023-11-20T13:02:59.515989989"
       },
       {
         "bulkPrintDetails": [
@@ -247,7 +249,9 @@
         "submitterEmail": "string",
         "submitterId": "string",
         "totalAmountTillToday": 1000,
-        "totalClaimAmount": 1000
+        "totalClaimAmount": 1000,
+        "claimantRespondedAt":"2023-11-20T13:02:59.515989989",
+        "reDeterminationRequestedAt":"2023-11-20T13:02:59.515989989"
       },
       {
         "bespokeOrderDirection": {
@@ -336,7 +340,9 @@
         "submitterEmail": "email",
         "submitterId": "string",
         "totalAmountTillToday": 1000,
-        "totalClaimAmount": 1000
+        "totalClaimAmount": 1000,
+        "claimantRespondedAt":"2023-11-20T13:02:59.515989989",
+        "reDeterminationRequestedAt":"2023-11-20T13:02:59.515989989"
       },
       {
         "bulkPrintDetails": [
@@ -495,7 +501,9 @@
           "present": true
         },
         "totalAmountTillToday": 1000,
-        "totalClaimAmount": 1000
+        "totalClaimAmount": 1000,
+        "claimantRespondedAt":"2023-11-20T13:02:59.515989989",
+        "reDeterminationRequestedAt":"2023-11-20T13:02:59.515989989"
       }
     ],
     "headers": {
