@@ -36,8 +36,8 @@ services:
     networks:
       - ccd-network
   claim-store-api:
-    # image: hmctspublic.azurecr.io/cmc/claim-store:pr-2784-0a9ded4-20240116110923
-    image: claim-store-api:latest
+    image: hmctspublic.azurecr.io/cmc/claim-store:${CLAIM_STORE_API_VERSION:-latest}
+    # image: claim-store-api:latest
     healthcheck:
       retries: 40
     environment:
