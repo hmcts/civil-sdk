@@ -40,6 +40,7 @@
   {"email": "approver-caseworker@mailnesia.com", "roles": "caseworker,caseworker-approver, prd-aac-system", "lastName": "Approver-System"},
   {"email": "nbc-team-leader@mailnesia.com", "roles": "caseworker,caseworker-civil,caseworker-civil-staff,cwd-user,civil-national-business-centre,hmcts-admin,national-business-centre,nbc-team-leader,caseworker-civil-admin,ctsc-team-leader,ctsc,task-supervisor", "lastName": "National business centre"},
   {"email": "citizen.user1@gmail.com", "roles": "citizen", "lastName": "citizen"},
-  {"email": "citizen.user2@gmail.com", "roles": "citizen", "lastName": "citizen"}
+  {"email": "citizen.user2@gmail.com", "roles": "citizen", "lastName": "citizen"},
+  {"email": "civilmoneyclaims+anonymouscitizen@gmail.com", "roles": "caseworker,caseworker-cmc,caseworker-cmc-anonymouscitizen", "lastName": "anonymouscitizen"}
 ]
 

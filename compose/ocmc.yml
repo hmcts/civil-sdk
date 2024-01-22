@@ -36,7 +36,8 @@ services:
     networks:
       - ccd-network
   claim-store-api:
-    image: hmctspublic.azurecr.io/cmc/claim-store:${CLAIM_STORE_API_VERSION:-latest}
+    # image: hmctspublic.azurecr.io/cmc/claim-store:pr-2784-0a9ded4-20240116110923
+    image: claim-store-api:latest
     healthcheck:
       retries: 40
     environment:
@@ -78,7 +79,7 @@ services:
       - https_proxy
       - no_proxy=idam-api,service-auth-provider-api,pdf-service-api,ccd-data-store-api,dm-store
       - IDAM_CASEWORKER_ANONYMOUS_USERNAME=civilmoneyclaims+anonymouscitizen@gmail.com
-      - IDAM_CASEWORKER_ANONYMOUS_PASSWORD=Password12
+      - IDAM_CASEWORKER_ANONYMOUS_PASSWORD=Password12!
       - IDAM_CASEWORKER_SYSTEM_USERNAME=civilmoneyclaims+systemupdate@gmail.com
       - IDAM_CASEWORKER_SYSTEM_PASSWORD=Password12
       - OIDC_ISSUER=http://fr-am:8080/openam/oauth2/hmcts
