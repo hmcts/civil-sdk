@@ -5,6 +5,8 @@ services:
   camunda:
     container_name: camunda
     image: camunda/camunda-bpm-platform:run-latest
+    environment:
+      CAMUNDA_BPM_GENERIC-PROPERTIES_PROPERTIES_ENFORCEHISTORYTIMETOLIVE: "false"
     ports:
       - 9404:8080
     networks:
