@@ -115,6 +115,8 @@ services:
         condition: service_started
     networks:
       - ccd-network
+    extra_hosts:
+      - "docker.for.mac.localhost:host-gateway"
 
   am-role-assignment-service:
     image: "${AM_ROLE_ASSIGNMENT_SERVICE_USE_LOCAL-hmctspublic.azurecr.io/}am/role-assignment-service:${AM_ROLE_ASSIGNMENT_SERVICE_TAG:-latest}"
@@ -205,8 +207,8 @@ services:
       DB_USERNAME:
       DB_PASSWORD:
       POSTGRES_HOST_AUTH_METHOD: trust
-      PG_MAJOR: 11.14
-      PG_VERSION: 11.14-1.pgdg110+1
+      PG_MAJOR: 14.3-alpine
+      PG_VERSION: 14.3-alpine
     ports:
       - 5050:5432
     volumes:

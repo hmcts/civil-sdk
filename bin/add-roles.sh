@@ -11,6 +11,9 @@ ${dir}/utils/idam-add-role.sh "ctsc"
 ${dir}/utils/idam-add-role.sh "task-supervisor"
 ${dir}/utils/idam-add-role.sh "cwd-user"
 ${dir}/utils/idam-add-role.sh "civil-national-business-centre"
+${dir}/utils/idam-add-role.sh "judge"
+${dir}/utils/idam-add-role.sh "hearing-centre-admin"
+${dir}/utils/idam-add-role.sh "hearing-centre-team-leader"
 
 ${dir}/utils/idam-add-role.sh "ccd-import"
 ${dir}/utils/idam-add-role.sh "caseworker"
@@ -42,7 +45,7 @@ done
 accessprofiles=("judge-profile" "basic-access" "ga-basic-access" "legal-adviser" "GS_profile" "caseworker-ras-validation" "full-access" "admin-access"
 "civil-administrator-basic" "civil-administrator-standard" "caseworker-wa-task-configuration" "hearing-schedule-access" "APP-SOL-UNSPEC-PROFILE" "APP-SOL-SPEC-PROFILE" "RES-SOL-ONE-UNSPEC-PROFILE"
 "RES-SOL-ONE-SPEC-PROFILE" "RES-SOL-TWO-UNSPEC-PROFILE" "RES-SOL-TWO-SPEC-PROFILE" "payment-access" "caseflags-admin" "caseflags-viewer" "hearing-manager" "hearing-viewer" "caseworker-wa-task-configuration" "CITIZEN-CLAIMANT-PROFILE" "CITIZEN-DEFENDANT-PROFILE" "cui-admin-profile" "cui-nbc-profile" "citizen-profile" 
-"caseworker-civil-citizen-ui-pcqextractor" "next-hearing-date-admin")
+"caseworker-civil-citizen-ui-pcqextractor" "hearing-centre-team-leader" "national-business-centre" "hearing-centre-admin" "judge" "next-hearing-date-admin")
 
 for accessprofile in "${accessprofiles[@]}"
 do
