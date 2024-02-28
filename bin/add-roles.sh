@@ -38,6 +38,8 @@ ${dir}/utils/ccd-add-role.sh "caseworker-cmc"
 ${dir}/utils/ccd-add-role.sh "TTL-admin"
 
 
+${dir}/utils/ccd-add-role.sh "next-hearing-date-admin"
+
 roles=("solicitor" "systemupdate" "admin" "staff" "judge")
 for role in "${roles[@]}"
 do
@@ -48,7 +50,7 @@ done
 accessprofiles=("judge-profile" "basic-access" "ga-basic-access" "legal-adviser" "GS_profile" "caseworker-ras-validation" "full-access" "admin-access"
 "civil-administrator-basic" "civil-administrator-standard" "caseworker-wa-task-configuration" "hearing-schedule-access" "APP-SOL-UNSPEC-PROFILE" "APP-SOL-SPEC-PROFILE" "RES-SOL-ONE-UNSPEC-PROFILE"
 "RES-SOL-ONE-SPEC-PROFILE" "RES-SOL-TWO-UNSPEC-PROFILE" "RES-SOL-TWO-SPEC-PROFILE" "payment-access" "caseflags-admin" "caseflags-viewer" "hearing-manager" "hearing-viewer" "caseworker-wa-task-configuration" "CITIZEN-CLAIMANT-PROFILE" "CITIZEN-DEFENDANT-PROFILE" "cui-admin-profile" "cui-nbc-profile" "citizen-profile" 
-"caseworker-civil-citizen-ui-pcqextractor" "hearing-centre-team-leader" "national-business-centre" "hearing-centre-admin" "judge")
+"caseworker-civil-citizen-ui-pcqextractor" "hearing-centre-team-leader" "national-business-centre" "hearing-centre-admin" "judge" "next-hearing-date-admin")
 
 for accessprofile in "${accessprofiles[@]}"
 do
@@ -82,3 +84,5 @@ prdRoles=('"caseworker"','"caseworker-caa"','"caseworker-divorce"','"caseworker-
 ${dir}/utils/idam-add-role.sh "prd-admin" "${prdRoles[@]}"
 ${dir}/utils/idam-add-role.sh "payments"
 ${dir}/utils/ccd-add-role.sh "payments"
+
+${dir}/utils/idam-add-role.sh "next-hearing-date-admin"
