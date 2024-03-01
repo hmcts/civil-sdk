@@ -14,7 +14,7 @@ services:
       SERVICES_DOCUMENTS_API: http://dm-store:8080
       SERVICES_DOCUMENTS_API_V2: http://ccd-case-document-am-api:4455
       SERVICES_S2S: http://service-auth-provider-api:8080
-      SERVICES_IDAM_LOGIN_URL: "${IDAM_STUB_LOCALHOST:-http://localhost:3501}"
+      SERVICES_IDAM_LOGIN_URL: "${IDAM_STUB_LOCALHOST:-http://docker.for.mac.localhost:3501}"
       SERVICES_IDAM_API_URL: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}"
       SERVICES_IDAM_INDEX_URL: /
       SERVICES_IDAM_OAUTH_CALLBACK_URL: /oauth2/callback
@@ -60,6 +60,41 @@ services:
         condition: service_started
     networks:
       - ccd-network
+
+  xui-mo:
+    image: "hmctspublic.azurecr.io/xui/mo-webapp:latest"
+    environment:
+      MICROSERVICE: xui_webapp
+      PROTOCOL: http
+      XUI_ENV: local
+      IDAM_API_SERVICE: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}"
+      IDAM_CLIENT: xuimowebapp
+      IDAM_WEB_SERVICE: "${IDAM_STUB_LOCALHOST:-http://docker.for.mac.localhost:3501}"
+      SERVICES_CCD_COMPONENT_API: http://ccd-api-gateway:3453
+      SERVICES_CCD_DATA_STORE_API: http://ccd-data-store-api:4452
+      SERVICES_DOCUMENTS_API: http://dm-store:8080
+      SERVICES_DOCUMENTS_API_V2: http://ccd-case-document-am-api:4455
+      SERVICES_S2S: http://service-auth-provider-api:8080
+      SERVICES_IDAM_LOGIN_URL: "${IDAM_STUB_LOCALHOST:-http://docker.for.mac.localhost:3501}"
+      SERVICES_IDAM_API_URL: "${IDAM_STUB_SERVICE_NAME:-http://idam-api:5000}"
+      SERVICES_IDAM_INDEX_URL: /
+      SERVICES_IDAM_OAUTH_CALLBACK_URL: /oauth2/callback
+      SERVICES_IDAM_CLIENT_ID: xui_webapp
+      SERVICES_PAYMENTS_URL: http://wiremock:8080
+      SERVICES_PRD_API: http://wiremock:8080
+      SERVICES_PRD_COMMONDATA_API: http://wiremock:8080
+      SERVICES_PRD_API_URL: http://wiremock:8080
+      SERVICES_LOCATION_REF_API_URL: http://wiremock:8080
+      SERVICES_PRD_JUDICIAL_API: http://wiremock:8080
+      SERVICES_PRD_LOCATION_API: http://wiremock:8080
+      SERVICES_EM_ANNO_API: http://ccd-api-gateway:3453
+      REDISCLOUD_URL: http://dummyrediscloudurl
+      SERVICES_ROLE_ASSIGNMENT_API: http://am-role-assignment-service:4096
+      SERVICES_CCD_CASE_ASSIGNMENT_API: http://manage-case-assignment:4454
+      SERVICES_HEARINGS_COMPONENT_API_CIVIL: http://docker.for.mac.localhost:4000
+      SERVICES_HMC_HEARINGS_COMPONENT_API: http://wiremock:8080
+      JURISDICTIONS: SSCS,AUTOTEST1,DIVORCE,PROBATE,PUBLICLAW,bulkscan,BULKSCAN,IA,EMPLOYMENT,CMC,CIVIL
+
 
 networks:
   ccd-network:
