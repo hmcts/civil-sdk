@@ -1,0 +1,37 @@
+{
+  "name": "Civil - Organisation 2",
+  "organisationIdentifier": "79ZRSOU",
+  "contactInformation": [
+    {
+      "addressId": "44b4af24-7b52-4f50-9646-df2eec7c0e5b",
+      "uprn": null,
+      "created": "2021-05-11T10:18:17.543816",
+      "addressLine1": "29, SEATON DRIVE",
+      "addressLine2": null,
+      "addressLine3": null,
+      "townCity": "NORTHAMPTON",
+      "county": null,
+      "country": null,
+      "postCode": "NN3 9SS",
+      "dxAddress": []
+    }
+  ],
+  "status": "ACTIVE",
+  "sraRegulated": false,
+  "superUser": {
+    "firstName": "dfsaf",
+    "lastName": "safds",
+    "email": "hmcts.civil+organisation.2.superuser@gmail.com"
+  },
+  "paymentAccount": [
+    "PBA0079006"
+  ],
+  "pendingPaymentAccount": [],
+  "dateReceived": "2021-05-11T10:18:17.492665",
+  "dateApproved": null,
+  "lastUpdated": "2021-05-17T20:57:11.712423",
+  "organisationProfileIds": [
+    "SOLICITOR_PROFILE"
+  ],
+  "orgAttributes": []
+}

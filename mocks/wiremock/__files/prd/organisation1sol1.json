@@ -1,0 +1,38 @@
+{
+  "name": "Civil - Organisation 1",
+  "organisationIdentifier": "Q1KOKP2",
+  "contactInformation": [
+    {
+      "addressId": "818adf4e-b452-478e-a444-e324469eccf3",
+      "uprn": null,
+      "created": "2021-05-11T10:16:43.122643",
+      "addressLine1": "38 Delisle Road",
+      "addressLine2": null,
+      "addressLine3": null,
+      "townCity": "London",
+      "county": "United Kingdom",
+      "country": null,
+      "postCode": "SE28 0JE",
+      "dxAddress": []
+    }
+  ],
+  "status": "ACTIVE",
+  "sraRegulated": false,
+  "superUser": {
+    "firstName": "dsf",
+    "lastName": "dsfa",
+    "email": "hmcts.civil+organisation.1.superuser@gmail.com"
+  },
+  "paymentAccount": [
+    "PBA0078095",
+    "PBA0088192"
+  ],
+  "pendingPaymentAccount": [],
+  "dateReceived": "2021-05-11T10:16:43.07103",
+  "dateApproved": null,
+  "lastUpdated": "2021-06-10T16:14:07.903976",
+  "organisationProfileIds": [
+    "SOLICITOR_PROFILE"
+  ],
+  "orgAttributes": []
+}
