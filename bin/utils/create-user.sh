@@ -6,7 +6,7 @@ USER_EMAIL="${1:-me@server.net}"
 ENV="${2:-local}"
 FORENAME="${3:-John}"
 SURNAME="${4:-Smith}"
-PASSWORD=Password12
+PASSWORD=Password12!
 USER_ROLES="${5:-[]}"
 
 case ${ENV} in
