@@ -105,13 +105,18 @@ To add role assignments:
 don't have those, go get them.
 
 ```shell
-./bin/process-and-import-ccd-definition.sh
+./bin/process-and-import-ccd-definition.sh "-e *-prod.json,AuthorisationCaseType-shuttered.json"
 ```
 **Note:** If you have chosen to run OCMC services as well in step 4, you need to import CMC CCD definition. You can do so by running:
 
 ```shell
 docker-compose -f compose/cmc-ccd-definition-importer.yml up cmc-ccd-definition-importer
 ```
+For OCMC Add the following lines to the hosts /etc/hosts file:
+
+`127.0.0.1	idam-web-public`
+
+`127.0.0.1	claim-store-api`
 
 9. Upload Camunda diagrams from `civil-camunda-bpmn-definition` repo
 
