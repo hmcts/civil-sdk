@@ -42,6 +42,9 @@
   {"email": "nbc-team-leader@mailnesia.com", "roles": "caseworker,caseworker-civil,caseworker-civil-staff,cwd-user,civil-national-business-centre,hmcts-admin,national-business-centre,nbc-team-leader,caseworker-civil-admin,ctsc-team-leader,ctsc,task-supervisor", "lastName": "National business centre"},
   {"email": "citizen.user1@gmail.com", "roles": "citizen", "lastName": "citizen"},
   {"email": "citizen.user2@gmail.com", "roles": "citizen", "lastName": "citizen"},
-  {"email": "civilmoneyclaims+anonymouscitizen@gmail.com", "roles": "caseworker,caseworker-cmc,caseworker-cmc-anonymouscitizen", "lastName": "anonymouscitizen"}
+  {"email": "civilmoneyclaims+anonymouscitizen@gmail.com", "roles": "caseworker,caseworker-cmc,caseworker-cmc-anonymouscitizen", "lastName": "anonymouscitizen"},
+  {"email": "civilmoneyclaims+ccda@gmail.com", "roles": "caseworker,caseworker-cmc", "lastName": "civilmoneyclaims-caseworker"},
+  {"email": "civilmoneyclaims+la@gmail.com", "roles": "caseworker,caseworker-cmc,caseworker-cmc-legaladvisor", "lastName": "civilmoneyclaims-legaladvisor"},
+  {"email": "civilmoneyclaims+judge@gmail.com", "roles": "caseworker,caseworker-cmc,caseworker-cmc-judge", "lastName": "civilmoneyclaims-judge"}
 ]
 

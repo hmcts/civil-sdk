@@ -111,6 +111,82 @@ services:
       - "4400:4400"
     networks:
       - ccd-network
+#
+#  doc-assembly-api:
+#    image: hmctspublic.azurecr.io/dg/docassembly
+#    environment:
+#      - no_proxy=idam-api,service-auth-provider-api,$no_proxy
+#      - IDAM_API_BASE_URI=http://idam-api:5000
+#      - S2S_BASE_URI=http://service-auth-provider-api:8080
+#      - DM_STORE_APP_URL=http://dm-store:4506
+#      - REFORM_ENVIRONMENT=local
+#      - S2S_NAMES_WHITELIST=em_api,em_gw,ccd_gw,ccd_data,sscs,dg_tmpl_mgmt,dg_docassembly,dm-store,cmc,cmc_claim_store
+#      - CASE_WORKER_ROLES=caseworker-cmc,caseworker-cmc-judge,caseworker-cmc-legaladvisor
+#      - DOCMOSIS_ACCESS_KEY=${DOCMOSIS_ACCESS_KEY}
+#      - OPEN_ID_API_BASE_URI=http://idam-api:5000/o
+#      - CASE_DOCUMENT_AM_URL=http://ccd-case-document-am-api:4455
+#      - CDAM_URL=http://ccd-case-document-am-api:4455
+#      - OIDC_ISSUER_BASE_URI=http://fr-am:8080/openam/oauth2/hmcts
+#      - DOCMOSIS_TEMPLATES_ENDPOINT_AUTH=${DOCMOSIS_TEMPLATES_ENDPOINT_AUTH}
+#      - DOCMOSIS_TEMPLATES_ENDPOINT= https://docmosis.demo.platform.hmcts.net
+#      - DOCMOSIS_CONVERT_ENDPOINT= https://docmosis.demo.platform.hmcts.net/rs/convert
+#      - DOCMOSIS_RENDER_ENDPOINT= https://docmosis.demo.platform.hmcts.net/rs/render
+#    depends_on:
+#      service-auth-provider-api:
+#        condition: service_started
+#      dm-store:
+#        condition: service_started
+#    ports:
+#      - 4666:8080
+#    networks:
+#      - ccd-network
+#
+#  send-letter-api:
+#    image: hmctspublic.azurecr.io/rpe/send-letter-service
+#    environment:
+#      APPINSIGHTS_INSTRUMENTATIONKEY: fake-key
+#      ACTIONS_API_KEY: ${ACTIONS_API_KEY}
+#      STORAGE_ACCOUNT_CONNECTION_STRING: UseDevelopmentStorage=true
+#      # db
+#      LETTER_TRACKING_DB_NAME: letter_tracking
+#      LETTER_TRACKING_DB_HOST: ccd-shared-database
+#      LETTER_TRACKING_DB_PORT: "5432"
+#      LETTER_TRACKING_DB_USER_NAME: letter_tracking
+#      LETTER_TRACKING_DB_PASSWORD: letter_tracking
+#      # db - migration
+#      FLYWAY_URL: "jdbc:postgresql://ccd-shared-database:5432/letter_tracking"
+#      FLYWAY_NOOP_STRATEGY: "false"
+#      # encryption
+#      ENCRYPTION_ENABLED: "false"
+#      ENCRYPTION_PUBLIC_KEY: ""
+#      # schedules
+#      SCHEDULING_ENABLED: "true"
+#      # inherited
+#      LOGBACK_REQUIRE_ALERT_LEVEL: "false"
+#      LOGBACK_REQUIRE_ERROR_CODE: "false"
+#      S2S_NAME: "send_letter_tests"
+#      S2S_URL: "http://service-auth-provider-api:8080"
+#      # mails
+#      SPRING_MAIL_HOST: "false"
+#      # ftp
+#      FTP_HOSTNAME: localhost
+#      FTP_PORT: 22
+#      FTP_TARGET_FOLDER: TARGET
+#      FTP_REPORTS_FOLDER: REPORTS
+#      FTP_FINGERPRINT: fingerprint
+#      FTP_USER: user
+#      FTP_PRIVATE_KEY: private
+#      FTP_PUBLIC_KEY: public
+#    depends_on:
+#      ccd-shared-database:
+#        condition: service_healthy
+#      service-auth-provider-api:
+#        condition: service_started
+#    ports:
+#      - 8485:8080
+#    networks:
+#      - ccd-network
+#
   draft-store-api:
     image: hmctspublic.azurecr.io/draft-store/service:${DRAFT_STORE_API_VERSION:-latest}
     healthcheck:

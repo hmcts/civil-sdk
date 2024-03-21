@@ -1,7 +1,7 @@
 version: '2.4'
 services:
   cmc-ccd-definition-importer:
-    image: hmctspublic.azurecr.io/cmc/ccd-definition-importer:${CMC_CCD_DEFINITION_VERSION:-1.10.36-alpha}
+    image: hmctspublic.azurecr.io/cmc/ccd-definition-importer:${CMC_CCD_DEFINITION_VERSION:-1.10.35}
     environment:
       - VERBOSE=${VERBOSE:-false}
       - WAIT_HOSTS=ccd-user-profile-api:4453, ccd-definition-store-api:4451, service-auth-provider-api:8080, ccd-api-gateway:3453, idam-api:5000
