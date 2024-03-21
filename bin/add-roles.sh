@@ -33,6 +33,12 @@ ${dir}/utils/ccd-add-role.sh "prd-aac-system"
 
 ${dir}/utils/ccd-add-role.sh "citizen"
 
+${dir}/utils/ccd-add-role.sh "caseworker-cmc-anonymouscitizen"
+${dir}/utils/ccd-add-role.sh "caseworker-cmc"
+${dir}/utils/ccd-add-role.sh "caseworker-cmc-legaladvisor"
+${dir}/utils/ccd-add-role.sh "caseworker-cmc-judge"
+${dir}/utils/ccd-add-role.sh "TTL-admin"
+
 ${dir}/utils/ccd-add-role.sh "next-hearing-date-admin"
 
 roles=("solicitor" "systemupdate" "admin" "staff" "judge")
@@ -69,10 +75,11 @@ ${dir}/utils/idam-add-role.sh "caseworker-publiclaw-solicitor"
 
 ${dir}/utils/idam-add-role.sh "xui-approver-userdata"
 
-${dir}/utils/idam-add-role.sh "caseworker-divorce"
-${dir}/utils/idam-add-role.sh "caseworker-divorce-solicitor"
-${dir}/utils/idam-add-role.sh "caseworker-divorce-financialremedy"
-${dir}/utils/idam-add-role.sh "caseworker-divorce-financialremedy-solicitor"
+${dir}/utils/idam-add-role.sh "caseworker-cmc-anonymouscitizen"
+${dir}/utils/idam-add-role.sh "caseworker-cmc"
+${dir}/utils/idam-add-role.sh "caseworker-cmc-legaladvisor"
+${dir}/utils/idam-add-role.sh "caseworker-cmc-judge"
+${dir}/utils/idam-add-role.sh "TTL-admin"
 
 prdRoles=('"caseworker"','"caseworker-caa"','"caseworker-divorce"','"caseworker-divorce-solicitor"','"caseworker-divorce-financialremedy"','"caseworker-divorce-financialremedy-solicitor"','"caseworker-probate"','"caseworker-ia"','"caseworker-probate-solicitor"','"caseworker-publiclaw"','"caseworker-ia-legalrep-solicitor"','"caseworker-publiclaw-solicitor"','"caseworker-civil"','"caseworker-civil-solicitor"','"xui-approver-userdata"','"pui-caa"','"prd-admin"','"pui-case-manager"','"pui-finance-manager"','"pui-organisation-manager"','"pui-user-manager"')
 ${dir}/utils/idam-add-role.sh "prd-admin" "${prdRoles[@]}"
