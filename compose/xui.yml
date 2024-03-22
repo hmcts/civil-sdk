@@ -48,7 +48,7 @@ services:
       S2S_SECRET:  "${IDAM_KEY_XUI_WEBAPP}"
       IDAM_SECRET: "${OAUTH2_CLIENT_XUI}"
 
-      JURISDICTIONS: "CIVIL"
+      JURISDICTIONS: "CIVIL,CMC"
 
       SYSTEM_USER_NAME: "dummy"
       SYSTEM_USER_PASSWORD: "dummy"
