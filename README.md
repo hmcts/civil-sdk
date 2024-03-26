@@ -69,7 +69,12 @@ docker network create ccd-network
 ```
 
 **Note:** Not all the containers may come up on first try. Run the command again a couple minutes later to bring up the
-remaining.
+remaining. This is because some containers require others, and although the container itself is up, the application isn't yet.
+**Note:** If dm-store won't stay up, logging the error blobStorageReadService, stop and delete the containers compose_azure-storage-emulator-azurite_1 and dm-store, then run
+```shell
+docker volume rm compose_ccd-docker-azure-blob-data
+./ccd compose up -d
+```
 
 7. Scripts to create test users and import CCD definitions are located in bin directory.
 
