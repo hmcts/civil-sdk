@@ -27,7 +27,7 @@
 ./ccd login
 ```
 
-**Note:** If you experience any error with the above command, try `az login` first
+**Note:** If you experience any error with the above command, try `az login` or `az login --use-device-code` first
 
 2. Pulling latest Docker images:
 
@@ -107,6 +107,7 @@ don't have those, go get them.
 ```shell
 ./bin/process-and-import-ccd-definition.sh "-e *-prod.json,AuthorisationCaseType-shuttered.json"
 ```
+The -e option allows you to ignore some files in ccd-definition when building the UI. If you get messages about duplicated fields, or case_event, case_field keys, most probably there are several json files declaring different versions of the same field.
 **Note:** If you have chosen to run OCMC services as well in step 4, you need to import CMC CCD definition. You can do so by running:
 
 ```shell
@@ -130,6 +131,12 @@ To stop the containers and preserve the data run:
 
 ```shell
 /ccd compose down -t 1
+```
+### Removing
+To remove the containers and their data, run:
+```shell
+./ccd compose down -v
+docker system prune -a --volumes
 ```
 
 ### Notes
@@ -239,7 +246,11 @@ Example response:
 }
 
 ```
-
+### Elastic search limit of total fields has been exceeded
+If you see this message, there are too many field indexes in Elastic Search. By default, all fields declared in ccd-definition are indexed. To prevent one from doing so, use Searchable: N in its declaration. However, if you want the indexes for al of them, you can change the Elastic Search limit as follows:
+```
+curl -XPUT localhost:9200/*_cases*/_settings -H 'Content-Type: application/json' -d '{ "index.mapping.total_fields.limit" : 12000 }'
+```
 ----
 
 ## Camunda
