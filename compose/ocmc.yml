@@ -63,11 +63,11 @@ services:
       - SPRING_MAIL_HOST=smtp-server
       - SPRING_MAIL_PORT=1025
       - PDF_SERVICE_URL=http://wiremock:8080
-      - DOCUMENT_MANAGEMENT_URL=http://dm-store:4460
+      - DOCUMENT_MANAGEMENT_URL=http://dm-store:8080
       - CORE_CASE_DATA_API_URL=http://ccd-data-store-api:4452
       - FEATURE_TOGGLES_SAVE_CLAIM_STATE_ENABLED=true
       - FEATURE_TOGGLES_DIRECTIONS_QUESTIONNAIRE_ENABLED=true
-      - DOC_ASSEMBLY_URL=http://doc-assembly-api:8080
+      - DOC_ASSEMBLY_URL=http://ccd-case-document-am-api:4455
       - JSON_CONSOLE_PRETTY_PRINT
       - ROOT_LOGGING_LEVEL
       - REFORM_SERVICE_NAME=claim-store
@@ -134,12 +134,13 @@ services:
       - "8800:8800"
     networks:
       - ccd-network
+
   citizen-integration-tests:
     image: hmctspublic.azurecr.io/cmc/citizen-integration-tests:${CITIZEN_INTEGRATION_TESTS_VERSION:-latest}
     environment:
       - FEATURE_TESTING_SUPPORT=true
       - WEB_DRIVER_HOST=remote-webdriver
-      - CITIZEN_APP_URL=https://localhost:3000
+      - CITIZEN_APP_URL=https://192.168.50.28:3000
       - IDAM_URL=http://idam-api:5000
       - CLAIM_STORE_URL=${CLAIM_STORE_URL:-http://localhost:4400}
       - SMOKE_TEST_CITIZEN_USERNAME
@@ -153,10 +154,64 @@ services:
       - https_proxy
       - no_proxy=www-citizen.moneyclaim.reform.hmcts.net,idam-api,remote-webdriver,idam-web-public,claim-store-api
     depends_on:
+      remote-webdriver:
+        condition: service_started
       citizen-frontend:
         condition: service_started
     volumes:
       - ./output:/usr/src/app/output
+    networks:
+      - ccd-network
+
+  remote-webdriver:
+    image: selenium/standalone-chrome:3.8.1
+    environment:
+      - JAVA_OPTS=-Xms8m -Xmx256m -Djava.security.egd=file:/dev/./urandom -XX:MaxMetaspaceSize=128m
+    networks:
+      - ccd-network
+
+  send-letter-api:
+    image: hmctspublic.azurecr.io/rpe/send-letter-service
+    environment:
+      APPINSIGHTS_INSTRUMENTATIONKEY: fake-key
+      ACTIONS_API_KEY: ${ACTIONS_API_KEY}
+      STORAGE_ACCOUNT_CONNECTION_STRING: UseDevelopmentStorage=true
+      # db
+      LETTER_TRACKING_DB_NAME: letter_tracking
+      LETTER_TRACKING_DB_HOST: ccd-shared-database
+      LETTER_TRACKING_DB_PORT: "5432"
+      LETTER_TRACKING_DB_USER_NAME: ccd
+      LETTER_TRACKING_DB_PASSWORD: ccd
+      # db - migration
+      FLYWAY_URL: "jdbc:postgresql://ccd-shared-database:5432/letter_tracking"
+      FLYWAY_NOOP_STRATEGY: "false"
+      # encryption
+      ENCRYPTION_ENABLED: "false"
+      ENCRYPTION_PUBLIC_KEY: ""
+      # schedules
+      SCHEDULING_ENABLED: "true"
+      # inherited
+      LOGBACK_REQUIRE_ALERT_LEVEL: "false"
+      LOGBACK_REQUIRE_ERROR_CODE: "false"
+      S2S_NAME: "send_letter_tests"
+      S2S_URL: "http://service-auth-provider-api:8080"
+      # mails
+      SPRING_MAIL_HOST: "false"
+      # ftp
+      FTP_HOSTNAME: localhost
+      FTP_PORT: 22
+      FTP_TARGET_FOLDER: TARGET
+      FTP_REPORTS_FOLDER: REPORTS
+      FTP_FINGERPRINT: fingerprint
+      FTP_USER: user
+      FTP_PRIVATE_KEY: private
+      FTP_PUBLIC_KEY: public
+    depends_on:
+      service-auth-provider-api:
+        condition: service_started
+    networks:
+      - ccd-network
+
 networks:
   ccd-network:
     external: true
