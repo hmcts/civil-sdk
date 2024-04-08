@@ -40,7 +40,8 @@ else
     echo FAIL
 fi
 
-${dir}/process-and-import-ccd-definition.sh "-e *-prod.json,*-GAR2GAspec-nonprod.json,*HNL-nonprod.json,*CUI-nonprod.json"
+echo "Prod aat config. Please change exclusions for non prod"
+${dir}/process-and-import-ccd-definition.sh "-e *-nonprod.json,AuthorisationCaseType-shuttered.json"
 
 if [ $? -eq 0 ]; then
     echo OK
