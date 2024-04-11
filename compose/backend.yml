@@ -33,6 +33,7 @@ services:
       DEFINITION_STORE_DB_USE_SSL: "${DB_USE_SSL}"
       DEFINITION_STORE_IDAM_KEY: "${IDAM_KEY_CCD_DEFINITION_STORE}"
       DEFINITION_STORE_S2S_AUTHORISED_SERVICES: ccd_data,ccd_gw,ccd_admin,xui_webapp,aac_manage_case_assignment
+      DEFINITION_STORE_TX_TIMEOUT_DEFAULT: 60
       USER_PROFILE_HOST: http://ccd-user-profile-api:4453
       IDAM_USER_URL: "${IDAM_STUB_SERVICE_NAME:-http://idam-web-public:8080}"
       IDAM_S2S_URL: http://service-auth-provider-api:8080
