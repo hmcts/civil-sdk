@@ -137,7 +137,7 @@
     "court_name": "Court Name 3333",
     "venue_name": "Central London",
     "is_case_management_location": "N",
-    "is_hearing_location": "Y",
+    "is_hearing_location": "N",
     "welsh_venue_name": "",
     "is_temporary_location": "N",
     "is_nightingale_court": "N",
