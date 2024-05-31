@@ -35,7 +35,7 @@
       "amount_or_volume": {
         "or": [
           {
-            "matches": "30000\\.\\d{2}"
+            "matches": "30000\\.00"
           },
           {
             "matches": "30000"
