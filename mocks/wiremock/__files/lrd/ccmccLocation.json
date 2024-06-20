@@ -35,6 +35,7 @@
     "mrd_building_location_id": "ABC-DEF-240",
     "mrd_venue_id": "ABC-PQR-0812",
     "service_url": "",
-    "fact_url": ""
+    "fact_url": "",
+    "external_short_name": "Randon"
   }
 ]
