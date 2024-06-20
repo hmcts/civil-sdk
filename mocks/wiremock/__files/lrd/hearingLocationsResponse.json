@@ -73,7 +73,8 @@
     "mrd_building_location_id": "",
     "mrd_venue_id": "",
     "service_url": "",
-    "fact_url": ""
+    "fact_url": "",
+    "external_short_name": "Barnet"
   },
   {
     "court_venue_id": "2222",
@@ -111,7 +112,8 @@
     "mrd_building_location_id": "",
     "mrd_venue_id": "",
     "service_url": "",
-    "fact_url": ""
+    "fact_url": "",
+    "external_short_name": "High Wycombe"
   },
   {
     "court_venue_id": "3333",
@@ -149,6 +151,7 @@
     "mrd_building_location_id": "",
     "mrd_venue_id": "",
     "service_url": "",
-    "fact_url": ""
+    "fact_url": "",
+    "external_short_name": "Central London"
   }
 ]
