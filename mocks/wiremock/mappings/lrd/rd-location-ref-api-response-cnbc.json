@@ -13,6 +13,6 @@
     "headers": {
       "Content-Type": "application/json"
     },
-    "bodyFileName": "lrd/courtLocationsResponse.json"
+    "bodyFileName": "lrd/cnbcLocations.json"
   }
 }
