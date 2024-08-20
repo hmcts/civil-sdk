@@ -1,0 +1,33 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/fees-register/fees/lookup",
+    "queryParameters": {
+      "service": {
+        "equalTo": "civil money claims"
+      },
+      "jurisdiction1": {
+        "equalTo": "civil"
+      },
+      "jurisdiction2": {
+        "equalTo": "county court"
+      },
+      "channel": {
+        "equalTo": "default"
+      },
+      "event": {
+        "equalTo": "hearing"
+      },
+      "keyword": {
+        "equalTo": "HearingSmallClaims"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": "{\"code\": \"FEE0210\", \"description\": \"Civil Court fees - Hearing fee - HearingSmallClaims- Claim Amount - up to 10000.00 GBP\", \"version\": 4, \"fee_amount\": 346.00}"
+  }
+}
