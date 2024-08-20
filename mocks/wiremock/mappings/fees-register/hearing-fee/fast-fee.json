@@ -10,7 +10,7 @@
         "equalTo": "civil"
       },
       "jurisdiction2": {
-        "equalTo": "county court"
+        "equalTo": "civil"
       },
       "channel": {
         "equalTo": "default"
@@ -20,6 +20,9 @@
       },
       "keyword": {
         "equalTo": "FastTrackHrg"
+      },
+      "amount_or_volume": {
+        "matches": ".*"
       }
     }
   },
