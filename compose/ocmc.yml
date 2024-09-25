@@ -24,7 +24,7 @@ services:
       - http_proxy
       - https_proxy
       - no_proxy=claim-store-api, fees-api, payments-api, idam-api, service-auth-provider-api, draft-store-api
-      - LAUNCH_DARKLY_SDK_KEY=${LAUNCH_DARKLY_SDK_KEY:-}
+      - LAUNCH_DARKLY_SDK_KEY
       - LAUNCH_DARKLY_OFFLINE_MODE
     mem_limit: 2048m
     memswap_limit: 0
