@@ -50,8 +50,8 @@ done
 
 accessprofiles=("judge-profile" "basic-access" "ga-basic-access" "legal-adviser" "APPLICANT-PROFILE-SPEC" "RESPONDENT-ONE-PROFILE-SPEC" "GS_profile" "caseworker-ras-validation" "full-access" "admin-access"
 "civil-administrator-basic" "civil-administrator-standard" "caseworker-wa-task-configuration" "hearing-schedule-access" "APP-SOL-UNSPEC-PROFILE" "APP-SOL-SPEC-PROFILE" "RES-SOL-ONE-UNSPEC-PROFILE"
-"RES-SOL-ONE-SPEC-PROFILE" "RES-SOL-TWO-UNSPEC-PROFILE" "RES-SOL-TWO-SPEC-PROFILE" "payment-access" "caseflags-admin" "caseflags-viewer" "hearing-manager" "hearing-viewer" "caseworker-wa-task-configuration" "CITIZEN-CLAIMANT-PROFILE" "CITIZEN-DEFENDANT-PROFILE" "cui-admin-profile" "cui-nbc-profile" "citizen-profile" 
-"caseworker-civil-citizen-ui-pcqextractor" "hearing-centre-team-leader" "national-business-centre" "hearing-centre-admin" "judge" "next-hearing-date-admin" "court-officer-order")
+"RES-SOL-ONE-SPEC-PROFILE" "RES-SOL-TWO-UNSPEC-PROFILE" "RES-SOL-TWO-SPEC-PROFILE" "payment-access" "caseflags-admin" "caseflags-viewer" "hearing-manager" "hearing-viewer" "caseworker-wa-task-configuration" "CITIZEN-CLAIMANT-PROFILE" "CITIZEN-DEFENDANT-PROFILE" "cui-admin-profile" "cui-nbc-profile" "citizen-profile"
+"caseworker-civil-citizen-ui-pcqextractor" "hearing-centre-team-leader" "national-business-centre" "hearing-centre-admin" "judge" "next-hearing-date-admin" "court-officer-order" "nbc-team-leader" "ctsc-team-leader" "ctsc")
 
 for accessprofile in "${accessprofiles[@]}"
 do
